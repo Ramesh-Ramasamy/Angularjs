@@ -12,20 +12,19 @@ function addAEL(idFName,idIName){
 		document.getElementById("imgSliding").className="disblock";
 	});
 }
-addAEL(document.getElementById("disFrame"),document.getElementById("imgSlide"));
 function multipleSection (x) {
 	var i=-1;
 	return function(count){		
-		for(var j=0;j<count;j++){
-			document.write("<section>");	
-			document.write(x[0].innerHTML);
-			document.write("</section>");
+		for(var j=0;j<count;j++){			
 			var buttons = document.querySelectorAll('button');
 			buttons[++i].id += i;
 			var idFName = document.getElementById(buttons[i].id);
 			buttons[++i].id += i;
 			var idIName = document.getElementById(buttons[i].id);									
-			addAEL (idFName,idIName);					
+			addAEL (idFName,idIName);
+			document.write("<section>");	
+			document.write(x[0].innerHTML);
+			document.write("</section>");					
 		}				
 	}
 }
