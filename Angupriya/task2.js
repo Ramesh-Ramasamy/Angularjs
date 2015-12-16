@@ -3,15 +3,19 @@
 {
 var content=["ABOUT_US :Infibeam Inc is a leading online retailer in India ","Infibeam_offers cloud based  ecommerce platform service in B2C and B2B verticals and is recognized globally for its innovative approach towards delivering business values and responsive to changing customer needs","Company_believes in empowering every individual and business in the retail value chain by providing affordable technology to solve large scale business problems","Infibeam is a trusted name in retail and technology platform services and a partner of choice for global business.","is","well","Infibeam buildbazzar","display content"];
 
+	var total_count=0;
 
 function count(idd){
 	return function(){
 	var element=document.getElementById(idd);
     document.getElementById("body").setAttribute("class","hide_bg");
 	var count_value=parseInt(element.getAttribute("value"),10)+1
+	total_count++;
+
 	document.getElementById(idd).value=count_value;
 	document.getElementById("contents").innerHTML=content[idd];
 	document.getElementById("counter").innerHTML="you clicked this button  "+count_value+" times";
+	document.getElementById("bottom").innerHTML="total count of all buttons clicked: "+total_count;
 	if(count_value>10){
 			document.getElementById("body").setAttribute("class","show_bg");
 	}
