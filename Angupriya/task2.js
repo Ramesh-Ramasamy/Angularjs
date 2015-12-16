@@ -6,16 +6,14 @@ var content=["ABOUT_US :Infibeam Inc is a leading online retailer in India ","In
 	var total_count=0;
 
 function count(idd){
+	var count_value=0;
+	
 	return function(){
-	var element=document.getElementById(idd);
-    document.getElementById("body").setAttribute("class","hide_bg");
-	var count_value=parseInt(element.getAttribute("value"),10)+1
+	document.getElementById("body").setAttribute("class","hide_bg");
 	total_count++;
-
-	document.getElementById(idd).value=count_value;
-	document.getElementById("contents").innerHTML=content[idd];
-	document.getElementById("counter").innerHTML="you clicked this button  "+count_value+" times";
-	document.getElementById("bottom").innerHTML="total count of all buttons clicked: "+total_count;
+    document.getElementById("contents").innerHTML=content[idd];
+	document.getElementById("counter").innerHTML="you clicked this button  "+(++count_value)+" times";
+	document.getElementById("total_counter").innerHTML="total count of all buttons clicked: "+total_count;
 	if(count_value>10){
 			document.getElementById("body").setAttribute("class","show_bg");
 	}
@@ -31,7 +29,6 @@ for (var i = 0; i < n; i++) {
 var br=document.createElement("br");
 	var x=document.createElement("button");
 	x.setAttribute("id",i);
-	x.setAttribute("value",0);
 	
 	document.getElementById("body").setAttribute("class","hide_bg");
 	var first=content[i].split(" ",2);
