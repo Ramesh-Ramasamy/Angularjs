@@ -50,8 +50,12 @@
 #counter{
 	position: relative;
 	text-align: center;
-	color: orange
+	color: orange;
 	text-decoration: blink;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	
 }
 
 .hide_bg{
@@ -63,4 +67,18 @@
 #contents{
 	font-size: 20px;
 	font-style: italic;
+}
+#bottom{
+	text-transform: "uppercase";
+	text-align: center;
+	position: relative;
+	margin-top: 400 px;
+	color: red;
+	
+	animation: blink 1s steps(2, start) infinite;
+
+}
+
+@keyframes blink{
+	to{color: blue;}
 }
