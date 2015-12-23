@@ -4,6 +4,9 @@
 body{
 	margin: 0;
 }
+p {
+    text-indent: 50px;
+}
 header{
 	margin:0;
 	width: 100%;
@@ -37,12 +40,12 @@ footer{
 	display: block;
 }
 .row p{
-	font-size: 30px;
+	font-size: 20px;
 }
 #show{
 	background-color:#99ccff;
 	padding:20px; 
-	width:50%;
+	width:100%;
 	text-align: center;
 	border:1px solid red;
 }
@@ -60,6 +63,9 @@ footer{
 	padding: 20px;
 	margin-bottom: 7px;	
 	color: #000;
+}
+#title,#show{
+	text-indent: 0px;
 }
 button{
 	width: 70%;
