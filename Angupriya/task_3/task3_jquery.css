@@ -1,0 +1,66 @@
+	
+#header{
+	width: 100%;
+	height: 10%;
+	background-color: black;
+	font-style: italic;
+	font-family: times new roman;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+}
+#leftside{
+
+	width: 18%;
+	height: 650px;
+	background-color: pink;
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 20px;
+	text-transform: uppercase;
+	float:left;
+
+}
+
+#leftside button{
+	background-color: white;
+	position: relative;
+	margin-top: 20px;
+	color: brown;
+	text-transform: capitalize;
+	font-size: 25px;
+	border-radius: 25px;
+	width: 200px;
+	text-align: center;
+	height: 40px;
+}
+
+.show{
+	display: block;
+}
+
+.hide{
+	display: none;
+}
+
+#counter{
+	position: relative;
+	text-align: center;
+	color: orange
+	text-decoration: blink;
+}
+
+.hide_bg{
+	background-color: white;
+}
+.show_bg{
+	background-color: cyan;
+}
+#contents{
+	font-size: 20px;
+	font-style: italic;
+}
