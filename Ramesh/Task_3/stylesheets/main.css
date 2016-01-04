@@ -67,6 +67,9 @@ footer{
 #title,#show{
 	text-indent: 0px;
 }
+#showdetails{
+	text-align: justify;
+}
 button{
 	width: 70%;
     background-color: #4CAF50; 
