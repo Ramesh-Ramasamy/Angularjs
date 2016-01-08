@@ -23181,3 +23181,394 @@ Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:19:20) [GET]
   [4;35;1mSQL (37.0ms)[0m   [0mCOMMIT[0m
 Rendering posts/show
 Completed in 46ms (View: 1, DB: 38) | 200 OK [http://localhost/posts/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-01-08 13:23:19) [GET]
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-01-08 13:23:20) [GET]
+  [4;36;1mPost Load (0.1ms)[0m   [0;1mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 23, `updated_at` = '2016-01-08 07:53:21' WHERE `id` = 1[0m
+  [4;36;1mSQL (32.6ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 39ms (View: 0, DB: 34) | 200 OK [http://localhost/posts/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.3ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 42, `updated_at` = '2016-01-08 07:53:22' WHERE `id` = 2[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 49ms (View: 0, DB: 43) | 200 OK [http://localhost/posts/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 24, `updated_at` = '2016-01-08 07:53:23' WHERE `id` = 3[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 48ms (View: 0, DB: 43) | 200 OK [http://localhost/posts/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 29, `updated_at` = '2016-01-08 07:53:24' WHERE `id` = 4[0m
+  [4;35;1mSQL (33.4ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 40ms (View: 0, DB: 34) | 200 OK [http://localhost/posts/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:24) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 5) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 42, `updated_at` = '2016-01-08 07:53:24' WHERE `id` = 5[0m
+  [4;36;1mSQL (37.5ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 44ms (View: 0, DB: 39) | 200 OK [http://localhost/posts/5]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 25, `updated_at` = '2016-01-08 07:53:25' WHERE `id` = 3[0m
+  [4;35;1mSQL (53.1ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 60ms (View: 1, DB: 54) | 200 OK [http://localhost/posts/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 43, `updated_at` = '2016-01-08 07:53:25' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.8ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 54ms (View: 0, DB: 48) | 200 OK [http://localhost/posts/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.9ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 24, `updated_at` = '2016-01-08 07:53:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (52.9ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 63ms (View: 1, DB: 55) | 200 OK [http://localhost/posts/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 44, `updated_at` = '2016-01-08 07:53:27' WHERE `id` = 2[0m
+  [4;36;1mSQL (52.2ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 60ms (View: 1, DB: 53) | 200 OK [http://localhost/posts/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 26, `updated_at` = '2016-01-08 07:53:27' WHERE `id` = 3[0m
+  [4;35;1mSQL (73.3ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 80ms (View: 0, DB: 74) | 200 OK [http://localhost/posts/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:28) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 30, `updated_at` = '2016-01-08 07:53:28' WHERE `id` = 4[0m
+  [4;36;1mSQL (67.3ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 75ms (View: 1, DB: 68) | 200 OK [http://localhost/posts/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:28) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 5) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 43, `updated_at` = '2016-01-08 07:53:28' WHERE `id` = 5[0m
+  [4;35;1mSQL (69.4ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 77ms (View: 1, DB: 71) | 200 OK [http://localhost/posts/5]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:29) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.3ms)[0m   [0mUPDATE `posts` SET `clickcount` = 31, `updated_at` = '2016-01-08 07:53:29' WHERE `id` = 4[0m
+  [4;36;1mSQL (50.1ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 58ms (View: 1, DB: 51) | 200 OK [http://localhost/posts/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 27, `updated_at` = '2016-01-08 07:53:29' WHERE `id` = 3[0m
+  [4;35;1mSQL (38.7ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 46ms (View: 1, DB: 40) | 200 OK [http://localhost/posts/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 45, `updated_at` = '2016-01-08 07:53:30' WHERE `id` = 2[0m
+  [4;36;1mSQL (55.5ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 63ms (View: 1, DB: 57) | 200 OK [http://localhost/posts/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 25, `updated_at` = '2016-01-08 07:53:30' WHERE `id` = 1[0m
+  [4;35;1mSQL (49.0ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 55ms (View: 0, DB: 50) | 200 OK [http://localhost/posts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 46, `updated_at` = '2016-01-08 07:53:31' WHERE `id` = 2[0m
+  [4;36;1mSQL (63.1ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 69ms (View: 0, DB: 64) | 200 OK [http://localhost/posts/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 28, `updated_at` = '2016-01-08 07:53:31' WHERE `id` = 3[0m
+  [4;35;1mSQL (37.8ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 44ms (View: 0, DB: 39) | 200 OK [http://localhost/posts/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:32) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 32, `updated_at` = '2016-01-08 07:53:32' WHERE `id` = 4[0m
+  [4;36;1mSQL (45.1ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 52ms (View: 0, DB: 46) | 200 OK [http://localhost/posts/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:33) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 5) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 44, `updated_at` = '2016-01-08 07:53:33' WHERE `id` = 5[0m
+  [4;35;1mSQL (64.0ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 71ms (View: 1, DB: 65) | 200 OK [http://localhost/posts/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:33) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 33, `updated_at` = '2016-01-08 07:53:33' WHERE `id` = 4[0m
+  [4;36;1mSQL (47.2ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 54ms (View: 0, DB: 48) | 200 OK [http://localhost/posts/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 29, `updated_at` = '2016-01-08 07:53:34' WHERE `id` = 3[0m
+  [4;35;1mSQL (51.5ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 58ms (View: 1, DB: 53) | 200 OK [http://localhost/posts/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.1ms)[0m   [0mUPDATE `posts` SET `clickcount` = 47, `updated_at` = '2016-01-08 07:53:35' WHERE `id` = 2[0m
+  [4;36;1mSQL (41.3ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 48ms (View: 1, DB: 42) | 200 OK [http://localhost/posts/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:23:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 26, `updated_at` = '2016-01-08 07:53:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (56.7ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 64ms (View: 1, DB: 58) | 200 OK [http://localhost/posts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-01-08 13:25:14) [GET]
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;35;1mPost Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-01-08 13:25:15) [GET]
+  [4;36;1mPost Load (0.1ms)[0m   [0;1mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;35;1mPost Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:25:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.2ms)[0m   [0mUPDATE `posts` SET `clickcount` = 27, `updated_at` = '2016-01-08 07:55:16' WHERE `id` = 1[0m
+  [4;36;1mSQL (66.9ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 74ms (View: 1, DB: 68) | 200 OK [http://localhost/posts/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:25:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE `posts` SET `clickcount` = 48, `updated_at` = '2016-01-08 07:55:17' WHERE `id` = 2[0m
+  [4;35;1mSQL (36.2ms)[0m   [0mCOMMIT[0m
+Rendering posts/show
+Completed in 44ms (View: 0, DB: 38) | 200 OK [http://localhost/posts/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2016-01-08 13:25:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.3ms)[0m   [0mUPDATE `posts` SET `clickcount` = 30, `updated_at` = '2016-01-08 07:55:18' WHERE `id` = 3[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mCOMMIT[0m
+Rendering posts/show
+Completed in 47ms (View: 0, DB: 40) | 200 OK [http://localhost/posts/3]
