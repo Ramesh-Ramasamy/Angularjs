@@ -11,8 +11,7 @@ class CountriesController < ApplicationController
   end
 
   def new
-  	@country = Country.new 
-    render :layout => false 	
+  	@country = Country.new      	
   end
 
   def edit

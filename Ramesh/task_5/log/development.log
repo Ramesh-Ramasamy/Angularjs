@@ -19355,3 +19355,2187 @@ Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:53:57) [GET]
 Rendering comments/index
   [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
 Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:55:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'japan' AND `countries`.id <> 2) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 73, `updated_at` = '2016-01-18 06:25:39' WHERE `id` = 2[0m
+  [4;36;1mSQL (50.2ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 59ms (View: 1, DB: 51) | 200 OK [http://localhost/countries/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:55:40) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 1, DB: 2) | 200 OK [http://localhost/countries/2/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:55:41) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:55:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 82, `updated_at` = '2016-01-18 06:25:42' WHERE `id` = 1[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 53ms (View: 1, DB: 45) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:55:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;36;1mCountry Update (0.1ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 45, `updated_at` = '2016-01-18 06:25:43' WHERE `id` = 3[0m
+  [4;35;1mSQL (44.8ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 53ms (View: 1, DB: 46) | 200 OK [http://localhost/countries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:55:43) [GET]
+  Parameters: {"country_id"=>"3"}
+  [4;36;1mCountry Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.3ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;36;1mComment Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/countries/3/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:55:44) [GET]
+  Parameters: {"country_id"=>"3"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 3) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/3/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:55:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'Australia' AND `countries`.id <> 4) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 23, `updated_at` = '2016-01-18 06:25:46' WHERE `id` = 4[0m
+  [4;36;1mSQL (99.4ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 107ms (View: 1, DB: 101) | 200 OK [http://localhost/countries/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:55:47) [GET]
+  Parameters: {"country_id"=>"4"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/4/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:55:47) [GET]
+  Parameters: {"country_id"=>"4"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 4) [0m
+Rendering comments/index
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://localhost/countries/4/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 11:58:21) [GET]
+  [4;35;1mCountry Load (0.4ms)[0m   [0mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:58:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;35;1mCountry Update (0.3ms)[0m   [0mUPDATE `countries` SET `clickcount` = 83, `updated_at` = '2016-01-18 06:28:22' WHERE `id` = 1[0m
+  [4;36;1mSQL (69.9ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 79ms (View: 1, DB: 71) | 200 OK [http://localhost/countries/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:58:24) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:58:26) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (6.9ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 67ms (View: 2, DB: 8) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:58:28) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:58:29) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 15ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:58:30) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:58:36) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:58:38) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:58:40) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:58:43) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:58:44) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 11:58:57) [GET]
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;36;1mCountry Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:58:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.3ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;35;1mCountry Update (0.3ms)[0m   [0mUPDATE `countries` SET `clickcount` = 84, `updated_at` = '2016-01-18 06:28:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (39.9ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 93ms (View: 1, DB: 41) | 200 OK [http://localhost/countries/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:59:00) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:59:00) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:59:01) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:59:02) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:59:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'Australia' AND `countries`.id <> 4) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 24, `updated_at` = '2016-01-18 06:29:24' WHERE `id` = 4[0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 54ms (View: 1, DB: 47) | 200 OK [http://localhost/countries/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:59:25) [GET]
+  Parameters: {"country_id"=>"4"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 4) [0m
+Rendering comments/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/4/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:59:26) [GET]
+  Parameters: {"country_id"=>"4"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/4/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:59:27) [GET]
+  Parameters: {"country_id"=>"4"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 4) [0m
+Rendering comments/index
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://localhost/countries/4/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 11:59:27) [GET]
+  Parameters: {"country_id"=>"4"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/4/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 11:59:28) [GET]
+  Parameters: {"country_id"=>"4"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 4) [0m
+Rendering comments/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/4/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 11:59:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.1ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 85, `updated_at` = '2016-01-18 06:29:29' WHERE `id` = 1[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 74ms (View: 1, DB: 68) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:00:24) [GET]
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:00:25) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:00:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.3ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 86, `updated_at` = '2016-01-18 06:30:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (51.0ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 59ms (View: 1, DB: 52) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:26) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:27) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:28) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:29) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:00:38) [GET]
+  [4;36;1mCountry Load (0.3ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:00:38) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:00:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 87, `updated_at` = '2016-01-18 06:30:39' WHERE `id` = 1[0m
+  [4;35;1mSQL (42.5ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 50ms (View: 1, DB: 44) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:40) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.3ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 14ms (View: 4, DB: 2) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:41) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:43) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:43) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:45) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:45) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:46) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:47) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:47) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:48) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:48) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:54) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:00:54) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:00:55) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:01:15) [GET]
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/countries]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:01:16) [GET]
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;36;1mCountry Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:01:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 88, `updated_at` = '2016-01-18 06:31:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (40.2ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 50ms (View: 1, DB: 41) | 200 OK [http://localhost/countries/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:18) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 54ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:21) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:22) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:01:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'japan' AND `countries`.id <> 2) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 74, `updated_at` = '2016-01-18 06:31:23' WHERE `id` = 2[0m
+  [4;36;1mSQL (31.5ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 41ms (View: 1, DB: 33) | 200 OK [http://localhost/countries/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:24) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 15ms (View: 5, DB: 2) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:26) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:28) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.4ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:29) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:31) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:43) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:44) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:45) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 62ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:47) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:48) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:49) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:50) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:01:52) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:54) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:56) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:58) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:01:59) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 15ms (View: 5, DB: 2) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:00) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:02) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 68ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:03) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:05) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:06) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:08) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 1, DB: 2) | 200 OK [http://localhost/countries/2/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:10) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;36;1mCountry Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 16ms (View: 5, DB: 2) | 200 OK [http://localhost/countries/2/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:11) [GET]
+  Parameters: {"country_id"=>"2"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 2) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 1, DB: 2) | 200 OK [http://localhost/countries/2/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:02:26) [GET]
+  [4;35;1mCountry Load (0.3ms)[0m   [0mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:02:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.3ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.3ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 89, `updated_at` = '2016-01-18 06:32:27' WHERE `id` = 1[0m
+  [4;36;1mSQL (39.4ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 49ms (View: 1, DB: 41) | 200 OK [http://localhost/countries/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:28) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:29) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 53ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:30) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:30) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:31) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:32) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:33) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:33) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:34) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:35) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:35) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:36) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:37) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:37) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:39) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:02:40) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.country_id = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:02:41) [GET]
+  Parameters: {"country_id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:22:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'japan' AND `countries`.id <> 2) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 75, `updated_at` = '2016-01-18 06:52:56' WHERE `id` = 2[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 50ms (View: 1, DB: 44) | 200 OK [http://localhost/countries/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:22:58) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 46, `updated_at` = '2016-01-18 06:52:58' WHERE `id` = 3[0m
+  [4;36;1mSQL (50.9ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 58ms (View: 1, DB: 52) | 200 OK [http://localhost/countries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:22:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'Australia' AND `countries`.id <> 4) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 25, `updated_at` = '2016-01-18 06:52:59' WHERE `id` = 4[0m
+  [4;36;1mSQL (30.8ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 38ms (View: 1, DB: 32) | 200 OK [http://localhost/countries/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 90, `updated_at` = '2016-01-18 06:53:02' WHERE `id` = 1[0m
+  [4;36;1mSQL (29.3ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 37ms (View: 1, DB: 31) | 200 OK [http://localhost/countries/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'japan' AND `countries`.id <> 2) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 76, `updated_at` = '2016-01-18 06:53:02' WHERE `id` = 2[0m
+  [4;36;1mSQL (36.8ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 46ms (View: 1, DB: 38) | 200 OK [http://localhost/countries/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 47, `updated_at` = '2016-01-18 06:53:03' WHERE `id` = 3[0m
+  [4;36;1mSQL (60.1ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 68ms (View: 1, DB: 61) | 200 OK [http://localhost/countries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 48, `updated_at` = '2016-01-18 06:53:05' WHERE `id` = 3[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 47ms (View: 1, DB: 40) | 200 OK [http://localhost/countries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:06) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 49, `updated_at` = '2016-01-18 06:53:06' WHERE `id` = 3[0m
+  [4;36;1mSQL (52.7ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 62ms (View: 1, DB: 54) | 200 OK [http://localhost/countries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:06) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 50, `updated_at` = '2016-01-18 06:53:06' WHERE `id` = 3[0m
+  [4;36;1mSQL (32.1ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 42ms (View: 1, DB: 33) | 200 OK [http://localhost/countries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2016-01-18 12:23:08) [GET]
+  Parameters: {"country_id"=>"3"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.country_id = 3) [0m
+Rendering comments/index
+  [4;36;1mComment Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/countries/3/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2016-01-18 12:23:09) [GET]
+  Parameters: {"country_id"=>"3"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries/3/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 91, `updated_at` = '2016-01-18 06:53:11' WHERE `id` = 1[0m
+  [4;35;1mSQL (39.5ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 48ms (View: 1, DB: 41) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:18) [GET]
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:19) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 63ms (View: 58, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 14ms (View: 5, DB: 2) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:20) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:21) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:21) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:21) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:23:22) [GET]
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.3ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 92, `updated_at` = '2016-01-18 06:53:24' WHERE `id` = 1[0m
+  [4;35;1mSQL (55.6ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 64ms (View: 1, DB: 57) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.3ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;36;1mCountry Update (0.1ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 51, `updated_at` = '2016-01-18 06:53:25' WHERE `id` = 3[0m
+  [4;35;1mSQL (47.8ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 57ms (View: 1, DB: 49) | 200 OK [http://localhost/countries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:23:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 93, `updated_at` = '2016-01-18 06:53:27' WHERE `id` = 1[0m
+  [4;35;1mSQL (58.3ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 66ms (View: 1, DB: 60) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:30:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.4ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.4ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;36;1mCountry Update (0.4ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 94, `updated_at` = '2016-01-18 07:00:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (32.5ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 44ms (View: 1, DB: 35) | 200 OK [http://localhost/countries/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:30:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'japan' AND `countries`.id <> 2) LIMIT 1[0m
+  [4;36;1mCountry Update (0.1ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 77, `updated_at` = '2016-01-18 07:00:26' WHERE `id` = 2[0m
+  [4;35;1mSQL (37.9ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 45ms (View: 1, DB: 39) | 200 OK [http://localhost/countries/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:30:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 52, `updated_at` = '2016-01-18 07:00:27' WHERE `id` = 3[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 39ms (View: 1, DB: 32) | 200 OK [http://localhost/countries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:30:29) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'Australia' AND `countries`.id <> 4) LIMIT 1[0m
+  [4;36;1mCountry Update (0.2ms)[0m   [0;1mUPDATE `countries` SET `clickcount` = 26, `updated_at` = '2016-01-18 07:00:29' WHERE `id` = 4[0m
+  [4;35;1mSQL (34.4ms)[0m   [0mCOMMIT[0m
+Rendering countries/show
+Completed in 42ms (View: 1, DB: 36) | 200 OK [http://localhost/countries/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:33:20) [GET]
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/countries]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:33:23) [GET]
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:34:52) [GET]
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:34:52) [GET]
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:34:53) [GET]
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:35:31) [GET]
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:35:32) [GET]
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:35:32) [GET]
+  [4;36;1mCountry Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 14ms (View: 8, DB: 2) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:37:04) [GET]
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:37:05) [GET]
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:38:08) [GET]
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:38:09) [GET]
+  [4;36;1mCountry Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:38:42) [GET]
+  [4;35;1mCountry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:38:43) [GET]
+  [4;36;1mCountry Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:39:33) [GET]
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:39:34) [GET]
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:40:06) [GET]
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:40:07) [GET]
+  [4;36;1mCountry Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:40:30) [GET]
+  [4;35;1mCountry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:40:51) [GET]
+  [4;36;1mCountry Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:44:40) [GET]
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:44:41) [GET]
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:44:57) [GET]
+  [4;35;1mCountry Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/countries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#new (for 127.0.0.1 at 2016-01-18 12:44:58) [GET]
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Rendering template within layouts/countries
+Rendering countries/new
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/countries/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:48:47) [GET]
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;36;1mCountry Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#index (for 127.0.0.1 at 2016-01-18 12:48:48) [GET]
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` [0m
+Rendering template within layouts/countries
+Rendering countries/index
+  [4;36;1mCountry Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/countries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:48:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 95, `updated_at` = '2016-01-18 07:18:50' WHERE `id` = 1[0m
+  [4;36;1mSQL (47.2ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 56ms (View: 1, DB: 49) | 200 OK [http://localhost/countries/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:48:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCountry Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.4ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'japan' AND `countries`.id <> 2) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 78, `updated_at` = '2016-01-18 07:18:51' WHERE `id` = 2[0m
+  [4;36;1mSQL (65.4ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 74ms (View: 1, DB: 67) | 200 OK [http://localhost/countries/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:48:52) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.3ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 53, `updated_at` = '2016-01-18 07:18:52' WHERE `id` = 3[0m
+  [4;36;1mSQL (27.3ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 37ms (View: 1, DB: 29) | 200 OK [http://localhost/countries/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:48:52) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCountry Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.3ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'Australia' AND `countries`.id <> 4) LIMIT 1[0m
+  [4;35;1mCountry Update (0.1ms)[0m   [0mUPDATE `countries` SET `clickcount` = 27, `updated_at` = '2016-01-18 07:18:52' WHERE `id` = 4[0m
+  [4;36;1mSQL (45.5ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 55ms (View: 1, DB: 47) | 200 OK [http://localhost/countries/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:48:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'America' AND `countries`.id <> 3) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 54, `updated_at` = '2016-01-18 07:18:53' WHERE `id` = 3[0m
+  [4;36;1mSQL (40.3ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 49ms (View: 1, DB: 42) | 200 OK [http://localhost/countries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:48:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.3ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'japan' AND `countries`.id <> 2) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 79, `updated_at` = '2016-01-18 07:18:54' WHERE `id` = 2[0m
+  [4;36;1mSQL (36.7ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 45ms (View: 1, DB: 38) | 200 OK [http://localhost/countries/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CountriesController#show (for 127.0.0.1 at 2016-01-18 12:48:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCountry Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT `countries`.id FROM `countries` WHERE (`countries`.`countryname` = BINARY 'India' AND `countries`.id <> 1) LIMIT 1[0m
+  [4;35;1mCountry Update (0.2ms)[0m   [0mUPDATE `countries` SET `clickcount` = 96, `updated_at` = '2016-01-18 07:18:54' WHERE `id` = 1[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+Rendering countries/show
+Completed in 52ms (View: 1, DB: 45) | 200 OK [http://localhost/countries/1]

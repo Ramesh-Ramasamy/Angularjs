@@ -1,18 +1,24 @@
-<% form_for(@country) do |coun| %>
-	<p>
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-6">
+    <% form_for(@country) do |coun| %>
+  <p>
     <%= coun.label :countryname %><br />
-    <%= coun.text_field :countryname %>
+    <%= coun.text_field :countryname, :placeholder => "Country Name"%>
   </p>
   <p>
-    <%= coun.label :countrydesc %><br />
-    <%= coun.text_field :countrydesc %>
+    <%= coun.label :description %><br />
+    <%= coun.text_field :countrydesc, :placeholder => "Country Description" %>
   </p>
   <p>
     <%= coun.label :clickcount %><br />
-    <%= coun.text_field :clickcount %>
+    <%= coun.text_field :clickcount, :placeholder => "Initial Count"%>
   </p>
   <p>
-    <%= coun.submit 'Create_Model' %>
+    <%= coun.submit 'Create' %>
   </p>
 <% end %>
 <%= link_to "Back", countries_path %> 
+  </div>
+  <div class="col-1"></div>
+</div>
