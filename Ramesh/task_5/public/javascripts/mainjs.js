@@ -7,7 +7,7 @@ $(function(){
 	$("#showdetails").on('click','a',function(e){				
 		$("#showlinks").load($(this).attr('href'),function(result){
 			if (result == "") {
-				$("#showlinks").html('<b>Not Comments</b>');
+				$("#showlinks").html('<b>No Comments</b>');
 			};			
 		});	
 
