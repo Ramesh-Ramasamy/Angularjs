@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  countryname: MyString
+  countrydesc: MyText
+  clickcount: 1
+
+two:
+  countryname: MyString
+  countrydesc: MyText
+  clickcount: 1

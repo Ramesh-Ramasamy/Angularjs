@@ -1,27 +1,11 @@
-class PostsController < ApplicationController 
-  
-  # GET /posts
-  # GET /posts.xml
+class PostsController < ApplicationController     
   def index
-    @posts = Post.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @posts }
-    end
-  end
-
-  # GET /posts/1
-  # GET /posts/1.xml
-  
+    @posts = Post.all        
+  end  
   def show
     @post = Post.find(params[:id])
     @post.clickcount = @post.clickcount + 1
     @post.save    
-    respond_to do |format|
-      format.html {render :layout =>false}
-      format.xml  { render :xml => @post }
-      format.js {render :layout =>false}
-    end
+    render :layout => !request.xhr?
   end  
 end

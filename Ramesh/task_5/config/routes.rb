@@ -1,7 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
-    map.connect 'posts/:id', :controller => 'posts', :action => 'view'
-
+  map.resources :countries, :has_many => :comments
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -43,5 +41,5 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-  map.root :controller => "posts"
+  map.root :controller => "countries"  
 end

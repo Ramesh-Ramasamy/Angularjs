@@ -1,0 +1,18 @@
+<% form_for(@country) do |coun| %>
+	<p>
+    <%= coun.label :countryname %><br />
+    <%= coun.text_field :countryname %>
+  </p>
+  <p>
+    <%= coun.label :countrydesc %><br />
+    <%= coun.text_field :countrydesc %>
+  </p>
+  <p>
+    <%= coun.label :clickcount %><br />
+    <%= coun.text_field :clickcount %>
+  </p>
+  <p>
+    <%= coun.submit 'Create_Model' %>
+  </p>
+<% end %>
+<%= link_to "Back", countries_path %> 

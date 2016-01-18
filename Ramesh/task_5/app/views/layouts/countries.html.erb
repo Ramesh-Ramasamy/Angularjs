@@ -4,18 +4,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Posts: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <title>Posts: <%= controller.action_name %></title> 
   <%= stylesheet_link_tag 'main' %>
-  <%= javascript_include_tag :defaults %>  
+  <%= javascript_include_tag "jquery-1.11.3.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "mainjs.js", "data-turbolinks-track" => true  %>
 </head>
 <body>
-<header>Task 4 Ruby On Rails</header>
+<header>Task 5 Ruby On Rails</header>
 <section>
 <p style="color: green"><%= notice %></p>
 
 <%= yield %>
 </section>
-<footer>copyright &copy; www.BuildaBazaar.com</footer>
+<!--<footer>cpoyright &copy; www.BuildaBazaar.com</footer> -->
 </body>
 </html>
