@@ -1,11 +1,16 @@
 $(function(){		
 	$(".col-3 a").click(function(event){		
-		$("#showdetails").load($(this).attr('href'));
+		$("#showdetails").load($(this).attr('href')).fadeIn(300);
 		$("#showlinks").empty();		
 		return false;
 	});	
 	$("#showdetails").on('click','a',function(e){		
-		$("#showlinks").load($(this).attr('href'));		
+		$("#showlinks").load($(this).attr('href'),function(result){
+			if (result == "") {
+				$("#showlinks").html('<b>Not Comments</b>');
+			};			
+		});	
+
 		return false;
 	});	
 	$("section").on('submit','#new_comment',function(e){
