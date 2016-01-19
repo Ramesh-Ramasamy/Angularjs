@@ -1,6 +1,6 @@
 $(function(){		
 	$(".col-3 a").click(function(event){		
-		$("#showdetails").load($(this).attr('href')).fadeIn(300);
+		$("#showdetails").hide().fadeIn(1000).load($(this).attr('href'));
 		$("#showlinks").empty();		
 		return false;
 	});	

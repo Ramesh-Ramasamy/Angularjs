@@ -13,9 +13,7 @@ class CommentsController < ApplicationController
   	@country = Country.find(params[:country_id])
   	@comment = @country.comments.build
   end
-
-  def edit
-  end
+  
   def create
   	@country = Country.find(params[:country_id])
   	@comment = @country.comments.build(params[:comment]) 	
@@ -24,4 +22,5 @@ class CommentsController < ApplicationController
       redirect_to country_comment_url(@country, @comment)
     end  	
   end
+  
 end

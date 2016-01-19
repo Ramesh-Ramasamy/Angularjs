@@ -2,6 +2,6 @@
 <b>Country Name :</b> <%= @country.countryname %><br /><br />
 <b>Description :</b> <%= @country.countrydesc %><br /><br />
 <b>Click Count :</b> <%= @country.clickcount %>
-<br />
+<br /><br />
 <%= link_to 'New comment', new_country_comment_path(@country) %>
 <%= link_to 'Comments', country_comments_path(@country) %>

@@ -15,7 +15,6 @@ header{
 	background: #000;
 	background: -moz-radial-gradient(#4d4d4d 10%, #000 60%);
     background: radial-gradient(#4d4d4d 20%, #000 60%);
-
 }
 section{		
 	width: 100%;
@@ -55,23 +54,38 @@ footer{
 	color: red;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
 }
+#showdetails a{
+	display: inline-block;
+    background-color: #f44336;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    opacity: 0.9;
+}
+#showdetails a:hover{
+	background-color: red;
+}
 .countries {
 	padding: 5px;	
 	width: 100%;
 	overflow:auto;
 }
 .col-2 a{
-	text-align: center;
-	display: inline-block;
-	width:50%;
-	color:#000;	
-	-webkit-transition-property: width;
-	-webkit-transition-duration: 2s;	
+	background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;			
 }
 .col-2 a:hover{
-	width:60%;
-	
-	
+	background-color: #3e8e41;	
 }
 .col-3 a{
 	display: inline-block;

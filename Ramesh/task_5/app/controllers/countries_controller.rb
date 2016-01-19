@@ -7,18 +7,18 @@ class CountriesController < ApplicationController
   	@country = Country.find(params[:id])
     @country.clickcount = @country.clickcount+1
     @country.save
-    render :layout => false
+    render :layout => !request.xhr?
   end
 
   def new
   	@country = Country.new      	
   end
 
-  def edit
-  end
   def create
   	@country = Country.new(params[:country])
   	@country.save
-  	redirect_to(@country)  	
-  end  
+  	redirect_to(countries_path)  	
+    
+  end 
+
 end

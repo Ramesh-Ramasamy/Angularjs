@@ -6,7 +6,7 @@ class CreateCountries < ActiveRecord::Migration
       t.integer :clickcount
 
       t.timestamps
-    end
+    end    
   end
 
   def self.down
