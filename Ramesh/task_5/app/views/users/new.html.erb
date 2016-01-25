@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-6">
+    <h2>Register</h2> <br />
+    <div class="formdesign">
+      <% form_for (@user) do |details| %>
+        Username <br/>
+        <%= details.text_field :username, :placeholder => "User Name" %> <br/><br/>
+        Password <br/>
+        <%= details.password_field :password, :placeholder => "Password" %> <br/><br/>
+        Password Confirmation <br/>
+        <%= details.password_field :password_confirmation, :placeholder => "Confirm Password" %> <br/> <br/>
+        <%= details.submit 'Create' %>
+        <div class="errors">
+          <% if @user.errors.any? %>
+            <ul class="Signup_Errors">
+            <% for message_error in @user.errors.full_messages %>
+              <li> <%= message_error %></li>
+            <% end %>
+            </ul>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-2"></div>
+</div>

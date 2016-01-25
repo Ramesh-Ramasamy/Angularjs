@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-6">
+    <div class="formdesign">
+      <h2>Login </h2><br />
+      <% form_tag(:controller => 'sessions', :action => 'authenticate_login') do  %>
+        <%= text_field_tag (:username), nil, :placeholder => 'Username' %><br /><br />
+        <%= password_field_tag (:password), nil, :placeholder => 'Password' %> <br /><br />
+        <%= submit_tag("Log In") %><br /><br />
+      <% end %>
+      <%= notice %>
+    </div>
+  </div>
+  <div class="col-2"></div>
+</div>

@@ -1,5 +1,5 @@
 $(function(){		
-	$(".col-3 a").click(function(event){		
+	/*$(".col-3 a").click(function(event){		
 		$("#showdetails").hide().fadeIn(1000).load($(this).attr('href'));
 		$("#showlinks").empty();		
 		return false;
@@ -25,5 +25,5 @@ $(function(){
 	        }
 		});
 		return false;	
-	});
+	});*/
 });

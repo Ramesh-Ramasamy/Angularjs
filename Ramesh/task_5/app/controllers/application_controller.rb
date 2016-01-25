@@ -2,9 +2,12 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include ApplicationHelper
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  helper_method :current_user
 
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  def current_user
+      @current_user ||=User.find(session[:user_id]) if session[:user_id]
+  end
 end

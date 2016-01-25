@@ -4,16 +4,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Posts: <%= controller.action_name %></title> 
+  <title>Posts: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'main' %>
   <%= javascript_include_tag "jquery-1.11.3.js", "data-turbolinks-track" => true  %>
   <%= javascript_include_tag "mainjs.js", "data-turbolinks-track" => true  %>
 </head>
 <body>
-<header>Task 5 Ruby On Rails</header>
-<section>
-<p style="color: green"><%= notice %></p>
+<header>
+	Task 6 Ruby On Rails
+	<div class="row">
+		<div class="col-8">
+		</div>
+		<div class="col-4 cl-effect-4">
 
+      <% if current_user %>
+        Hello, <%= current_user.username %>
+      <%= link_to "Log out", logout_path %>
+      <% else %>
+        <%= link_to 'Sign-Up', new_user_path %>
+      <%= link_to "Log in", login_path %>
+      <% end %>
+      <%= link_to 'Home', countries_path %>
+		</div>
+	</div>
+</header>
+<section>
 <%= yield %>
 </section>
 <!--<footer>cpoyright &copy; www.BuildaBazaar.com</footer> -->

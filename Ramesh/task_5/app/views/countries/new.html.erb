@@ -2,19 +2,19 @@
   <div class="col-4"></div>
   <div class="col-6">
     <% form_for(@country) do |coun| %>
-  <p>
-    <%= coun.label :countryname %><br />
-    <%= coun.text_field :countryname, :placeholder => "Country Name"%>
-  </p>
-  <p>
-    <%= coun.label :description %><br />
-    <%= coun.text_field :countrydesc, :placeholder => "Country Description" %>
-  </p> 
-  <p>
-    <%= coun.submit 'Create' %>
-  </p>
-<% end %>
-<%= link_to "Back", countries_path %> 
-  </div>
+      <p>
+        <%= coun.label :countryname %><br />
+        <%= coun.text_field :countryname, :placeholder => "Country Name"%>
+      </p>
+      <p>
+        <%= coun.label :description %><br />
+        <%= coun.text_field :countrydesc, :placeholder => "Country Description" %>
+      </p>
+      <p>
+        <%= coun.submit 'Create' %>
+      </p>
+    <% end %>
+    <%= link_to "Back", countries_path %>
+    </div>
   <div class="col-1"></div>
 </div>

@@ -1,5 +1,16 @@
-<% @comments.each do |comment| %>
-	<b><u><%= comment.name %></u></b><br />
-		<%= comment.commentbody %>
-	<br/>
-<% end %>
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-6">
+    <% @comments.each do |comment| %>
+      <b>
+        <u>
+          <%= comment.name %>
+        </u>
+      </b>	<br />
+        <%= comment.commentbody %>
+      <br/>
+    <% end %>
+    <%= will_paginate @comments %>
+  </div>
+  <div class="col-2"></div>
+</div>
