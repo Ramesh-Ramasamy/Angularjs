@@ -1,0 +1,3 @@
+class Developingcountry < Countrytype
+
+end

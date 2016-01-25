@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
   layout "countries"
+  before_filter :check_user, :only =>[:new, :create, :show]
   def index
     @country = Country.find(params[:country_id])
-    @comments = @country.comments.paginate( :page => params[:page], :per_page => 2)
+    @comments = @country.comments.paginate( :page => params[:page], :per_page => 5)
   end
 
   def show
@@ -11,13 +12,8 @@ class CommentsController < ApplicationController
   end
 
   def new
-    if (session[:user_id])
   	@country = Country.find(params[:country_id])
   	@comment = @country.comments.build
-    else
-      flash[:notice] = "You Must Login Then Only You created Comment"
-      redirect_to '/login'
-    end
   end
 
   def create
@@ -26,6 +22,13 @@ class CommentsController < ApplicationController
   	if @comment.save
       flash[:notice] = 'Comment was successfully saved.'
       redirect_to country_comment_url(@country, @comment)
+    end
+  end
+
+  def check_user
+    if (!current_user)
+      flash[:notice] = "You Must Login Then Only You Post a Comment"
+      redirect_to '/login'
     end
   end
 
