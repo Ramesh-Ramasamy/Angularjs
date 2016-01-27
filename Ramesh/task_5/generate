@@ -170,4 +170,339 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
 	[31mapp/controllers/withcontinents_controller.rb[m
-	[31mapp/
+	[31mapp/controllers/withoutcontinents_controller.rb[m
+	[31mapp/helpers/withcontinents_helper.rb[m
+	[31mapp/helpers/withoutcontinents_helper.rb[m
+	[31mapp/models/withcontinent.rb[m
+	[31mapp/models/withoutcontinent.rb[m
+	[31mapp/views/withcontinents/[m
+	[31mapp/views/withoutcontinents/[m
+	[31mdb/migrate/20160127094051_add_details_to_countries.rb[m
+	[31mgenerate[m
+	[31mtest/functional/withcontinents_controller_test.rb[m
+	[31mtest/functional/withoutcontinents_controller_test.rb[m
+	[31mtest/unit/helpers/withcontinents_helper_test.rb[m
+	[31mtest/unit/helpers/withoutcontinents_helper_test.rb[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git add .
+warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
+whose behaviour will change in Git 2.0 with respect to paths you removed.
+Paths like 'Ramesh/task_5/app/controllers/developedcountries_controller.rb' that are
+removed from your working tree are ignored with this version of Git.
+
+* 'git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+
+* 'git add --all <pathspec>' will let you also record the removals.
+
+Run 'git status' to check the paths you removed from your working tree.
+
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git add .[K-all
+error: did you mean `--all` (with two dashes ?)
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git add -all[C[C[C-all
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git commit -m ""n"a"v"b"a"r" "a"n"d" "s"i"n"g"l"e" "t"a"b"l"e" "i"n"h"e"r"i"t"a"n"c"e" "c"o"m"p"l"e"t"e"d"
+[master f34f4b9] navbar and single table inheritance completed
+ 40 files changed, 5707 insertions(+), 122 deletions(-)
+ delete mode 100644 Ramesh/task_5/app/controllers/developedcountries_controller.rb
+ delete mode 100644 Ramesh/task_5/app/controllers/developingcountries_controller.rb
+ create mode 100644 Ramesh/task_5/app/controllers/withcontinents_controller.rb
+ create mode 100644 Ramesh/task_5/app/controllers/withoutcontinents_controller.rb
+ create mode 100644 Ramesh/task_5/app/helpers/withcontinents_helper.rb
+ create mode 100644 Ramesh/task_5/app/helpers/withoutcontinents_helper.rb
+ delete mode 100644 Ramesh/task_5/app/models/countrytype.rb
+ delete mode 100644 Ramesh/task_5/app/models/developedcountry.rb
+ delete mode 100644 Ramesh/task_5/app/models/developingcountry.rb
+ create mode 100644 Ramesh/task_5/app/models/withcontinent.rb
+ create mode 100644 Ramesh/task_5/app/models/withoutcontinent.rb
+ delete mode 100644 Ramesh/task_5/app/views/developedcountries/index.html.erb
+ delete mode 100644 Ramesh/task_5/app/views/developedcountries/new.html.erb
+ delete mode 100644 Ramesh/task_5/app/views/developedcountries/show.html.erb
+ delete mode 100644 Ramesh/task_5/app/views/developingcountries/index.html.erb
+ delete mode 100644 Ramesh/task_5/app/views/developingcountries/new.html.erb
+ delete mode 100644 Ramesh/task_5/app/views/developingcountries/show.html.erb
+ create mode 100644 Ramesh/task_5/app/views/withcontinents/index.html.erb
+ create mode 100644 Ramesh/task_5/app/views/withcontinents/new.html.erb
+ create mode 100644 Ramesh/task_5/app/views/withcontinents/show.html.erb
+ create mode 100644 Ramesh/task_5/app/views/withoutcontinents/index.html.erb
+ create mode 100644 Ramesh/task_5/app/views/withoutcontinents/new.html.erb
+ create mode 100644 Ramesh/task_5/app/views/withoutcontinents/show.html.erb
+ delete mode 100644 Ramesh/task_5/db/migrate/20160125120146_create_country_types.rb
+ delete mode 100644 Ramesh/task_5/db/migrate/20160125121821_create_countrytypes.rb
+ create mode 100644 Ramesh/task_5/db/migrate/20160127094051_add_details_to_countries.rb
+ create mode 100644 Ramesh/task_5/generate
+ rewrite Ramesh/task_5/public/javascripts/mainjs.js (95%)
+ create mode 100644 Ramesh/task_5/test/functional/withcontinents_controller_test.rb
+ create mode 100644 Ramesh/task_5/test/functional/withoutcontinents_controller_test.rb
+ create mode 100644 Ramesh/task_5/test/unit/helpers/withcontinents_helper_test.rb
+ create mode 100644 Ramesh/task_5/test/unit/helpers/withoutcontinents_helper_test.rb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git push origin master
+Username for 'https://github.com': ramesh.r@infin beam.net
+Password for 'https://ramesh.r@infibeam.net@github.com': 
+To https://github.com/Ramesh-Ramasamy/infibeamprojects.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Ramesh-Ramasamy/infibeamprojects.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git push origin master[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kll[K[Kull -r
+Cannot pull with rebase: You have unstaged changes.
+Please commit or stash them.
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git pull -rsh origin master
+Username for 'https://github.com': ramesh.r@infibeam.net
+Password for 'https://ramesh.r@infibeam.net@github.com': 
+To https://github.com/Ramesh-Ramasamy/infibeamprojects.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Ramesh-Ramasamy/infibeamprojects.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git push origin master[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kit pull origin master
+remote: Counting objects: 54, done.[K
+remote: Compressing objects:   2% (1/47)   [Kremote: Compressing objects:   4% (2/47)   [Kremote: Compressing objects:   6% (3/47)   [Kremote: Compressing objects:   8% (4/47)   [Kremote: Compressing objects:  10% (5/47)   [Kremote: Compressing objects:  12% (6/47)   [Kremote: Compressing objects:  14% (7/47)   [Kremote: Compressing objects:  17% (8/47)   [Kremote: Compressing objects:  19% (9/47)   [Kremote: Compressing objects:  21% (10/47)   [Kremote: Compressing objects:  23% (11/47)   [Kremote: Compressing objects:  25% (12/47)   [Kremote: Compressing objects:  27% (13/47)   [Kremote: Compressing objects:  29% (14/47)   [Kremote: Compressing objects:  31% (15/47)   [Kremote: Compressing objects:  34% (16/47)   [Kremote: Compressing objects:  36% (17/47)   [Kremote: Compressing objects:  38% (18/47)   [Kremote: Compressing objects:  40% (19/47)   [Kremote: Compressing objects:  42% (20/47)   [Kremote: Compressing objects:  44% (21/47)   [Kremote: Compressing objects:  46% (22/47)   [Kremote: Compressing objects:  48% (23/47)   [Kremote: Compressing objects:  51% (24/47)   [Kremote: Compressing objects:  53% (25/47)   [Kremote: Compressing objects:  55% (26/47)   [Kremote: Compressing objects:  57% (27/47)   [Kremote: Compressing objects:  59% (28/47)   [Kremote: Compressing objects:  61% (29/47)   [Kremote: Compressing objects:  63% (30/47)   [Kremote: Compressing objects:  65% (31/47)   [Kremote: Compressing objects:  68% (32/47)   [Kremote: Compressing objects:  70% (33/47)   [Kremote: Compressing objects:  72% (34/47)   [Kremote: Compressing objects:  74% (35/47)   [Kremote: Compressing objects:  76% (36/47)   [Kremote: Compressing objects:  78% (37/47)   [Kremote: Compressing objects:  80% (38/47)   [Kremote: Compressing objects:  82% (39/47)   [Kremote: Compressing objects:  85% (40/47)   [Kremote: Compressing objects:  87% (41/47)   [Kremote: Compressing objects:  89% (42/47)   [Kremote: Compressing objects:  91% (43/47)   [Kremote: Compressing objects:  93% (44/47)   [Kremote: Compressing objects:  95% (45/47)   [Kremote: Compressing objects:  97% (46/47)   [Kremote: Compressing objects: 100% (47/47)   [Kremote: Compressing objects: 100% (47/47), done.[K
+Unpacking objects:   1% (1/54)   Unpacking objects:   3% (2/54)   remote: Total 54 (delta 2), reused 54 (delta 2), pack-reused 0[K
+Unpacking objects:   5% (3/54)   Unpacking objects:   7% (4/54)   Unpacking objects:   9% (5/54)   Unpacking objects:  11% (6/54)   Unpacking objects:  12% (7/54)   Unpacking objects:  14% (8/54)   Unpacking objects:  16% (9/54)   Unpacking objects:  18% (10/54)   Unpacking objects:  20% (11/54)   Unpacking objects:  22% (12/54)   Unpacking objects:  24% (13/54)   Unpacking objects:  25% (14/54)   Unpacking objects:  27% (15/54)   Unpacking objects:  29% (16/54)   Unpacking objects:  31% (17/54)   Unpacking objects:  33% (18/54)   Unpacking objects:  35% (19/54)   Unpacking objects:  37% (20/54)   Unpacking objects:  38% (21/54)   Unpacking objects:  40% (22/54)   Unpacking objects:  42% (23/54)   Unpacking objects:  44% (24/54)   Unpacking objects:  46% (25/54)   Unpacking objects:  48% (26/54)   Unpacking objects:  50% (27/54)   Unpacking objects:  51% (28/54)   Unpacking objects:  53% (29/54)   Unpacking objects:  55% (30/54)   Unpacking objects:  57% (31/54)   Unpacking objects:  59% (32/54)   Unpacking objects:  61% (33/54)   Unpacking objects:  62% (34/54)   Unpacking objects:  64% (35/54)   Unpacking objects:  66% (36/54)   Unpacking objects:  68% (37/54)   Unpacking objects:  70% (38/54)   Unpacking objects:  72% (39/54)   Unpacking objects:  74% (40/54)   Unpacking objects:  75% (41/54)   Unpacking objects:  77% (42/54)   Unpacking objects:  79% (43/54)   Unpacking objects:  81% (44/54)   Unpacking objects:  83% (45/54)   Unpacking objects:  85% (46/54)   Unpacking objects:  87% (47/54)   Unpacking objects:  88% (48/54)   Unpacking objects:  90% (49/54)   Unpacking objects:  92% (50/54)   Unpacking objects:  94% (51/54)   Unpacking objects:  96% (52/54)   Unpacking objects:  98% (53/54)   Unpacking objects: 100% (54/54)   Unpacking objects: 100% (54/54), done.
+From https://github.com/Ramesh-Ramasamy/infibeamprojects
+ * branch            master     -> FETCH_HEAD
+   a52f74e..e7338ec  master     -> origin/master
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;39r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[39;1H"~/Documents/infibeamprojects/.git/MERGE_MSG" 7L, 304C[>c[1;1H[33mMerge branch 'master' of https://github.com/Ramesh[m-Ramasamy/infibeamprojects
+
+[34m# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.[m
+[1m[34m~                                                                                                                                                     [9;1H~                                                                                                                                                     [10;1H~                                                                                                                                                     [11;1H~                                                                                                                                                     [12;1H~                                                                                                                                                     [13;1H~                                                                                                                                                     [14;1H~                                                                                                                                                     [15;1H~                                                                                                                                                     [16;1H~                                                                                                                                                     [17;1H~                                                                                                                                                     [18;1H~                                                                                                                                                     [19;1H~                                                                                                                                                     [20;1H~                                                                                                                                                     [21;1H~                                                                                                                                                     [22;1H~                                                                                                                                                     [23;1H~                                                                                                                                                     [24;1H~                                                                                                                                                     [25;1H~                                                                                                                                                     [26;1H~                                                                                                                                                     [27;1H~                                                                                                                                                     [28;1H~                                                                                                                                                     [29;1H~                                                                                                                                                     [30;1H~                                                                                                                                                     [31;1H~                                                                                                                                                     [32;1H~                                                                                                                                                     [33;1H~                                                                                                                                                     [34;1H~                                                                                                                                                     [35;1H~                                                                                                                                                     [36;1H~                                                                                                                                                     [37;1H~                                                                                                                                                     [38;1H~                                                                                                                                                     [m[39;133H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[39;1H[K[39;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[39;1H[K[39;1H[?1l>[?12l[?25h[?1049lMerge made by the 'recursive' strategy.
+ Angupriya/task4/firstwebpage/README                                            |  243 [32m++[m
+ Angupriya/task4/firstwebpage/Rakefile                                          |   10 [32m+[m
+ Angupriya/task4/firstwebpage/app/controllers/application_controller.rb         |   10 [32m+[m
+ Angupriya/task4/firstwebpage/app/controllers/comments_controller.rb            |   25 [32m+[m
+ Angupriya/task4/firstwebpage/app/controllers/counters_controller.rb            |   28 [32m+[m
+ Angupriya/task4/firstwebpage/app/helpers/application_helper.rb                 |    3 [32m+[m
+ Angupriya/task4/firstwebpage/app/helpers/comments_helper.rb                    |    2 [32m+[m
+ Angupriya/task4/firstwebpage/app/helpers/counters_helper.rb                    |    2 [32m+[m
+ Angupriya/task4/firstwebpage/app/models/comment.rb                             |    4 [32m+[m
+ Angupriya/task4/firstwebpage/app/models/counter.rb                             |   11 [32m+[m
+ Angupriya/task4/firstwebpage/app/views/comments/index.html.erb                 |    1 [32m+[m
+ Angupriya/task4/firstwebpage/app/views/comments/new.html.erb                   |    9 [32m+[m
+ Angupriya/task4/firstwebpage/app/views/comments/show.html.erb                  |   12 [32m+[m
+ Angupriya/task4/firstwebpage/app/views/counters/index.html.erb                 |   14 [32m+[m
+ Angupriya/task4/firstwebpage/app/views/counters/new.html.erb                   |   18 [32m+[m
+ Angupriya/task4/firstwebpage/app/views/counters/show.html.erb                  |   17 [32m+[m
+ Angupriya/task4/firstwebpage/app/views/layouts/counters.html.erb               |   17 [32m+[m
+ Angupriya/task4/firstwebpage/config/boot.rb                                    |  110 [32m+[m
+ Angupriya/task4/firstwebpage/config/database.yml                               |   48 [32m+[m
+ Angupriya/task4/firstwebpage/config/environment.rb                             |   41 [32m+[m
+ Angupriya/task4/firstwebpage/config/environments/development.rb                |   17 [32m+[m
+ Angupriya/task4/firstwebpage/config/environments/production.rb                 |   28 [32m+[m
+ Angupriya/task4/firstwebpage/config/environments/test.rb                       |   28 [32m+[m
+ Angupriya/task4/firstwebpage/config/initializers/backtrace_silencers.rb        |    7 [32m+[m
+ Angupriya/task4/firstwebpage/config/initializers/cookie_verification_secret.rb |    7 [32m+[m
+ Angupriya/task4/firstwebpage/config/initializers/inflections.rb                |   10 [32m+[m
+ Angupriya/task4/firstwebpage/config/initializers/mime_types.rb                 |    5 [32m+[m
+ Angupriya/task4/firstwebpage/config/initializers/new_rails_defaults.rb         |   21 [32m+[m
+ Angupriya/task4/firstwebpage/config/initializers/session_store.rb              |   15 [32m+[m
+ Angupriya/task4/firstwebpage/config/locales/en.yml                             |    5 [32m+[m
+ Angupriya/task4/firstwebpage/config/routes.rb                                  |    7 [32m+[m
+ Angupriya/task4/firstwebpage/db/migrate/20160118101721_create_comments.rb      |   15 [32m+[m
+ Angupriya/task4/firstwebpage/db/migrate/20160118103505_create_counters.rb      |   15 [32m+[m
+ Angupriya/task4/firstwebpage/db/schema.rb                                      |   30 [32m+[m
+ Angupriya/task4/firstwebpage/db/seeds.rb                                       |    7 [32m+[m
+ Angupriya/task4/firstwebpage/doc/README_FOR_APP                                |    2 [32m+[m
+ Angupriya/task4/firstwebpage/log/development.log                               | 9811 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ Angupriya/task4/firstwebpage/log/production.log                                |    0
+ Angupriya/task4/firstwebpage/log/server.log                                    |    0
+ Angupriya/task4/firstwebpage/log/test.log                                      |    0
+ Angupriya/task4/firstwebpage/public/404.html                                   |   30 [32m+[m
+ Angupriya/task4/firstwebpage/public/422.html                                   |   30 [32m+[m
+ Angupriya/task4/firstwebpage/public/500.html                                   |   30 [32m+[m
+ Angupriya/task4/firstwebpage/public/favicon.ico                                |    0
+ Angupriya/task4/firstwebpage/public/images/rails.png                           |  Bin [31m0[m -> [32m6646[m bytes
+ Angupriya/task4/firstwebpage/public/javascripts/application.js                 |    2 [32m+[m
+ Angupriya/task4/firstwebpage/public/javascripts/controls.js                    |  963 [32m++++++[m
+ Angupriya/task4/firstwebpage/public/javascripts/counter.js                     |   31 [32m+[m
+ Angupriya/task4/firstwebpage/public/javascripts/dragdrop.js                    |  973 [32m+++++++[m
+ Angupriya/task4/firstwebpage/public/javascripts/effects.js                     | 1128 [32m++++++++[m
+ Angupriya/task4/firstwebpage/public/javascripts/jquery-1.11.3.min.js           |    5 [32m+[m
+ Angupriya/task4/firstwebpage/public/javascripts/prototype.js                   | 4320 [32m+++++++++++++++++++++++++++[m
+ Angupriya/task4/firstwebpage/public/robots.txt                                 |    5 [32m+[m
+ Angupriya/task4/firstwebpage/public/stylesheets/counterstyle.css               |   95 [32m+[m
+ Angupriya/task4/firstwebpage/script/about                                      |    4 [32m+[m
+ Angupriya/task4/firstwebpage/script/console                                    |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/dbconsole                                  |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/destroy                                    |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/generate                                   |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/performance/benchmarker                    |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/performance/profiler                       |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/plugin                                     |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/runner                                     |    3 [32m+[m
+ Angupriya/task4/firstwebpage/script/server                                     |    3 [32m+[m
+ Angupriya/task4/firstwebpage/test/fixtures/comments.yml                        |   11 [32m+[m
+ Angupriya/task4/firstwebpage/test/fixtures/counters.yml                        |   11 [32m+[m
+ Angupriya/task4/firstwebpage/test/functional/comments_controller_test.rb       |    8 [32m+[m
+ Angupriya/task4/firstwebpage/test/functional/counters_controller_test.rb       |    8 [32m+[m
+ Angupriya/task4/firstwebpage/test/performance/browsing_test.rb                 |    9 [32m+[m
+ Angupriya/task4/firstwebpage/test/test_helper.rb                               |   38 [32m+[m
+ Angupriya/task4/firstwebpage/test/unit/comment_test.rb                         |    8 [32m+[m
+ Angupriya/task4/firstwebpage/test/unit/counter_test.rb                         |    8 [32m+[m
+ Angupriya/task4/firstwebpage/test/unit/helpers/comments_helper_test.rb         |    4 [32m+[m
+ Angupriya/task4/firstwebpage/test/unit/helpers/counters_helper_test.rb         |    4 [32m+[m
+ 74 files changed, 18407 insertions(+)
+ create mode 100644 Angupriya/task4/firstwebpage/README
+ create mode 100644 Angupriya/task4/firstwebpage/Rakefile
+ create mode 100644 Angupriya/task4/firstwebpage/app/controllers/application_controller.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/controllers/comments_controller.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/controllers/counters_controller.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/helpers/application_helper.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/helpers/comments_helper.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/helpers/counters_helper.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/models/comment.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/models/counter.rb
+ create mode 100644 Angupriya/task4/firstwebpage/app/views/comments/index.html.erb
+ create mode 100644 Angupriya/task4/firstwebpage/app/views/comments/new.html.erb
+ create mode 100644 Angupriya/task4/firstwebpage/app/views/comments/show.html.erb
+ create mode 100644 Angupriya/task4/firstwebpage/app/views/counters/index.html.erb
+ create mode 100644 Angupriya/task4/firstwebpage/app/views/counters/new.html.erb
+ create mode 100644 Angupriya/task4/firstwebpage/app/views/counters/show.html.erb
+ create mode 100644 Angupriya/task4/firstwebpage/app/views/layouts/counters.html.erb
+ create mode 100644 Angupriya/task4/firstwebpage/config/boot.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/database.yml
+ create mode 100644 Angupriya/task4/firstwebpage/config/environment.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/environments/development.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/environments/production.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/environments/test.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/initializers/backtrace_silencers.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/initializers/cookie_verification_secret.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/initializers/inflections.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/initializers/mime_types.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/initializers/new_rails_defaults.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/initializers/session_store.rb
+ create mode 100644 Angupriya/task4/firstwebpage/config/locales/en.yml
+ create mode 100644 Angupriya/task4/firstwebpage/config/routes.rb
+ create mode 100644 Angupriya/task4/firstwebpage/db/migrate/20160118101721_create_comments.rb
+ create mode 100644 Angupriya/task4/firstwebpage/db/migrate/20160118103505_create_counters.rb
+ create mode 100644 Angupriya/task4/firstwebpage/db/schema.rb
+ create mode 100644 Angupriya/task4/firstwebpage/db/seeds.rb
+ create mode 100644 Angupriya/task4/firstwebpage/doc/README_FOR_APP
+ create mode 100644 Angupriya/task4/firstwebpage/log/development.log
+ create mode 100644 Angupriya/task4/firstwebpage/log/production.log
+ create mode 100644 Angupriya/task4/firstwebpage/log/server.log
+ create mode 100644 Angupriya/task4/firstwebpage/log/test.log
+ create mode 100644 Angupriya/task4/firstwebpage/public/404.html
+ create mode 100644 Angupriya/task4/firstwebpage/public/422.html
+ create mode 100644 Angupriya/task4/firstwebpage/public/500.html
+ create mode 100644 Angupriya/task4/firstwebpage/public/favicon.ico
+ create mode 100644 Angupriya/task4/firstwebpage/public/images/rails.png
+ create mode 100644 Angupriya/task4/firstwebpage/public/javascripts/application.js
+ create mode 100644 Angupriya/task4/firstwebpage/public/javascripts/controls.js
+ create mode 100644 Angupriya/task4/firstwebpage/public/javascripts/counter.js
+ create mode 100644 Angupriya/task4/firstwebpage/public/javascripts/dragdrop.js
+ create mode 100644 Angupriya/task4/firstwebpage/public/javascripts/effects.js
+ create mode 100644 Angupriya/task4/firstwebpage/public/javascripts/jquery-1.11.3.min.js
+ create mode 100644 Angupriya/task4/firstwebpage/public/javascripts/prototype.js
+ create mode 100644 Angupriya/task4/firstwebpage/public/robots.txt
+ create mode 100644 Angupriya/task4/firstwebpage/public/stylesheets/counterstyle.css
+ create mode 100755 Angupriya/task4/firstwebpage/script/about
+ create mode 100755 Angupriya/task4/firstwebpage/script/console
+ create mode 100755 Angupriya/task4/firstwebpage/script/dbconsole
+ create mode 100755 Angupriya/task4/firstwebpage/script/destroy
+ create mode 100755 Angupriya/task4/firstwebpage/script/generate
+ create mode 100755 Angupriya/task4/firstwebpage/script/performance/benchmarker
+ create mode 100755 Angupriya/task4/firstwebpage/script/performance/profiler
+ create mode 100755 Angupriya/task4/firstwebpage/script/plugin
+ create mode 100755 Angupriya/task4/firstwebpage/script/runner
+ create mode 100755 Angupriya/task4/firstwebpage/script/server
+ create mode 100644 Angupriya/task4/firstwebpage/test/fixtures/comments.yml
+ create mode 100644 Angupriya/task4/firstwebpage/test/fixtures/counters.yml
+ create mode 100644 Angupriya/task4/firstwebpage/test/functional/comments_controller_test.rb
+ create mode 100644 Angupriya/task4/firstwebpage/test/functional/counters_controller_test.rb
+ create mode 100644 Angupriya/task4/firstwebpage/test/performance/browsing_test.rb
+ create mode 100644 Angupriya/task4/firstwebpage/test/test_helper.rb
+ create mode 100644 Angupriya/task4/firstwebpage/test/unit/comment_test.rb
+ create mode 100644 Angupriya/task4/firstwebpage/test/unit/counter_test.rb
+ create mode 100644 Angupriya/task4/firstwebpage/test/unit/helpers/comments_helper_test.rb
+ create mode 100644 Angupriya/task4/firstwebpage/test/unit/helpers/counters_helper_test.rb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git pull origin master[1P[1P[1P[1@u[1@s[1@h
+Username for 'https://github.com': ramesh.r@infibeam.net
+Password for 'https://ramesh.r@infibeam.net@github.com': 
+Counting objects: 83, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/46)   Compressing objects:   4% (2/46)   Compressing objects:   6% (3/46)   Compressing objects:   8% (4/46)   Compressing objects:  10% (5/46)   Compressing objects:  13% (6/46)   Compressing objects:  15% (7/46)   Compressing objects:  17% (8/46)   Compressing objects:  19% (9/46)   Compressing objects:  21% (10/46)   Compressing objects:  23% (11/46)   Compressing objects:  26% (12/46)   Compressing objects:  28% (13/46)   Compressing objects:  30% (14/46)   Compressing objects:  32% (15/46)   Compressing objects:  34% (16/46)   Compressing objects:  36% (17/46)   Compressing objects:  39% (18/46)   Compressing objects:  41% (19/46)   Compressing objects:  43% (20/46)   Compressing objects:  45% (21/46)   Compressing objects:  47% (22/46)   Compressing objects:  50% (23/46)   Compressing objects:  52% (24/46)   Compressing objects:  54% (25/46)   Compressing objects:  56% (26/46)   Compressing objects:  58% (27/46)   Compressing objects:  60% (28/46)   Compressing objects:  63% (29/46)   Compressing objects:  65% (30/46)   Compressing objects:  67% (31/46)   Compressing objects:  69% (32/46)   Compressing objects:  71% (33/46)   Compressing objects:  73% (34/46)   Compressing objects:  76% (35/46)   Compressing objects:  78% (36/46)   Compressing objects:  80% (37/46)   Compressing objects:  82% (38/46)   Compressing objects:  84% (39/46)   Compressing objects:  86% (40/46)   Compressing objects:  89% (41/46)   Compressing objects:  91% (42/46)   Compressing objects:  93% (43/46)   Compressing objects:  95% (44/46)   Compressing objects:  97% (45/46)   Compressing objects: 100% (46/46)   Compressing objects: 100% (46/46), done.
+Writing objects:   1% (1/52)   Writing objects:   3% (2/52)   Writing objects:   5% (3/52)   Writing objects:   7% (4/52)   Writing objects:   9% (5/52)   Writing objects:  11% (6/52)   Writing objects:  13% (7/52)   Writing objects:  15% (8/52)   Writing objects:  17% (9/52)   Writing objects:  19% (10/52)   Writing objects:  21% (11/52)   Writing objects:  23% (12/52)   Writing objects:  25% (13/52)   Writing objects:  26% (14/52)   Writing objects:  28% (15/52)   Writing objects:  30% (16/52)   Writing objects:  32% (17/52)   Writing objects:  34% (18/52)   Writing objects:  36% (19/52)   Writing objects:  38% (20/52)   Writing objects:  40% (21/52)   Writing objects:  42% (22/52)   Writing objects:  44% (23/52)   Writing objects:  48% (25/52)   Writing objects:  50% (26/52)   Writing objects:  51% (27/52)   Writing objects:  53% (28/52)   Writing objects:  55% (29/52)   Writing objects:  57% (30/52)   Writing objects:  59% (31/52)   Writing objects:  61% (32/52)   Writing objects:  63% (33/52)   Writing objects:  65% (34/52)   Writing objects:  67% (35/52)   Writing objects:  69% (36/52)   Writing objects:  71% (37/52)   Writing objects:  73% (38/52)   Writing objects:  75% (39/52)   Writing objects:  76% (40/52)   Writing objects:  78% (41/52)   Writing objects:  80% (42/52)   Writing objects:  82% (43/52)   Writing objects:  84% (44/52)   Writing objects:  86% (45/52)   Writing objects:  90% (47/52)   Writing objects:  92% (48/52)   Writing objects:  94% (49/52)   Writing objects:  96% (50/52)   Writing objects:  98% (51/52)   Writing objects: 100% (52/52)   Writing objects: 100% (52/52), 19.98 KiB | 0 bytes/s, done.
+Total 52 (delta 24), reused 0 (delta 0)
+To https://github.com/Ramesh-Ramasamy/infibeamprojects.git
+   e7338ec..f0ca577  master -> master
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git st[K[Klg
+[?1h=*   [31mf0ca577[m -[33m (HEAD, origin/master, origin/HEAD, master)[m Merge branch 'master' of https://github.com/Ramesh-Ramasamy/infibeamprojects [32m(49 seconds ago)[m
+[31m|[m[32m\[m  [m
+[31m|[m * [31me7338ec[m -[33m[m Count number of times link visited using rails [32m(7 hours ago) [1;34m<Angupriya>[m[m
+* [32m|[m [31mf34f4b9[m -[33m[m navbar and single table inheritance completed [32m(3 minutes ago) [1;34m<Ramesh-Ramasamy>[m[m
+[32m|[m[32m/[m  [m
+* [31ma52f74e[m -[33m[m simple table inheritance partially developed [32m(2 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31ma24e5f0[m -[33m[m task 6 partially complated [32m(2 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m6d02f51[m -[33m[m task 5 completed and showed to ajay [32m(8 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31maf05f55[m -[33m[m bugfix: not comments to no comments [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m4945236[m -[33m[m Add css to new countries page [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m80a48df[m -[33m[m adding No comments statements [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m586580a[m -[33m[m task 5 completed [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31macf61d3[m -[33m[m Removed edit,new controllers and changed button font size [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31mfabcb94[m -[33m[m Removed unwantedd files [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m82e0408[m -[33m[m Changed the README File into My Application Description [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m202ef11[m -[33m[m rakefile modified to my application description [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m08409a1[m -[33m[m creating dynamic webpage using rails framework [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m0d62259[m -[33m[m checking to not in id [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31maf06a51[m -[33m[m count of buttons clicked without using id [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m7f5d315[m -[33m[m using jquery to display count of button [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m1f5a2e9[m -[33m[m html file of task3 [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m275f4ec[m -[33m[m css file of task3 [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31mb379e6d[m -[33m[m Task 3 splitted in folder and some simple ajax load function [32m(5 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m548bfa2[m -[33m[m Task 3 completed in jquery [32m(5 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31md084dcc[m -[33m[m task3 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31mf89b271[m -[33m[m stylesheet for task3 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m605818e[m -[33m[m jquery library file [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m36fadb5[m -[33m[m created n buttons without using values [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m77bd1cc[m -[33m[m stylesheet for task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31madbd332[m -[33m[m task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m3cf96b5[m -[33m[m displaying total clicks of buttons [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m864dbd4[m -[33m[m style sheet of task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m952edf7[m -[33m[m task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31mcef4a8e[m -[33m[m stylesheet for task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m6954081[m -[33m[m creating n buttons and displaying number of times  it is clicked [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31me20b67b[m -[33m[m Task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m58883c8[m -[33m[m Task_2 completed [32m(6 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m8bbb71d[m -[33m[m file moved to correct folder [32m(6 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+:[K[K[?1l>infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ 
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git lg
+[?1h=*   [31mf0ca577[m -[33m (HEAD, origin/master, origin/HEAD, master)[m Merge branch 'master' of https://github.com/Ramesh-Ramasamy/infibeamprojects [32m(3 minutes ago) [1;34m[m
+[31m|[m[32m\[m  [m
+[31m|[m * [31me7338ec[m -[33m[m Count number of times link visited using rails [32m(7 hours ago) [1;34m<Angupriya>[m[m
+* [32m|[m [31mf34f4b9[m -[33m[m navbar and single table inheritance completed [32m(5 minutes ago) [1;34m<Ramesh-Ramasamy>[m[m
+[32m|[m[32m/[m  [m
+* [31ma52f74e[m -[33m[m simple table inheritance partially developed [32m(2 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31ma24e5f0[m -[33m[m task 6 partially complated [32m(2 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m6d02f51[m -[33m[m task 5 completed and showed to ajay [32m(8 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31maf05f55[m -[33m[m bugfix: not comments to no comments [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m4945236[m -[33m[m Add css to new countries page [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m80a48df[m -[33m[m adding No comments statements [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m586580a[m -[33m[m task 5 completed [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31macf61d3[m -[33m[m Removed edit,new controllers and changed button font size [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31mfabcb94[m -[33m[m Removed unwantedd files [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m82e0408[m -[33m[m Changed the README File into My Application Description [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m202ef11[m -[33m[m rakefile modified to my application description [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m08409a1[m -[33m[m creating dynamic webpage using rails framework [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m0d62259[m -[33m[m checking to not in id [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31maf06a51[m -[33m[m count of buttons clicked without using id [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m7f5d315[m -[33m[m using jquery to display count of button [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m1f5a2e9[m -[33m[m html file of task3 [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m275f4ec[m -[33m[m css file of task3 [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31mb379e6d[m -[33m[m Task 3 splitted in folder and some simple ajax load function [32m(5 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m548bfa2[m -[33m[m Task 3 completed in jquery [32m(5 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31md084dcc[m -[33m[m task3 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31mf89b271[m -[33m[m stylesheet for task3 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m605818e[m -[33m[m jquery library file [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m36fadb5[m -[33m[m created n buttons without using values [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m77bd1cc[m -
