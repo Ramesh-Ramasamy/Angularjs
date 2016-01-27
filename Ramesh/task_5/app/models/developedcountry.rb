@@ -1,3 +1,0 @@
-class Developedcountry < Countrytype
-
-end

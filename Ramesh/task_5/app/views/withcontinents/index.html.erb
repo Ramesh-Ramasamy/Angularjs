@@ -1,0 +1,5 @@
+<ul>
+	<% @withcontinents.each do |c| %>
+		<li><%= link_to c.countryname+"<br />"+truncate( c.countrydesc, :length => 17), c %></li>
+	<% end %> 
+</ul>

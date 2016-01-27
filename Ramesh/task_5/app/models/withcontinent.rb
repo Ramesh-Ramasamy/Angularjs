@@ -1,0 +1,3 @@
+class Withcontinent < Country
+	
+end

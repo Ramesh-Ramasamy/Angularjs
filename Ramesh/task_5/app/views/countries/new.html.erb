@@ -11,6 +11,18 @@
         <%= coun.text_field :countrydesc, :placeholder => "Country Description" %>
       </p>
       <p>
+        <%= coun.radio_button :type, "Withcontinent" %>
+        <%= coun.label :type, "Withcontinent", :value => "Withcontinent" %>
+        <%= coun.radio_button :type, "Withoutcontinent" %>
+        <%= coun.label :type, "Withoutcontinent", :value => "Withoutcontinent" %>
+      </p>
+      <p>
+        <div id="showcontinent" class="block" >
+          <%= coun.label :ContinentName  %><br />
+          <%= coun.text_field :continent %>
+        </div>
+      </p>
+      <p>
         <%= coun.submit 'Create' %>
       </p>
     <% end %>

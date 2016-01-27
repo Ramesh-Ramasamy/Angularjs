@@ -1,0 +1,3 @@
+class Withoutcontinent < Country
+	
+end

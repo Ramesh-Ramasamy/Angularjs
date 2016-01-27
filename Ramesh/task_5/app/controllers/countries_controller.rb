@@ -14,7 +14,12 @@ class CountriesController < ApplicationController
   end
 
   def create
-  	@country = Country.new(params[:country])
+    if (params[:country][:type] == "Withcontinent")
+      @country = Withcontinent.new(params[:country]) 
+    else
+      params[:country][:continent] = nil
+      @country = Withoutcontinent.new(params[:country]) 
+    end   	
   	@country.save
   	redirect_to(countries_path)
   end

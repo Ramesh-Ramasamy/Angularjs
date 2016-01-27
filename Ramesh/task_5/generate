@@ -1,0 +1,173 @@
+Script started on Wednesday 27 January 2016 02:55:05 PM IST
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migratecd Documents/infibeamprojects/Ramesh/task_5ls[Kcd ..[3Plsrails ball -d mysqlls[Kcd ..[3Plscd Documents/infibeamprojects/Ramesh/task_5[28Prake db:migrate[Krake db:migratecd Documents/infibeamprojects/Ramesh/task_5ls[Kcd ..[3Plscd Documents/infibeamprojects/Ramesh/task_5[28Prake db:migrate[Krails generate migration AddDetailsToCountries continentLstring type:string
+      create  
+File exists - generate
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rails generate migration AddDetailsToCountries continentLstring type:string[1P[1@:
+      create  
+File exists - generate
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake:db[K[K[K db:create
+task_5_development already exists
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:create[Cmigrateils generate migration AddDetailsToCountries continent:string type:stringL[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1@s[1@c[1@r[1@i[1@p[1@t[1@/
+      exists  db/migrate
+      create  db/migrate/20160127094051_add_details_to_countries.rb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate
+==  AddDetailsToCountries: migrating ==========================================
+-- add_column(:countries, :continent, :string)
+   -> 0.2149s
+-- add_column(:countries, :type, :string)
+   -> 0.2006s
+==  AddDetailsToCountries: migrated (0.4159s) =================================
+
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake routes;
+    country_comments GET    /countries/:country_id/comments(.:format)          {:action=>"index", :controller=>"comments"}
+                     POST   /countries/:country_id/comments(.:format)          {:action=>"create", :controller=>"comments"}
+ new_country_comment GET    /countries/:country_id/comments/new(.:format)      {:action=>"new", :controller=>"comments"}
+edit_country_comment GET    /countries/:country_id/comments/:id/edit(.:format) {:action=>"edit", :controller=>"comments"}
+     country_comment GET    /countries/:country_id/comments/:id(.:format)      {:action=>"show", :controller=>"comments"}
+                     PUT    /countries/:country_id/comments/:id(.:format)      {:action=>"update", :controller=>"comments"}
+                     DELETE /countries/:country_id/comments/:id(.:format)      {:action=>"destroy", :controller=>"comments"}
+           countries GET    /countries(.:format)                               {:action=>"index", :controller=>"countries"}
+                     POST   /countries(.:format)                               {:action=>"create", :controller=>"countries"}
+         new_country GET    /countries/new(.:format)                           {:action=>"new", :controller=>"countries"}
+        edit_country GET    /countries/:id/edit(.:format)                      {:action=>"edit", :controller=>"countries"}
+             country GET    /countries/:id(.:format)                           {:action=>"show", :controller=>"countries"}
+                     PUT    /countries/:id(.:format)                           {:action=>"update", :controller=>"countries"}
+                     DELETE /countries/:id(.:format)                           {:action=>"destroy", :controller=>"countries"}
+               users GET    /users(.:format)                                   {:action=>"index", :controller=>"users"}
+                     POST   /users(.:format)                                   {:action=>"create", :controller=>"users"}
+            new_user GET    /users/new(.:format)                               {:action=>"new", :controller=>"users"}
+           edit_user GET    /users/:id/edit(.:format)                          {:action=>"edit", :controller=>"users"}
+                user GET    /users/:id(.:format)                               {:action=>"show", :controller=>"users"}
+                     PUT    /users/:id(.:format)                               {:action=>"update", :controller=>"users"}
+                     DELETE /users/:id(.:format)                               {:action=>"destroy", :controller=>"users"}
+            sessions GET    /sessions(.:format)                                {:action=>"index", :controller=>"sessions"}
+                     POST   /sessions(.:format)                                {:action=>"create", :controller=>"sessions"}
+         new_session GET    /sessions/new(.:format)                            {:action=>"new", :controller=>"sessions"}
+        edit_session GET    /sessions/:id/edit(.:format)                       {:action=>"edit", :controller=>"sessions"}
+             session GET    /sessions/:id(.:format)                            {:action=>"show", :controller=>"sessions"}
+                     PUT    /sessions/:id(.:format)                            {:action=>"update", :controller=>"sessions"}
+                     DELETE /sessions/:id(.:format)                            {:action=>"destroy", :controller=>"sessions"}
+              logout        /logout                                            {:action=>"logout", :controller=>"sessions"}
+               login        /login                                             {:action=>"login", :controller=>"sessions"}
+   authenticate_user        /authenticate_user                                 {:action=>"authenticate_user", :controller=>"sessions"}
+                            /:controller/:action/:id                           
+                            /:controller/:action/:id(.:format)                 
+                root        /                                                  {:action=>"index", :controller=>"countries"}
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ script/generate controller withcontinents index new show
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/withcontinents
+      exists  test/functional/
+      exists  test/unit/helpers/
+      create  app/controllers/withcontinents_controller.rb
+      create  test/functional/withcontinents_controller_test.rb
+      create  app/helpers/withcontinents_helper.rb
+      create  test/unit/helpers/withcontinents_helper_test.rb
+      create  app/views/withcontinents/index.html.erb
+      create  app/views/withcontinents/new.html.erb
+      create  app/views/withcontinents/show.html.erb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ script/generate controller withcontinents index new show[1@o[1@u[1@t
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/withoutcontinents
+      exists  test/functional/
+      exists  test/unit/helpers/
+      create  app/controllers/withoutcontinents_controller.rb
+      create  test/functional/withoutcontinents_controller_test.rb
+      create  app/helpers/withoutcontinents_helper.rb
+      create  test/unit/helpers/withoutcontinents_helper_test.rb
+      create  app/views/withoutcontinents/index.html.erb
+      create  app/views/withoutcontinents/new.html.erb
+      create  app/views/withoutcontinents/show.html.erb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake routes
+     country_comments GET    /countries/:country_id/comments(.:format)          {:action=>"index", :controller=>"comments"}
+                      POST   /countries/:country_id/comments(.:format)          {:action=>"create", :controller=>"comments"}
+  new_country_comment GET    /countries/:country_id/comments/new(.:format)      {:action=>"new", :controller=>"comments"}
+ edit_country_comment GET    /countries/:country_id/comments/:id/edit(.:format) {:action=>"edit", :controller=>"comments"}
+      country_comment GET    /countries/:country_id/comments/:id(.:format)      {:action=>"show", :controller=>"comments"}
+                      PUT    /countries/:country_id/comments/:id(.:format)      {:action=>"update", :controller=>"comments"}
+                      DELETE /countries/:country_id/comments/:id(.:format)      {:action=>"destroy", :controller=>"comments"}
+            countries GET    /countries(.:format)                               {:action=>"index", :controller=>"countries"}
+                      POST   /countries(.:format)                               {:action=>"create", :controller=>"countries"}
+          new_country GET    /countries/new(.:format)                           {:action=>"new", :controller=>"countries"}
+         edit_country GET    /countries/:id/edit(.:format)                      {:action=>"edit", :controller=>"countries"}
+              country GET    /countries/:id(.:format)                           {:action=>"show", :controller=>"countries"}
+                      PUT    /countries/:id(.:format)                           {:action=>"update", :controller=>"countries"}
+                      DELETE /countries/:id(.:format)                           {:action=>"destroy", :controller=>"countries"}
+                users GET    /users(.:format)                                   {:action=>"index", :controller=>"users"}
+                      POST   /users(.:format)                                   {:action=>"create", :controller=>"users"}
+             new_user GET    /users/new(.:format)                               {:action=>"new", :controller=>"users"}
+            edit_user GET    /users/:id/edit(.:format)                          {:action=>"edit", :controller=>"users"}
+                 user GET    /users/:id(.:format)                               {:action=>"show", :controller=>"users"}
+                      PUT    /users/:id(.:format)                               {:action=>"update", :controller=>"users"}
+                      DELETE /users/:id(.:format)                               {:action=>"destroy", :controller=>"users"}
+             sessions GET    /sessions(.:format)                                {:action=>"index", :controller=>"sessions"}
+                      POST   /sessions(.:format)                                {:action=>"create", :controller=>"sessions"}
+          new_session GET    /sessions/new(.:format)                            {:action=>"new", :controller=>"sessions"}
+         edit_session GET    /sessions/:id/edit(.:format)                       {:action=>"edit", :controller=>"sessions"}
+              session GET    /sessions/:id(.:format)                            {:action=>"show", :controller=>"sessions"}
+                      PUT    /sessions/:id(.:format)                            {:action=>"update", :controller=>"sessions"}
+                      DELETE /sessions/:id(.:format)                            {:action=>"destroy", :controller=>"sessions"}
+       withcontinents GET    /withcontinents(.:format)                          {:action=>"index", :controller=>"withcontinents"}
+                      POST   /withcontinents(.:format)                          {:action=>"create", :controller=>"withcontinents"}
+    new_withcontinent GET    /withcontinents/new(.:format)                      {:action=>"new", :controller=>"withcontinents"}
+   edit_withcontinent GET    /withcontinents/:id/edit(.:format)                 {:action=>"edit", :controller=>"withcontinents"}
+        withcontinent GET    /withcontinents/:id(.:format)                      {:action=>"show", :controller=>"withcontinents"}
+                      PUT    /withcontinents/:id(.:format)                      {:action=>"update", :controller=>"withcontinents"}
+                      DELETE /withcontinents/:id(.:format)                      {:action=>"destroy", :controller=>"withcontinents"}
+    withoutcontinents GET    /withoutcontinents(.:format)                       {:action=>"index", :controller=>"withoutcontinents"}
+                      POST   /withoutcontinents(.:format)                       {:action=>"create", :controller=>"withoutcontinents"}
+ new_withoutcontinent GET    /withoutcontinents/new(.:format)                   {:action=>"new", :controller=>"withoutcontinents"}
+edit_withoutcontinent GET    /withoutcontinents/:id/edit(.:format)              {:action=>"edit", :controller=>"withoutcontinents"}
+     withoutcontinent GET    /withoutcontinents/:id(.:format)                   {:action=>"show", :controller=>"withoutcontinents"}
+                      PUT    /withoutcontinents/:id(.:format)                   {:action=>"update", :controller=>"withoutcontinents"}
+                      DELETE /withoutcontinents/:id(.:format)                   {:action=>"destroy", :controller=>"withoutcontinents"}
+               logout        /logout                                            {:action=>"logout", :controller=>"sessions"}
+                login        /login                                             {:action=>"login", :controller=>"sessions"}
+    authenticate_user        /authenticate_user                                 {:action=>"authenticate_user", :controller=>"sessions"}
+                             /:controller/:action/:id                           
+                             /:controller/:action/:id(.:format)                 
+                 root        /                                                  {:action=>"index", :controller=>"countries"}
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate[C[K[K[K[K[K[K[Kcreate
+task_5_development already exists
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:createmigrate
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   app/controllers/countries_controller.rb[m
+	[31mdeleted:    app/controllers/developedcountries_controller.rb[m
+	[31mdeleted:    app/controllers/developingcountries_controller.rb[m
+	[31mdeleted:    app/models/countrytype.rb[m
+	[31mdeleted:    app/models/developedcountry.rb[m
+	[31mdeleted:    app/models/developingcountry.rb[m
+	[31mmodified:   app/views/countries/index.html.erb[m
+	[31mmodified:   app/views/countries/new.html.erb[m
+	[31mdeleted:    app/views/developedcountries/index.html.erb[m
+	[31mdeleted:    app/views/developedcountries/new.html.erb[m
+	[31mdeleted:    app/views/developedcountries/show.html.erb[m
+	[31mdeleted:    app/views/developingcountries/index.html.erb[m
+	[31mdeleted:    app/views/developingcountries/new.html.erb[m
+	[31mdeleted:    app/views/developingcountries/show.html.erb[m
+	[31mmodified:   app/views/layouts/countries.html.erb[m
+	[31mmodified:   config/routes.rb[m
+	[31mdeleted:    db/migrate/20160125120146_create_country_types.rb[m
+	[31mdeleted:    db/migrate/20160125121821_create_countrytypes.rb[m
+	[31mmodified:   db/schema.rb[m
+	[31mmodified:   log/development.log[m
+	[31mmodified:   public/javascripts/mainjs.js[m
+	[31mmodified:   public/stylesheets/main.css[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mapp/controllers/withcontinents_controller.rb[m
+	[31mapp/

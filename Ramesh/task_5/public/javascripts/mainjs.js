@@ -1,29 +1,21 @@
-$(function(){		
-	/*$(".col-3 a").click(function(event){		
-		$("#showdetails").hide().fadeIn(1000).load($(this).attr('href'));
-		$("#showlinks").empty();		
+$(function(){			
+	$("#showcontinent").hide();
+	$("#country_type_withcontinent").click(function(){
+		$("#showcontinent").show();
+	});
+	$("#country_type_withoutcontinent").click(function(){
+		$("#showcontinent").hide();
+	});
+	$("a[href$='/withcontinents']").click(function(){
+		$("#withoutcontinent").empty();		
+		$("#withcontinent").load($(this).attr('href'));
+		$("#withcontinent").addClass("show");
 		return false;
-	});	
-	$("#showdetails").on('click','a',function(e){				
-		$("#showlinks").load($(this).attr('href'),function(result){
-			if (result == "") {
-				$("#showlinks").html('<b>No Comments</b>');
-			};			
-		});	
-
+	});
+	$("a[href$='/withoutcontinents']").click(function(){
+		$("#withcontinent").empty();
+		$("#withoutcontinent").load($(this).attr('href'));
+		$("#withoutcontinent").addClass("show");
 		return false;
-	});	
-	$("section").on('submit','#new_comment',function(e){
-	 	var postData = $(this).serializeArray();
-    	var formURL = $(this).attr("action");    	
-		$.ajax({
-			url : formURL,
-			type: 'post',	        
-	        data: postData,
-	        success : function(data){
-	        	$("#showlinks").html(data);	        		        	
-	        }
-		});
-		return false;	
-	});*/
+	});
 });
