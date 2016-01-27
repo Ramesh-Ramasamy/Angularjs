@@ -1,0 +1,12 @@
+<% for comment in @comments %>
+<tr>
+	<p>Name</p>
+	<td><%=h comment.name %> :  </td>
+	<p>Comments</p>
+	<td><%=h comment.feedback %><br></td>
+</tr>
+<% end %>
+<% if @comments.empty? %>
+<p> no comments posted </p>
+<% end %>
+

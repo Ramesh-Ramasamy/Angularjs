@@ -1,0 +1,9 @@
+
+<% form_for([@counter,@comment]) do |f| %>
+<%= f.error_messages %>
+<p>Enter your name:</p>
+<%= f.text_field :name %><br>
+<p>Feedback:</p>
+<%= f.text_area :feedback %><br>
+<%= f.submit 'submit feedback' ,:class => 'but'%>
+<% end %> 
