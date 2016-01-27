@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  content: MyString
+  count: 9.99
+
+two:
+  name: MyString
+  content: MyString
+  count: 9.99

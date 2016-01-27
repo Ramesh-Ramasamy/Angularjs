@@ -1,0 +1,14 @@
+<div id="leftside">
+<% @counters.each do |counter| %>
+  <%= link_to counter.name,counter,:class => 'but'%><br>
+  <br> 
+<% end %>
+  <%= link_to 'Add link',new_counter_path ,:class => 'but1' %>
+</div>
+
+<div id="contents"></div>
+  <div id="comment"></div>
+  <div id="feedback"></div>
+
+
+
