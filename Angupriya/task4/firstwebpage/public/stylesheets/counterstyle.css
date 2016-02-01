@@ -16,6 +16,8 @@
 
 p{
 	color: crimson;
+	/*margin-left: 200px;*/
+	width: auto;
 }
 textarea{
 	width: 300px;
@@ -59,7 +61,66 @@ textarea{
 	text-align: center;
 	height: 50px;
 }
+.regbut{
+	text-align: center;
+	width: 80px;
+	border-radius: 25px;
+	background-color: black;
+	float: right;
+	text-decoration: none;
+	background-color: grey;
+	color: yellow;
+	margin-right: 10px;
+}
+.addlink{
 
+	text-align: center;
+	width: 150px;
+	border-radius: 25px;
+	background-color: black;
+	float: right;
+	text-decoration: none;
+	background-color: grey;
+	color: yellow;
+	margin-right: 100px;
+	margin-top: 100px;
+}
+.linktype1{
+
+	text-align: center;
+	width: 150px;
+	height: 30px;
+	border-radius: 25px;
+	background-color: black;
+	text-decoration: none;
+	background-color: grey;
+	color: yellow;
+	text-transform: uppercase;
+	margin-left: 500px;
+	margin-top: 10px;
+	}
+
+.linktype2{
+
+	text-align: center;
+	width: 150px;
+	height: 30px;
+	margin-top: 0px;
+	border-radius: 25px;
+	background-color: black;
+	text-decoration: none;
+	background-color: grey;
+	color: yellow;
+	text-transform: uppercase;
+	margin-left: 900px;
+	}
+#mild{
+	font-size: 15px;
+	color: grey;
+	font-style: italic;
+	text-transform: capitalize;
+
+}
 
 .main{
 	width: 20%;
@@ -91,5 +152,29 @@ textarea{
 	margin-left: 200px;
 	font-size: 20px;
 	font-style: italic;
-	height: 200px;
+	width: 300px;
+	color: green;
+
+}
+
+#comment{
+	color: red;
+	text-transform: capitalize;
+}
+.regbut:hover{
+	color: pink
+}
+.regbut:active{
+	color: blue
+}
+
+#withtitle{
+	display: none;	
+	border-radius: 25px;
+	background-color: pink;
+}
+#withouttitle{
+	display: none;
+	border-radius: 25px;
+	background-color: pink;
 }

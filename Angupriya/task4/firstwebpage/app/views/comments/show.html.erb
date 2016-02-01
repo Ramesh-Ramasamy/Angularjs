@@ -1,3 +1,6 @@
+
+<%= will_paginate @comments %>
+
 <% for comment in @comments %>
 <tr>
 	<p>Name</p>
@@ -6,6 +9,7 @@
 	<td><%=h comment.feedback %><br></td>
 </tr>
 <% end %>
+
 <% if @comments.empty? %>
 <p> no comments posted </p>
 <% end %>

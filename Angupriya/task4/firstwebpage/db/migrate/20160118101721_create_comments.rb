@@ -4,7 +4,6 @@ class CreateComments < ActiveRecord::Migration
       t.string :name
       t.string :feedback
       t.references :counter
-
       t.timestamps
     end
   end

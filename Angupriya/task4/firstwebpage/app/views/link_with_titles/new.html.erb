@@ -1,0 +1,20 @@
+<h1>Creating Link with content without title</h1>
+
+<% form_for(@link) do |f| %>
+  <%= f.error_messages %>
+  <p>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </p>
+   <p>
+    <%= f.submit 'Create'%>
+  </p>
+<% end %>

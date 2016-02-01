@@ -1,0 +1,19 @@
+
+
+  <p>
+    <h1> <%=h @counter.title %></h1>
+    <b>Content:</b><%=h @counter.content %>
+    <b>count value :</b><%=h @counter.count %>
+    <b>total count:</b><%=h @tc %>
+  </p>
+
+  <p>
+    &nbsp<%= link_to 'newcomment',new_counter_comment_path(@counter)%>
+    &nbsp<%= link_to 'view comments',counter_comment_path(@counter)%>
+
+    </p>
+  <br><br>
+
+
+
+

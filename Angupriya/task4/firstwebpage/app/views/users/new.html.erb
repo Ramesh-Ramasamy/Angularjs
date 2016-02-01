@@ -1,0 +1,21 @@
+<%= notice %>
+<p>sign up</p>
+<% form_for(@user) do |f| %>
+
+<%= f.error_messages %>
+
+<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</p>
+
+<p>
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+</p>
+
+<p>
+	<%= f.submit 'login' ,:class => 'but'%>
+</p>
+
+<% end %>

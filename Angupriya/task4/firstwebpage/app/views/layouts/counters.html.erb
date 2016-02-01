@@ -1,17 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Counters: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'counterstyle' %>
-  <%= javascript_include_tag 'jquery-1.11.3.min.js' %> 
-  <%= javascript_include_tag 'counter.js' %>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Counters: <%= controller.action_name %></title>
+	<%= stylesheet_link_tag 'counterstyle' %>
+	<%= javascript_include_tag 'jquery-1.11.3.min.js' %> 
+	<%= javascript_include_tag 'counter.js' %>
 </head>
 <body>
-<div id="header"> task on ruby on rails</div>
-<p style="color: green"><%= notice %></p>
+	<div id="header"> task on ruby on rails
+		<%=link_to 'signup',new_user_path,:class => 'regbut' %>
+		<%=link_to 'login', url_for(:controller => 'users',:action => 'login') ,:class => 'regbut'%>
+		<%= link_to 'logout',url_for(:controller => 'application',:action => 'logout'),:class => 'regbut' %>
+	</div>
 <%= yield %>
 </body>
 </html>

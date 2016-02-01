@@ -1,18 +1,4 @@
-<h1>New counter</h1>
+<%= link_to 'without_title',url_for(:controller => 'link_without_titles',:action => 'new'),:class => 'addlink' %>
 
-<% form_for(@counter) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </p>
-   <p>
-    <%= f.submit 'Create'%>
-  </p>
-<% end %>
-
+<%= link_to 'with_title',url_for(:controller => 'link_with_titles',:action => 'new'),:class => 'addlink'%>
+ 

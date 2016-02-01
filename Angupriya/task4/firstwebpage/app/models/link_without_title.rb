@@ -1,0 +1,3 @@
+class LinkWithoutTitle < Counter
+
+end
