@@ -505,4 +505,245 @@ infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git l
 * [31mf89b271[m -[33m[m stylesheet for task3 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
 * [31m605818e[m -[33m[m jquery library file [32m(6 weeks ago) [1;34m<Angupriya>[m[m
 * [31m36fadb5[m -[33m[m created n buttons without using values [32m(6 weeks ago) [1;34m<Angupriya>[m[m
-* [31m77bd1cc[m -
+* [31m77bd1cc[m -[33m[m stylesheet for task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31madbd332[m -[33m[m task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m3cf96b5[m -[33m[m displaying total clicks of buttons [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m864dbd4[m -[33m[m style sheet of task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m952edf7[m -[33m[m task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31mcef4a8e[m -[33m[m stylesheet for task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m6954081[m -[33m[m creating n buttons and displaying number of times  it is clicked [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31me20b67b[m -[33m[m Task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m58883c8[m -[33m[m Task_2 completed [32m(6 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m8bbb71d[m -[33m[m file moved to correct folder [32m(6 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+:[K[K[?1l>infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ 
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git lgpush origin masterll[C[C[C[C[C[C[C[C[C[C[C[C[C[Csh[C[C[C[C[C[C[C[C[C[C[C[C[C[Cll -r[Ksh origin mastercommit -m "navbar and single table inheritance completed"add --all[K[1Pall.[Kstatus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   generate[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git status[Kgit add .
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git commit -m ""f"u"l"l"y" "c"o"m"p"l"e"t"e"r"[1P"d"
+[master 7cfc1b2] fully completed
+ 1 file changed, 336 insertions(+), 1 deletion(-)
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git commit -m "fully completed"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpull -r
+Current branch master is up to date.
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git pull -r[K[K[K[K[Ksh origin master
+Username for 'https://github.com': ramesh.r@infibeam.net
+Password for 'https://ramesh.r@infibeam.net@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects:  20% (1/5)   Compressing objects:  40% (2/5)   Compressing objects:  60% (3/5)   Compressing objects:  80% (4/5)   Compressing objects: 100% (5/5)   Compressing objects: 100% (5/5), done.
+Writing objects:  20% (1/5)   Writing objects:  40% (2/5)   Writing objects:  60% (3/5)   Writing objects:  80% (4/5)   Writing objects: 100% (5/5)   Writing objects: 100% (5/5), 7.38 KiB | 0 bytes/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+To https://github.com/Ramesh-Ramasamy/infibeamprojects.git
+   f0ca577..7cfc1b2  master -> master
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ git lg
+[?1h=* [31m7cfc1b2[m -[33m (HEAD, origin/master, origin/HEAD, master)[m fully completed [32m(40 seconds ago) [1;34m<Ramesh-Ramasamy>[m[m
+*   [31mf0ca577[m -[33m[m Merge branch 'master' of https://github.com/Ramesh-Ramasamy/infibeamprojects [32m(5 minutes ago) [1;34m<Ramesh-Ramasamy>[m[m
+[32m|[m[33m\[m  [m
+[32m|[m * [31me7338ec[m -[33m[m Count number of times link visited using rails [32m(7 hours ago) [1;34m<Angupriya>[m[m
+* [33m|[m [31mf34f4b9[m -[33m[m navbar and single table inheritance completed [32m(7 minutes ago) [1;34m<Ramesh-Ramasamy>[m[m
+[33m|[m[33m/[m  [m
+* [31ma52f74e[m -[33m[m simple table inheritance partially developed [32m(2 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31ma24e5f0[m -[33m[m task 6 partially complated [32m(2 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m6d02f51[m -[33m[m task 5 completed and showed to ajay [32m(8 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31maf05f55[m -[33m[m bugfix: not comments to no comments [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m4945236[m -[33m[m Add css to new countries page [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m80a48df[m -[33m[m adding No comments statements [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m586580a[m -[33m[m task 5 completed [32m(9 days ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31macf61d3[m -[33m[m Removed edit,new controllers and changed button font size [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31mfabcb94[m -[33m[m Removed unwantedd files [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m82e0408[m -[33m[m Changed the README File into My Application Description [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m202ef11[m -[33m[m rakefile modified to my application description [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m08409a1[m -[33m[m creating dynamic webpage using rails framework [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m0d62259[m -[33m[m checking to not in id [32m(3 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31maf06a51[m -[33m[m count of buttons clicked without using id [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m7f5d315[m -[33m[m using jquery to display count of button [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m1f5a2e9[m -[33m[m html file of task3 [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31m275f4ec[m -[33m[m css file of task3 [32m(4 weeks ago) [1;34m<Angupriya>[m[m
+* [31mb379e6d[m -[33m[m Task 3 splitted in folder and some simple ajax load function [32m(5 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31m548bfa2[m -[33m[m Task 3 completed in jquery [32m(5 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+* [31md084dcc[m -[33m[m task3 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31mf89b271[m -[33m[m stylesheet for task3 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m605818e[m -[33m[m jquery library file [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m36fadb5[m -[33m[m created n buttons without using values [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m77bd1cc[m -[33m[m stylesheet for task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31madbd332[m -[33m[m task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m3cf96b5[m -[33m[m displaying total clicks of buttons [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m864dbd4[m -[33m[m style sheet of task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m952edf7[m -[33m[m task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31mcef4a8e[m -[33m[m stylesheet for task2 [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m6954081[m -[33m[m creating n buttons and displaying number of times  it is clicked [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31me20b67b[m -[33m[m Task 2 completed [32m(6 weeks ago) [1;34m<Angupriya>[m[m
+* [31m58883c8[m -[33m[m Task_2 completed [32m(6 weeks ago) [1;34m<Ramesh-Ramasamy>[m[m
+:[K[K[?1l>
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ 
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake routes
+             country_comments GET    /countries/:country_id/comments(.:format)                           {:action=>"index", :controller=>"comments"}
+                              POST   /countries/:country_id/comments(.:format)                           {:action=>"create", :controller=>"comments"}
+          new_country_comment GET    /countries/:country_id/comments/new(.:format)                       {:action=>"new", :controller=>"comments"}
+         edit_country_comment GET    /countries/:country_id/comments/:id/edit(.:format)                  {:action=>"edit", :controller=>"comments"}
+              country_comment GET    /countries/:country_id/comments/:id(.:format)                       {:action=>"show", :controller=>"comments"}
+                              PUT    /countries/:country_id/comments/:id(.:format)                       {:action=>"update", :controller=>"comments"}
+                              DELETE /countries/:country_id/comments/:id(.:format)                       {:action=>"destroy", :controller=>"comments"}
+                    countries GET    /countries(.:format)                                                {:action=>"index", :controller=>"countries"}
+                              POST   /countries(.:format)                                                {:action=>"create", :controller=>"countries"}
+                  new_country GET    /countries/new(.:format)                                            {:action=>"new", :controller=>"countries"}
+                 edit_country GET    /countries/:id/edit(.:format)                                       {:action=>"edit", :controller=>"countries"}
+                      country GET    /countries/:id(.:format)                                            {:action=>"show", :controller=>"countries"}
+                              PUT    /countries/:id(.:format)                                            {:action=>"update", :controller=>"countries"}
+                              DELETE /countries/:id(.:format)                                            {:action=>"destroy", :controller=>"countries"}
+                        users GET    /users(.:format)                                                    {:action=>"index", :controller=>"users"}
+                              POST   /users(.:format)                                                    {:action=>"create", :controller=>"users"}
+                     new_user GET    /users/new(.:format)                                                {:action=>"new", :controller=>"users"}
+                    edit_user GET    /users/:id/edit(.:format)                                           {:action=>"edit", :controller=>"users"}
+                         user GET    /users/:id(.:format)                                                {:action=>"show", :controller=>"users"}
+                              PUT    /users/:id(.:format)                                                {:action=>"update", :controller=>"users"}
+                              DELETE /users/:id(.:format)                                                {:action=>"destroy", :controller=>"users"}
+                     sessions GET    /sessions(.:format)                                                 {:action=>"index", :controller=>"sessions"}
+                              POST   /sessions(.:format)                                                 {:action=>"create", :controller=>"sessions"}
+                  new_session GET    /sessions/new(.:format)                                             {:action=>"new", :controller=>"sessions"}
+                 edit_session GET    /sessions/:id/edit(.:format)                                        {:action=>"edit", :controller=>"sessions"}
+                      session GET    /sessions/:id(.:format)                                             {:action=>"show", :controller=>"sessions"}
+                              PUT    /sessions/:id(.:format)                                             {:action=>"update", :controller=>"sessions"}
+                              DELETE /sessions/:id(.:format)                                             {:action=>"destroy", :controller=>"sessions"}
+       withcontinent_comments GET    /withcontinents/:withcontinent_id/comments(.:format)                {:action=>"index", :controller=>"comments"}
+                              POST   /withcontinents/:withcontinent_id/comments(.:format)                {:action=>"create", :controller=>"comments"}
+    new_withcontinent_comment GET    /withcontinents/:withcontinent_id/comments/new(.:format)            {:action=>"new", :controller=>"comments"}
+   edit_withcontinent_comment GET    /withcontinents/:withcontinent_id/comments/:id/edit(.:format)       {:action=>"edit", :controller=>"comments"}
+        withcontinent_comment GET    /withcontinents/:withcontinent_id/comments/:id(.:format)            {:action=>"show", :controller=>"comments"}
+                              PUT    /withcontinents/:withcontinent_id/comments/:id(.:format)            {:action=>"update", :controller=>"comments"}
+                              DELETE /withcontinents/:withcontinent_id/comments/:id(.:format)            {:action=>"destroy", :controller=>"comments"}
+               withcontinents GET    /withcontinents(.:format)                                           {:action=>"index", :controller=>"withcontinents"}
+                              POST   /withcontinents(.:format)                                           {:action=>"create", :controller=>"withcontinents"}
+            new_withcontinent GET    /withcontinents/new(.:format)                                       {:action=>"new", :controller=>"withcontinents"}
+           edit_withcontinent GET    /withcontinents/:id/edit(.:format)                                  {:action=>"edit", :controller=>"withcontinents"}
+                withcontinent GET    /withcontinents/:id(.:format)                                       {:action=>"show", :controller=>"withcontinents"}
+                              PUT    /withcontinents/:id(.:format)                                       {:action=>"update", :controller=>"withcontinents"}
+                              DELETE /withcontinents/:id(.:format)                                       {:action=>"destroy", :controller=>"withcontinents"}
+    withoutcontinent_comments GET    /withoutcontinents/:withoutcontinent_id/comments(.:format)          {:action=>"index", :controller=>"comments"}
+                              POST   /withoutcontinents/:withoutcontinent_id/comments(.:format)          {:action=>"create", :controller=>"comments"}
+ new_withoutcontinent_comment GET    /withoutcontinents/:withoutcontinent_id/comments/new(.:format)      {:action=>"new", :controller=>"comments"}
+edit_withoutcontinent_comment GET    /withoutcontinents/:withoutcontinent_id/comments/:id/edit(.:format) {:action=>"edit", :controller=>"comments"}
+     withoutcontinent_comment GET    /withoutcontinents/:withoutcontinent_id/comments/:id(.:format)      {:action=>"show", :controller=>"comments"}
+                              PUT    /withoutcontinents/:withoutcontinent_id/comments/:id(.:format)      {:action=>"update", :controller=>"comments"}
+                              DELETE /withoutcontinents/:withoutcontinent_id/comments/:id(.:format)      {:action=>"destroy", :controller=>"comments"}
+            withoutcontinents GET    /withoutcontinents(.:format)                                        {:action=>"index", :controller=>"withoutcontinents"}
+                              POST   /withoutcontinents(.:format)                                        {:action=>"create", :controller=>"withoutcontinents"}
+         new_withoutcontinent GET    /withoutcontinents/new(.:format)                                    {:action=>"new", :controller=>"withoutcontinents"}
+        edit_withoutcontinent GET    /withoutcontinents/:id/edit(.:format)                               {:action=>"edit", :controller=>"withoutcontinents"}
+             withoutcontinent GET    /withoutcontinents/:id(.:format)                                    {:action=>"show", :controller=>"withoutcontinents"}
+                              PUT    /withoutcontinents/:id(.:format)                                    {:action=>"update", :controller=>"withoutcontinents"}
+                              DELETE /withoutcontinents/:id(.:format)                                    {:action=>"destroy", :controller=>"withoutcontinents"}
+                       logout        /logout                                                             {:action=>"logout", :controller=>"sessions"}
+                        login        /login                                                              {:action=>"login", :controller=>"sessions"}
+            authenticate_user        /authenticate_user                                                  {:action=>"authenticate_user", :controller=>"sessions"}
+                                     /:controller/:action/:id                                            
+                                     /:controller/:action/:id(.:format)                                  
+                         root        /                                                                   {:action=>"index", :controller=>"countries"}
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ script/generate model comment name:string commentbody:string wih[Kthcontinent:references wi thoutcou[Kntinent:refrences
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+      create  app/models/comment.rb
+   identical  test/unit/comment_test.rb
+overwrite test/fixtures/comments.yml? (enter "h" for help) [Ynaqdh] y
+       force  test/fixtures/comments.yml
+      exists  db/migrate
+      create  db/migrate/20160128063324_create_comments.rb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate
+==  CreateComments: migrating =================================================
+-- create_table(:comments)
+   -> 0.1537s
+==  CreateComments: migrated (0.1538s) ========================================
+
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migratescript/generate model comment name:string commentbody:string withcontinent:references witthoutcontinent:refrenceserences
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+      create  app/models/comment.rb
+   identical  test/unit/comment_test.rb
+   identical  test/fixtures/comments.yml
+      exists  db/migrate
+      create  db/migrate/20160128063527_create_comments.rb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rascript/generate model comment name:string commentbody:string withcontinent:references witthoutcontinent:references[Ainfibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscript/generate model comment name:string commentbody:string withcontinent:references witthoutcontinent:refrences[Ainfibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+==  CreateComments: migrating =================================================
+-- create_table(:comments)
+   -> 0.0972s
+==  CreateComments: migrated (0.0973s) ========================================
+
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ script/generate controller comments index new show
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/comments
+      exists  test/functional/
+      exists  test/unit/helpers/
+      create  app/controllers/comments_controller.rb
+   identical  test/functional/comments_controller_test.rb
+   identical  app/helpers/comments_helper.rb
+   identical  test/unit/helpers/comments_helper_test.rb
+      create  app/views/comments/index.html.erb
+      create  app/views/comments/new.html.erb
+      create  app/views/comments/show.html.erb
+infibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ script/generate controller comments index new showrake db:migrate[Kscript/generate model comment name:string commentbody:string withcontinent:references witthoutcontinent:references[Ainfibeam: ~/Documents/infibeamprojects/Ramesh/task_5 [01;34mmaster [00m$ rake db:migrate[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[Kroutes
+             country_comments GET    /countries/:country_id/comments(.:format)                           {:action=>"index", :controller=>"comments"}
+                              POST   /countries/:country_id/comments(.:format)                           {:action=>"create", :controller=>"comments"}
+          new_country_comment GET    /countries/:country_id/comments/new(.:format)                       {:action=>"new", :controller=>"comments"}
+         edit_country_comment GET    /countries/:country_id/comments/:id/edit(.:format)                  {:action=>"edit", :controller=>"comments"}
+              country_comment GET    /countries/:country_id/comments/:id(.:format)                       {:action=>"show", :controller=>"comments"}
+                              PUT    /countries/:country_id/comments/:id(.:format)                       {:action=>"update", :controller=>"comments"}
+                              DELETE /countries/:country_id/comments/:id(.:format)                       {:action=>"destroy", :controller=>"comments"}
+                    countries GET    /countries(.:format)                                                {:action=>"index", :controller=>"countries"}
+                              POST   /countries(.:format)                                                {:action=>"create", :controller=>"countries"}
+                  new_country GET    /countries/new(.:format)                                            {:action=>"new", :controller=>"countries"}
+                 edit_country GET    /countries/:id/edit(.:format)                                       {:action=>"edit", :controller=>"countries"}
+                      country GET    /countries/:id(.:format)                                            {:action=>"show", :controller=>"countries"}
+                              PUT    /countries/:id(.:format)                                            {:action=>"update", :controller=>"countries"}
+                              DELETE /countries/:id(.:format)                                            {:action=>"destroy", :controller=>"countries"}
+                        users GET    /users(.:format)                                                    {:action=>"index", :controller=>"users"}
+                              POST   /users(.:format)                                                    {:action=>"create", :controller=>"users"}
+                     new_user GET    /users/new(.:format)                                                {:action=>"new", :controller=>"users"}
+                    edit_user GET    /users/:id/edit(.:format)                                           {:action=>"edit", :controller=>"users"}
+                         user GET    /users/:id(.:format)                                                {:action=>"show", :controller=>"users"}
+                              PUT    /users/:id(.:format)                                                {:action=>"update", :controller=>"users"}
+                              DELETE /users/:id(.:format)                                                {:action=>"destroy", :controller=>"users"}
+                     sessions GET    /sessions(.:format)                                                 {:action=>"index", :controller=>"sessions"}
+                              POST   /sessions(.:format)                                                 {:action=>"create", :controller=>"sessions"}
+                  new_session GET    /sessions/new(.:format)                                             {:action=>"new", :controller=>"sessions"}
+                 edit_session GET    /sessions/:id/edit(.:format)                                        {:action=>"edit", :controller=>"sessions"}
+                      session GET    /sessions/:id(.:format)                                             {:action=>"show", :controller=>"sessions"}
+                              PUT    /sessions/:id(.:format)                                             {:action=>"update", :controller=>"sessions"}
+                              DELETE /sessions/:id(.:format)                                             {:action=>"destroy", :controller=>"sessions"}
+       withcontinent_comments GET    /withcontinents/:withcontinent_id/comments(.:format)                {:action=>"index", :controller=>"comments"}
+                              POST   /withcontinents/:withcontinent_id/comments(.:format)                {:action=>"create", :controller=>"comments"}
+    new_withcontinent_comment GET    /withcontinents/:withcontinent_id/comments/new(.:format)            {:action=>"new", :controller=>"comments"}
+   edit_withcontinent_comment GET    /withcontinents/:withcontinent_id/comments/:id/edit(.:format)       {:action=>"edit", :controller=>"comments"}
+        withcontinent_comment GET    /withcontinents/:withcontinent_id/comments/:id(.:format)            {:action=>"show", :controller=>"comments"}
+                              PUT    /withcontinents/:withcontinent_id/comments/:id(.:format)            {:action=>"update", :controller=>"comments"}
+                              DELETE /withcontinents/:withcontinent_id/comments/:id(.:format)            {:action=>"destroy", :controller=>"comments"}
+               withcontinents GET    /withcontinents(.:format)                                           {:action=>"index", :controller=>"withcontinents"}
+                              POST   /withcontinents(.:format)                                           {:action=>"create", :controller=>"withcontinents"}
+            new_withcontinent GET    /withcontinents/new(.:format)                                       {:action=>"new", :controller=>"withcontinents"}
+           edit_withcontinent GET    /withcontinents/:id/edit(.:format)                                  {:action=>"edit", :controller=>"withcontinents"}
+                withcontinent GET    /withcontinents/:id(.:format)                                       {:action=>"show", :controller=>"withcontinents"}
+                              PUT    /withcontinents/:id(.:format)                                       {:action=>"update", :controller=>"withcontinents"}
+                              DELETE /withcontinents/:id(.:format)                                       {:action=>"destroy", :controller=>"withcontinents"}
+    withoutcontinent_comments GET    /withoutcontinents/:withoutcontinent_id/comments(.:format)          {:action=>"index", :controller=>"comments"}
+                              POST   /withoutcontinents/:withoutcontinent_id/comments(.:format)          {:action=>"create", :controller=>"comments"}
+ new_withoutcontinent_comment GET    /withoutcontinents/:withoutcontinent_id/comments/new(.:format)      {:action=>"new", :controller=>"comments"}
+edit_withoutcontinent_comment GET    /withoutcontinents/:withoutcontinent_id/comments/:id/edit(.:format) {:action=>"edit", :controller=>"comments"}
+     withoutcontinent_comment GET    /withoutcontinents/:withoutcontinent_id/comments/:id(.:format)      {:action=>"show", :controller=>"comments"}
+                              PUT    /withoutcontinents/:withoutcontinent_id/comments/:id(.:format)      {:action=>"update", :controller=>"comments"}
+                              DELETE /withoutcontinents/:withoutcontinent_id/comments/:id(.:format)      {:action=>"destroy", :controller=>"comments"}
+            withoutcontinents GET    /withoutcontinents(.:format)                                        {:action=>"index", :controller=>"withoutcontinents"}
+                              POST   /withoutcontinents(.:format)                                        {:action=>"create", :controller=>"withoutcontinents"}
+         new_withoutcontinent GET    /wit

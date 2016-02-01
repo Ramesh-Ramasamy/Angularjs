@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
   layout "countries"
-  before_filter :check_user, :only =>[:new, :create, :show]
+  before_filter :check_user, :only =>[:new, :create]
   def index
     @country = Country.find(params[:country_id])
-    @comments = @country.comments.paginate( :page => params[:page], :per_page => 5)
+    @comments = @country.comments.paginate( :page => params[:page], :per_page => 3)
   end
 
   def show

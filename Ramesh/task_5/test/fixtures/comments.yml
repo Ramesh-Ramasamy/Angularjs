@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  commentbody: MyText
-  country: 
+  commentbody: MyString
+  country_id: 1
+  country_type: MyString
 
 two:
   name: MyString
-  commentbody: MyText
-  country: 
+  commentbody: MyString
+  country_id: 1
+  country_type: MyString

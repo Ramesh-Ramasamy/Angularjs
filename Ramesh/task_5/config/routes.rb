@@ -1,9 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :countries, :has_many => :comments
   map.resources :users
-  map.resources :sessions
-  map.resources :withcontinents
-  map.resources :withoutcontinents
+  map.resources :sessions 
+  map.resources :withcontinents, :has_many => :comments
+  map.resources :withoutcontinents, :has_many => :comments 
   map.logout '/logout', :controller => 'sessions', :action => 'logout'
   map.login '/login', :controller => 'sessions', :action => 'login'
   map.authenticate_user '/authenticate_user', :controller => 'sessions', :action => 'authenticate_user'

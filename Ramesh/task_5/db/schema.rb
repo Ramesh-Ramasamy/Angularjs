@@ -9,14 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160127094051) do
+ActiveRecord::Schema.define(:version => 20160201064406) do
 
   create_table "comments", :force => true do |t|
     t.string   "name"
-    t.text     "commentbody"
+    t.string   "commentbody"
     t.integer  "country_id"
+    t.string   "country_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "countries", :force => true do |t|
+    t.string   "countryname"
+    t.string   "countrydesc"
+    t.integer  "clickcount",  :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "continent"
+    t.string   "type"
   end
 
   create_table "users", :force => true do |t|

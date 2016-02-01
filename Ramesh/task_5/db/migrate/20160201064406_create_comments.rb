@@ -2,8 +2,9 @@ class CreateComments < ActiveRecord::Migration
   def self.up
     create_table :comments do |t|
       t.string :name
-      t.text :commentbody
-      t.references :country
+      t.string :commentbody
+      t.integer :country_id
+      t.string :country_type
 
       t.timestamps
     end

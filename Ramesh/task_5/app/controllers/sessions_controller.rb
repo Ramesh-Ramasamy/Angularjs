@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   layout "countries"
   def login
-
   end
 
   def authenticate_login
