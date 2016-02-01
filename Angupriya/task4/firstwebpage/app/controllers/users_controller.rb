@@ -11,10 +11,11 @@ class UsersController < ApplicationController
 	authenticate_user=User.authenticate(params[:Username],params[:login_pass])
 		if authenticate_user
 		session[:user_id]=authenticate_user.id
-		redirect_to(request.referer	,:notice=> 'successfully logged in ..u can enter the comments')	
-		else
-		flash[:notice]="invalid combination of username or password"
-		redirect_to(new_user_path)
+		flash[:notice] ='successfully logged in ..u can enter the comments'
+		redirect_to url_for(:action => 'home')	
+		else	
+		flash[:notice]="invalid combination of username or password..Retry"
+		redirect_to(:controller => 'users',:action => 'login')
 		end
 	end
 	
@@ -25,7 +26,10 @@ class UsersController < ApplicationController
 	def create
 	@user=User.new(params[:user])
 		if @user.save
-			redirect_to(request.referer,:notice => 'successfully registered')
+			flash[:notice]='successfully registered'
+			redirect_to (:controller => 'users',:action => 'home')
+		else
+			render 'new'
 		end
 	end
 end

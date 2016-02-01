@@ -10,6 +10,12 @@ $(document).ready(function(){
 		$("#feedback").empty();
 		return false;
 	});
+
+	$("#comment").on('click',"a",function(e){
+		$("#comment").load($(this).attr('href'));
+		return false;
+	});
+	
 	$("body").on('submit',"#new_comment",function(e)
 	{
 		var formdata=$(this).serializeArray();
@@ -39,4 +45,31 @@ $(document).ready(function(){
 	},function(){
 		$("#withouttitle").hide();
 	});
+
+
+
+
+$("body").on('submit',"form",function(e)
+	{
+		var formdata=$(this).serializeArray();
+		var pageurl=$(this).attr("action");
+		$.ajax(
+			{
+			url : pageurl,
+			type : 'post',
+			data  : formdata,
+			success :function(data){
+				$('#feedback').empty();
+				$("#contents").empty();
+				$("#comment").html(data);
+			}
+		});
+		return false;
+	});
+
+
+
 });
+
+
+

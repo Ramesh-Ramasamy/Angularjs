@@ -10,7 +10,14 @@
 	<%= javascript_include_tag 'counter.js' %>
 </head>
 <body>
-	<div id="header"> task on ruby on rails
+	<div id="header">
+	<span class="linktype1">with title
+
+	</span> 
+	<span class="linktype2">without title</span> 
+		 <span class="heading">
+		 task on ruby on rails
+		 </span>
 		<%=link_to 'signup',new_user_path,:class => 'regbut' %>
 		<%=link_to 'login', url_for(:controller => 'users',:action => 'login') ,:class => 'regbut'%>
 		<%= link_to 'logout',url_for(:controller => 'application',:action => 'logout'),:class => 'regbut' %>

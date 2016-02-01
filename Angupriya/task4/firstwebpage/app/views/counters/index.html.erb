@@ -2,14 +2,14 @@
   <% @counters.each do |counter| %>
   <%= link_to counter.name,counter,:class => 'but'%><br>
       <div id="mild">
-      <%= truncate(counter.content,:length => 20) %>
+      <%= truncate(counter.content,:length => 50) %>
       </div><br> 
   <% end %>
   <%= link_to 'Add link',new_counter_path ,:class => 'but1' %>
 </div>
  
-<div class='linktype1'>
-  with title
+
+
   <div id='withtitle'>
   <% @counters.each do |counter| %>
     <% if counter.type.present? %>
@@ -18,10 +18,7 @@
       <% end %>
     <% end %>
   <% end %>
-</div>
  </div>
-<div class='linktype2'>
-  without title
   <div id='withouttitle'>
     <% @counters.each do |counter| %>
       <% if counter.type.present? %>
@@ -32,7 +29,7 @@
     <% end %>
   </div>
 </div>
-
+ 
 <div id="contents"></div>
 <div id="comment"></div>
 <div id="feedback"></div>

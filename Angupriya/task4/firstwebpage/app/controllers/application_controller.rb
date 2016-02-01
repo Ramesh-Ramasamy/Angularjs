@@ -22,9 +22,9 @@ class ApplicationController < ActionController::Base
   def save_login_state
     
     if session[:user_id]
-      redirect_to(request.referer,:notice => 'already u r logged in')
-      render :layout => false
-      return false
+      flash[:notice]='already u r logged in ...logout to login with different user'
+      redirect_to(:controller => 'users',:action => 'home')
+        return false
     else
       return true
     end
