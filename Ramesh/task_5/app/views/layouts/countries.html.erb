@@ -15,24 +15,22 @@
 	<div class="row">
 		<div class="col-8">
     <nav>
-    <ul>
-      <li><%= link_to 'Add New Country', new_country_path %></li>
-      <li>
-        <%= link_to 'With Continent', withcontinents_path %> 
-        <div id="withcontinent">
-          
-        </div>
-      </li>
-      <li>
-        <%= link_to 'With Out Continent', withoutcontinents_path %>
-        <div id="withoutcontinent">
-          
-        </div>
-      </li>
-    </ul></nav>    
+      <ul>
+        <li>
+          <%= link_to 'Add New Country', new_country_path %>
+        </li>
+        <li>
+          <%= link_to 'With Continent', withcontinents_path %> 
+          <div id="withcontinent"></div>
+        </li>
+        <li>
+          <%= link_to 'With Out Continent', withoutcontinents_path %>
+          <div id="withoutcontinent"></div>
+        </li>
+      </ul>
+    </nav>    
 		</div>
 		<div class="col-4 cl-effect-4">
-
       <% if current_user %>
         Hello, <%= current_user.username %>
       <%= link_to "Log out", logout_path %>

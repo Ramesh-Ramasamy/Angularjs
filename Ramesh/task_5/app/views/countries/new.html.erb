@@ -25,8 +25,16 @@
       <p>
         <%= coun.submit 'Create' %>
       </p>
-    <% end %>
-    <%= link_to "Back", countries_path %>
+      <div class="errors">
+          <% if @country.errors.any? %>
+            <ul class="Signup_Errors">
+            <% for message_error in @country.errors.full_messages %>
+              <li> <%= message_error %></li>
+            <% end %>
+            </ul>
+          <% end %>
+        </div>
+    <% end %>    
     </div>
   <div class="col-1"></div>
 </div>

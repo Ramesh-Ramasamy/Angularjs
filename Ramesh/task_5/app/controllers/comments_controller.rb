@@ -22,6 +22,9 @@ class CommentsController < ApplicationController
   	if @comment.save
       flash[:notice] = 'Comment was successfully saved.'
       redirect_to country_comment_url(@country, @comment)
+    else
+      flash[:notice] = 'Comment Not Saved'
+      render 'new'
     end
   end
 

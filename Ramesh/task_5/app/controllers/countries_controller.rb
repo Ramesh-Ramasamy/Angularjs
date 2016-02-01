@@ -21,13 +21,17 @@ class CountriesController < ApplicationController
       params[:country][:continent] = nil
       @country = Withoutcontinent.new(params[:country]) 
     end   	
-  	@country.save
-  	redirect_to(countries_path)
+  	if @country.save
+  	 redirect_to(countries_path)
+    else
+      flash[:notice] = "Country not successfully added"
+      render 'new' 
+    end
   end
 
   def check_user
     if (!current_user)
-      flash[:notice] = "You Must Login Then Only You Post a Comment"
+      flash[:notice] = "You Must Login Then Only You Can Add a Country"
       redirect_to '/login'
     end
   end

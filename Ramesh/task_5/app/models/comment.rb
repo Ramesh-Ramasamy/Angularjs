@@ -1,3 +1,4 @@
 class Comment < ActiveRecord::Base
-	belongs_to :country, :polymorphic => true
+	validates_presence_of :name, :commentbody
+	belongs_to :country
 end

@@ -1,3 +1,3 @@
 class Withoutcontinent < Country
-	has_many :comments, :as => :country
+	has_many :comments, :foreign_key => "country_id"
 end
