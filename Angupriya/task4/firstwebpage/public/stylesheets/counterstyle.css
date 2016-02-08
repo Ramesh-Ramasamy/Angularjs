@@ -21,6 +21,7 @@
 }
 p{
 	color: crimson;
+	height: 20px;
 	/*margin-left: 200px;*/
 
 }
@@ -183,7 +184,7 @@ textarea{
 	display: none;	
 	border-radius: 25px;
 	width: 120px;
-	background-color: grey;
+	background-color: yellow;
 	text-transform: capitalize;
 
 }
@@ -192,9 +193,10 @@ textarea{
 	display: none;	
 	border-radius: 25px;
 	width: 20%;
-	background-color: grey;
+	background-color: aqua;
 	margin-left:130px;
 	width: 150px;
+	color: white;
 	text-transform: capitalize;
 }
 

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :comments
 	validates_presence_of :name, :password
 	validates_uniqueness_of :name
 	def self.authenticate(username,login_password)

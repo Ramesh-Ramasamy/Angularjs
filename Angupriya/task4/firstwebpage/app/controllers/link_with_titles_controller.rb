@@ -1,10 +1,12 @@
 class LinkWithTitlesController < ApplicationController
   def new
-    @link = LinkWithTitle.new
-    render :layout => false
-  end
+
+  @link = LinkWithTitle.new
+  render :layout => false
+   end
 
   def index
+    
     @link= LinkWithTitle.all
   end
 
@@ -23,5 +25,8 @@ class LinkWithTitlesController < ApplicationController
     @total = Counter.all
     @tc=Counter.total_value
     render :layout => false 
+  end
+
+  def dash
   end
 end

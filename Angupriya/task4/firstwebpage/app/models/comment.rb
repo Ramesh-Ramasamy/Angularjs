@@ -1,4 +1,5 @@
 class Comment < ActiveRecord::Base
   belongs_to :counter
-  validates_presence_of :name, :feedback
-end
+  belongs_to :user
+  validates_presence_of :feedback
+  end

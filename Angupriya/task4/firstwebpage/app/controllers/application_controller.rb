@@ -22,7 +22,8 @@ class ApplicationController < ActionController::Base
   def save_login_state
     
     if session[:user_id]
-      flash[:notice]='already u r logged in ...logout to login with different user'
+      @current_user = User.find session[:user_id]
+      flash[:notice]='u r already logged in  '+@current_user.name 
       redirect_to(:controller => 'users',:action => 'home')
         return false
     else

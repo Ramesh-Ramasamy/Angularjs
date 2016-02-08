@@ -2,8 +2,9 @@ class UsersController < ApplicationController
 	before_filter :save_login_state ,:only =>[:login,:login_attempt]
 	 
 	def home
+  
   end
-
+  
   def login
 	end
 

@@ -1,0 +1,23 @@
+<b><p>Top 2 Post with maximum comments are</p></b>
+<% for top in @topcounters %>
+  <%=h top.name %>
+  <br>
+<% end %>
+
+<b><p>Top 2 users with maximum comments : </p></b>
+<table border=1>
+  <tr>
+  <td><p>Name of user</p></td>
+  <td><p>Number of comments</p></td>
+  </tr>
+<% for top in @topusers %>
+  <tr>
+  <td>
+  <b><%=h top.name %></b>
+  </td>
+  <td>
+  <b><%=h top.user_count %></b>
+  </td>
+  </tr>
+<% end %>
+</table>

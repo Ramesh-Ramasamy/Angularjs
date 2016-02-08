@@ -16,7 +16,7 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	$("body").on('submit',"#new_comment",function(e)
+	/*$("body").on('submit',"#new_comment",function(e)
 	{
 		var formdata=$(this).serializeArray();
 		var pageurl=$(this).attr("action");
@@ -31,7 +31,7 @@ $(document).ready(function(){
 			}
 		});
 		return false;
-	});
+	});*/
 	$(".linktype1").hover(function()
 	{
 		$("#withtitle").show();

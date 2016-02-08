@@ -1,8 +1,8 @@
 class LinkWithoutTitlesController < ApplicationController
   def new
     @link = LinkWithoutTitle.new
-   render :layout => false
-  end
+    render :layout => false
+   end
 
   def create
   @link = LinkWithoutTitle.new(params[:link_without_title])
@@ -11,7 +11,7 @@ class LinkWithoutTitlesController < ApplicationController
   else
     render :action => "new" 
   end
-end
+  end
   def show
    @counter = Counter.find(params[:id])
    @counter.count_value

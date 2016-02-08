@@ -1,7 +1,6 @@
-
 <% form_for(@comment,:url=>counter_comments_path(@counter)) do |f| %>
 <%= f.error_messages %>
 <p>Enter your Feedback <%= @current_user.name%> !!</p>
 <%= f.text_area :feedback %><br>
-<%= f.submit 'submit feedback' ,:class => 'but'%>
+<%= f.submit 'submit feedback' %>
 <% end %> 
