@@ -22,7 +22,6 @@ class LinkWithTitlesController < ApplicationController
   def show
     @counter = LinkWithTitle.find(params[:id])
     @counter.count_value
-    @total = Counter.all
     @tc=Counter.total_value
     render :layout => false 
   end
