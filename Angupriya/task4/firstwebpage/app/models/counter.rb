@@ -10,4 +10,21 @@ class Counter < ActiveRecord::Base
   def self.total_value
 	 	self.sum(:count)
   end
-end
+
+  def with_title
+    if self.type.present? 
+       if (self.type).eql?('LinkWithTitle')
+       self.name
+       end 
+    end 
+  end 
+
+  def without_title
+    if self.type.present? 
+       if (self.type).eql?('LinkWithoutTitle')
+       self.name
+       end 
+    end 
+  end 
+  
+  end

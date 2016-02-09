@@ -1,16 +1,16 @@
-<h1>Creating Link with content without title</h1>
+<h1>Creating Link without title</h1>
 
 <% form_for(@link) do |f| %>
   <%= f.error_messages %>
   <p>
-  <%= f.label :title %><br>
+  <%= f.label :title %><br><br>
   <%= f.text_field :title %>
   </p>
-  <p>
+  <p><br>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
-  <p>
+  <p><br>
     <%= f.label :content %><br />
     <%= f.text_field :content %>
   </p>

@@ -5,15 +5,12 @@ class LinkWithTitlesController < ApplicationController
   render :layout => false
    end
 
-  def index
-    
-    @link= LinkWithTitle.all
-  end
 
   def create
     @link = LinkWithTitle.new(params[:link_with_title])
     if @link.save
       redirect_to :root
+      render :layout => false
     else
       render :action => "new" 
     end

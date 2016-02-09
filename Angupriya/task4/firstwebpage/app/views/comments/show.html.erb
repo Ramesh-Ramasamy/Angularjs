@@ -1,10 +1,11 @@
 
-<%= will_paginate @comments %>
+<%= will_paginate @comments%>
 
 <% for comment in @comments %>
 <tr>
 	<p>Name</p>
-	<p>Comments</p>
+  <%=h  comment.name %>
+  <p>Comments</p>
 	<td><%=h comment.feedback %><br></td>
 </tr>
 <% end %>

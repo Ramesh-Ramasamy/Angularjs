@@ -23,8 +23,9 @@ class CommentsController < ApplicationController
   end
 
   def show
-  @count=Counter.find(params[:counter_id])
-  @comments=@count.comments.paginate(:page => params[:page],:per_page => 2)
+   @count=Counter.find(params[:counter_id])
+  @c=User.all(:joins => :comments,:select => 'comments.feedback,users.name',:conditions => {:comments => {:counter_id => @count.id}})
+  @comments=@c.paginate(:page => params[:page],:per_page => 2)
   end
 
   def dashboard

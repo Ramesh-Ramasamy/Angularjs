@@ -11,20 +11,13 @@
 
   <div id='withtitle'>
   <% @counters.each do |counter| %>
-    <% if counter.type.present? %>
-      <% if (counter.type).eql?('LinkWithTitle')%>
-      <p><%= counter.name %></p>
-      <% end %>
-    <% end %>
+    <%= counter.with_title %><br>
   <% end %>
  </div>
+ 
   <div id='withouttitle'>
     <% @counters.each do |counter| %>
-      <% if counter.type.present? %>
-        <% if (counter.type).eql?('LinkWithoutTitle')%>
-        <p><%= counter.name %></p>
-        <% end %>
-      <% end %>
+      <p><%= counter.without_title %></p>
     <% end %>
   </div>
 </div>
