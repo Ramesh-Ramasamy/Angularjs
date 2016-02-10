@@ -1,0 +1,10 @@
+embed_assets: on
+
+javascripts:
+  workspace:
+    - public/javascripts/counter.js
+    - public/javascripts/jquery-1.11.3.min.js
+    
+stylesheets:
+  workspace:
+    - public/stylesheets/counterstyle.css

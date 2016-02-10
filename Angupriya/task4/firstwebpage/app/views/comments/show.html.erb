@@ -4,7 +4,7 @@
 <% for comment in @comments %>
 <tr>
 	<p>Name</p>
-  <%=h  comment.name %>
+  <%=h  comment.user.name %>
   <p>Comments</p>
 	<td><%=h comment.feedback %><br></td>
 </tr>

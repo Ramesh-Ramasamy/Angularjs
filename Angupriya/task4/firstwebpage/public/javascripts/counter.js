@@ -15,23 +15,6 @@ $(document).ready(function(){
 		$("#comment").load($(this).attr('href'));
 		return false;
 	});
-	
-	/*$("body").on('submit',"#new_comment",function(e)
-	{
-		var formdata=$(this).serializeArray();
-		var pageurl=$(this).attr("action");
-		$("#comment").empty();
-		$.ajax(
-			{
-			url : pageurl,
-			type : 'post',
-			data  : formdata,
-			success :function(data){
-				$("#feedback").html(data);
-			}
-		});
-		return false;
-	});*/
 	$(".linktype1").hover(function()
 	{
 		$("#withtitle").show();
@@ -45,9 +28,6 @@ $(document).ready(function(){
 	},function(){
 		$("#withouttitle").hide();
 	});
-
-
-
 
 $("body").on('submit',"form",function(e)
 	{

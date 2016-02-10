@@ -1,8 +1,40 @@
-<b><p>Top 2 Post with maximum comments are</p></b>
+
+
+<b><p>Top 2 Post with maximum count value : </p></b>
+<table border=1>
+  <tr>
+  <td><p>Name of user</p></td>
+  <td><p>Count value</p></td>
+  </tr>
 <% for top in @topcounters %>
-  <%=h top.name %>
-  <br>
+  <tr>
+  <td>
+  <b><%=h top.name %></b>
+  </td>
+  <td>
+  <b><%=h top.count %></b>
+  </td>
+  </tr>
 <% end %>
+</table>
+
+<b><p>Top 2 Post with maximum comments : </p></b>
+<table border=1>
+  <tr>
+  <td><p>Post Name</p></td>
+  <td><p>Number of comments</p></td>
+  </tr>
+<% for top in @topcomment %>
+  <tr>
+  <td>
+  <b><%=h top.name %></b>
+  </td>
+  <td>
+  <b><%=h top.comment_count %></b>
+  </td>
+  </tr>
+<% end %>
+</table>
 
 <b><p>Top 2 users with maximum comments : </p></b>
 <table border=1>

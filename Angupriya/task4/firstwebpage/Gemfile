@@ -1,0 +1,6 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+# gem "rails"
+gem "will_paginate", "~> 3.0.4"
+# gem "jammit"
