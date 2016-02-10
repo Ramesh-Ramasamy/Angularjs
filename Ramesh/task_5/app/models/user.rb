@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   validates_presence_of :username
   validates_uniqueness_of :username
   validates_confirmation_of :password
-
+  has_many :comments
   def encrypt_password
     if password.present?
       self.password = Digest::MD5.hexdigest(password)

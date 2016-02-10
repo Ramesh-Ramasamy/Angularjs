@@ -9,14 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160203111454) do
+ActiveRecord::Schema.define(:version => 20160209061326) do
 
   create_table "comments", :force => true do |t|
-    t.string   "name"
     t.string   "commentbody"
     t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "comments", ["country_id"], :name => "index_comments_on_country_id"

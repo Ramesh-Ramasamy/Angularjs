@@ -5,9 +5,11 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Posts: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'main.min' %>
-  <%= javascript_include_tag "jquery-1.11.3.js", "data-turbolinks-track" => true  %>
-  <%= javascript_include_tag "main.min.js", "data-turbolinks-track" => true  %>
+  <% bundle do %>
+  <%= stylesheet_link_tag 'main' %>
+  <%= javascript_include_tag 'jquery-1.11.3.js' %> 
+  <%= javascript_include_tag 'mainjs.js' %>
+  <% end %>
 </head>
 <body>
 <header>

@@ -22,16 +22,16 @@ class CountriesController < ApplicationController
       @country = Withoutcontinent.new(params[:country]) 
     end   	
   	if @country.save
-  	 redirect_to(countries_path)
+  	 redirect_to(root_path)
     else
-      flash[:notice] = "Country not successfully added"
+      flash.now[:notice] = "Country not successfully added"
       render 'new' 
     end
   end
 
   def check_user
     if (!current_user)
-      flash[:notice] = "You Must Login Then Only You Can Add a Country"
+      flash.now[:notice] = "You Must Login Then Only You Can Add a Country"
       redirect_to '/login'
     end
   end

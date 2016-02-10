@@ -1,15 +1,14 @@
 class SessionsController < ApplicationController
   layout "countries"
   def login
-  end
-
-  def authenticate_login
+  end 
+  def authenticate_login  
     authenticate = User.authenticate(params[:username], params[:password])
     if authenticate
       session[:user_id] = authenticate.id
       redirect_to root_path
     else
-      flash[:notice] = "Invalid Username and Password"
+      flash.now[:notice] = "Invalid Username and Password"
       render 'login'
     end
   end
