@@ -29,11 +29,9 @@ class CommentsController < ApplicationController
     end
   end
 
-  def check_user
-    if (!current_user)
-      flash.now[:notice] = "You Must Login Then Only You Post a Comment"
-      redirect_to '/login'
-    end
+  def dashboard
+    @country = Comment.all(:joins => :country, :group =>"country_id",:select => "countryname,country_id,count(*) as country_count", :order => "country_count DESC", :limit => 5)
+    @user = Comment.all(:joins => :user, :group =>"user_id",:select => "username,user_id,count(*) as user_count", :order => "user_count DESC", :limit => 5)
   end
 
 end

@@ -29,10 +29,5 @@ class CountriesController < ApplicationController
     end
   end
 
-  def check_user
-    if (!current_user)
-      flash.now[:notice] = "You Must Login Then Only You Can Add a Country"
-      redirect_to '/login'
-    end
-  end
+  
 end

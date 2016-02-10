@@ -1,0 +1,26 @@
+<div class="row needmargin"> 
+  <div class="col-3"></div> 
+  <div class="col-3">
+  <table align="center">
+  <tr><th>Country Name</th><th>Total Comments</th></tr>
+    <% @country.each do |country| %>           
+        <tr>
+          <td><b><%= country.countryname %></b></td>
+          <td><%= country.country_count %> </td>
+        </tr>
+    <% end %>
+    </table>
+  </div>
+  <div class="col-3">
+    <table align="center">
+    <tr><th>User Name</th><th>Total Comments</th></tr>
+      <% @user.each do |user| %>           
+          <tr>
+            <td><b><%= user.username %></b></td>
+            <td><%= user.user_count %> </td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="col-3"></div>
+</div>

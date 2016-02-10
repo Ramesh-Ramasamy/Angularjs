@@ -37,23 +37,6 @@ section{
 	width: 100%;
 
 }
-.caret {
-  border-top: 4px solid #aaa;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  content: "";
-  display: inline-block;
-  height: 0;
-  width: 0;
-  vertical-align: middle;
-  
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-    transition: color 0.1s linear; 
-}
-
-
 nav ul {
   margin: 0;
   padding: 0;
@@ -68,7 +51,19 @@ nav > ul > li {
   -o-transition: all 0.2s;
   transition: all 0.2s; 
 }
-
+th{
+  padding: 5px;
+  font-size: 20px;
+}
+td{
+  text-align: center;
+  
+  
+  border-right:1px solid;
+}
+table{
+  border-spacing: 0px;
+}
 nav > ul > li > a {
   color: #aaa;
   display: block;
@@ -76,7 +71,9 @@ nav > ul > li > a {
   
   text-decoration: none;
 }
-
+.needmargin{
+  margin:50px;
+}
 #withcontinent{
   display: block;
   width: 130px;
