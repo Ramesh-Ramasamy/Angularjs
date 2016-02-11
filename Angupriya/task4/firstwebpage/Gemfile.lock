@@ -1,18 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    cssmin (1.0.3)
-    jammit (0.7.0)
-      cssmin (~> 1.0)
-      jsmin (~> 1.0)
-    jsmin (1.0.1)
+    dalli (2.7.5)
     will_paginate (3.0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  jammit
+  dalli
   will_paginate (~> 3.0.4)
 
 BUNDLED WITH

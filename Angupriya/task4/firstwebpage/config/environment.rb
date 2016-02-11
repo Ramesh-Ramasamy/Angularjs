@@ -35,7 +35,7 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
   # config.gem "jammit"
-  config.action_controller.session_store = :active_record_store
+ #  config.action_controller.session_store = :active_record_store
   config.action_controller.session = {
    :session_key => '_firstwebpage_session',
    :secret      => '3e6a1e43670fdacabb2b8de88390e63a8783eaae9b0ceb718c104389490776f55b0aeceac3cc92e1b6c164c2bb7fca99a011419eb9f89a4b478f2773bd59e393'
