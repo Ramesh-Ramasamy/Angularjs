@@ -11,8 +11,11 @@ GEM
     activeresource (2.3.8)
       activesupport (= 2.3.8)
     activesupport (2.3.8)
+    cssmin (1.0.3)
+    dalli (1.0.5)
     jammit (0.6.3)
       yui-compressor (>= 0.9.3)
+    jsmin (1.0.1)
     json (1.8.3)
     mysql (2.8.1)
     rack (1.1.6)
@@ -33,7 +36,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cssmin
+  dalli (~> 1.0.5)
   jammit (= 0.6.3)
+  jsmin
   mysql (= 2.8.1)
   rails (= 2.3.8)
   rake (= 0.9.6)

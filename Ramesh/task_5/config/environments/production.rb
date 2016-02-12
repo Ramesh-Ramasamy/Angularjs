@@ -8,7 +8,15 @@ config.cache_classes = true
 config.action_controller.consider_all_requests_local = false
 config.action_controller.perform_caching             = true
 config.action_view.cache_template_loading            = true
-
+require 'active_support/cache/dalli_store23'
+config.cache_store = :dalli_store,
+(ENV["MEMCACHIER_SERVERS"] || "").split(","),
+{:username => ENV[""],
+ :password => ENV[""],
+ :failover => true,
+ :socket_timeout => 1.5,
+ :socket_failure_delay => 0.2
+}
 # See everything in the log (default is :info)
 # config.log_level = :debug
 

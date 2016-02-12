@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def authenticate_login  
     authenticate = User.authenticate(params[:username], params[:password])
     if authenticate
-      session[:user_id] = authenticate.id
+      Rails.cache.write("user_id", authenticate.id)    
       redirect_to root_path
     else
       flash.now[:notice] = "Invalid Username and Password"
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def logout
-    session[:user_id] = nil
+    Rails.cache.write("user_id", nil)
     redirect_to root_path
   end
 

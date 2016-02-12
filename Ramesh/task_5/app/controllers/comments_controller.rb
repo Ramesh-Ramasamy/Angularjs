@@ -1,15 +1,14 @@
 class CommentsController < ApplicationController
   layout "countries"
   before_filter :check_user, :only =>[:new, :create]
-  def index
-    @country = Country.find(params[:country_id])
-    @comments = User.all(:joins => :comments,:select => 'comments.commentbody,users.username',:conditions => {:comments => {:country_id => @country.id}})
+  def index   
+    @comments = Comment.all(:include => :user,:conditions => {:comments => {:country_id => params[:country_id]}} )
+    #@comments = User.all(:joins => :comments,:select => 'comments.commentbody,users.username',:conditions => {:comments => {:country_id => @country.id}})
     @comments = @comments.paginate(:page => params[:page], :per_page => 3)
   end
 
-  def show
-  	@country = Country.find(params[:country_id])
-  	@comment = @country.comments.find(params[:id])
+  def show  	
+  	@comment = Comment.find(params[:id])
   end
 
   def new
@@ -19,7 +18,7 @@ class CommentsController < ApplicationController
 
   def create
   	@country = Country.find(params[:country_id])
-    @comment = @country.comments.build(:user_id => session[:user_id], :commentbody => params[:comment][:commentbody])
+    @comment = @country.comments.build(:user_id => Rails.cache.read("user_id"), :commentbody => params[:comment][:commentbody])
   	if @comment.save
       flash[:notice] = 'Comment was successfully saved.'
       redirect_to country_comment_url(@country, @comment)
