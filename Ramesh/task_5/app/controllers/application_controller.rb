@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  helper_method :current_user
-
+  helper_method :current_user  
   def current_user
       @current_user ||=User.find(Rails.cache.read("user_id")) if Rails.cache.read("user_id")
   end

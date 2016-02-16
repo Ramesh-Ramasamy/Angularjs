@@ -4,16 +4,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Posts: <%= controller.action_name %></title>
-  
-    <%= stylesheet_link_tag 'main' %>
-    <%= javascript_include_tag 'jquery-1.11.3.js' %> 
-    <%= javascript_include_tag 'mainjs.js' %>  
-  
+  <title>Posts: <%= controller.action_name %></title>   
+    <%= include_stylesheets :common, :media => 'all' %>
+    <%= include_javascripts :common %>  
 </head>
 <body>
 <header>
-	Task 6 Ruby On Rails
+	Task 7 Ruby On Rails
 	<div class="row">
 		<div class="col-8">
     <nav>
@@ -41,6 +38,7 @@
       <%= link_to "Log in", login_path %>
       <% end %>
       <%= link_to 'Home', countries_path %>
+      <%= link_to 'Dash Board', dashboard_path %>
 		</div>
 	</div>
 </header>

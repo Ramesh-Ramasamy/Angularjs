@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   layout "countries"
   before_filter :check_user, :only =>[:new, :create]
-  def index   
+  def index      
     @comments = Comment.all(:include => :user,:conditions => {:comments => {:country_id => params[:country_id]}} )
     #@comments = User.all(:joins => :comments,:select => 'comments.commentbody,users.username',:conditions => {:comments => {:country_id => @country.id}})
     @comments = @comments.paginate(:page => params[:page], :per_page => 3)

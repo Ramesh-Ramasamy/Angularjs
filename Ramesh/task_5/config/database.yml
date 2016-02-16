@@ -41,7 +41,7 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: task_5_production
+  database: task_5_development
   pool: 5
   username: root
   password: run

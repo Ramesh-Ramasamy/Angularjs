@@ -10,6 +10,6 @@ require 'tasks/rails'
 require 'jammit'
 namespace :assets do
   task :package do
-    Jammit.package! :base_url => "http://mysite.org/"
+    Jammit.package! :base_url => "localhost/"
   end
 end
