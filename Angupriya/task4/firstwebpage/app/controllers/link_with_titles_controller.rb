@@ -9,8 +9,7 @@ class LinkWithTitlesController < ApplicationController
   def create
     @link = LinkWithTitle.new(params[:link_with_title])
     if @link.save
-      redirect_to :root
-      render :layout => false
+      redirect_to link_with_title_path(@link)
     else
       render :action => "new" 
     end
@@ -23,6 +22,4 @@ class LinkWithTitlesController < ApplicationController
     render :layout => false 
   end
 
-  def dash
-  end
 end

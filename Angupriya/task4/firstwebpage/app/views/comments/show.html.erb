@@ -1,13 +1,13 @@
+<%= notice %>
 
-<%= will_paginate @comments%>
-
+<%= will_paginate @comments %>
 <% for comment in @comments %>
-<tr>
+
 	<p>Name</p>
-  <%=h  comment.user.name %>
+  <%= comment.user.name %>
   <p>Comments</p>
-	<td><%=h comment.feedback %><br></td>
-</tr>
+	<%= comment.feedback %><br>
+
 <% end %>
 
 <% if @comments.empty? %>

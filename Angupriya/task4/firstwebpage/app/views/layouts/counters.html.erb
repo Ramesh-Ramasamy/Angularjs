@@ -5,21 +5,26 @@
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	<title>Counters: <%= controller.action_name %></title>
-	<% bundle do %>
-	<%= stylesheet_link_tag 'counterstyle' %>
-	<%= javascript_include_tag 'jquery-1.11.3.min.js' %> 
-	<%= javascript_include_tag 'counter.js' %>
-	<% end %>
-</head>
+	<%= include_stylesheets :common, :media => 'all' %>
+	<%= include_javascripts :common %>
+	</head>
 <body>
 	<div id="header">
 	<span class="linktype1">with title</span> 
 	<span class="linktype2">without title</span> 
+
 	<%= link_to 'dashboard',url_for(:controller => 'comments',:action => 'dashboard'),:class => 'but'%>
-		 <span class="heading">task on ruby on rails</span>
-		<%=link_to 'signup',new_user_path,:class => 'regbut' %>
-		<%=link_to 'login', url_for(:controller => 'users',:action => 'login') ,:class => 'regbut'%>
-		<%= link_to 'logout',url_for(:controller => 'application',:action => 'logout'),:class => 'regbut' %>
+		 
+		<span class="heading">task on ruby on rails</span>
+		
+		<% if Rails.cache.read('user_id') %>
+			<span id='wel'>Welcome <%= Rails.cache.read('user_name')%></span>
+			<%= link_to 'logout',url_for(:controller => 'application',:action => 'logout'),:class => 'regbut',:id => 'logout' %>
+		<% else %>
+			<%=link_to 'login', url_for(:controller => 'users',:action => 'login') ,:class => 'regbut'%>
+			<%=link_to 'signup',new_user_path,:class => 'regbut' %>
+		<% end %>
+	
 	</div>
 <%= yield %>
 </body>

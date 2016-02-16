@@ -1,10 +1,12 @@
-embed_assets: on
-
+package_assets: 	always
+embed_assets: 		  	on
+compress_assets: 		on
+package_path: 			packages
+javascript_compressor:  closure
 javascripts:
-  workspace:
-    - public/javascripts/counter.js
+  common:
     - public/javascripts/jquery-1.11.3.min.js
-    
+    - public/javascripts/counter.js
 stylesheets:
-  workspace:
-    - public/stylesheets/counterstyle.css
+  common:
+    - public/stylesheets/*.css

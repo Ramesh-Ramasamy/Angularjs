@@ -1,4 +1,4 @@
-<h1>Creating Link without title</h1>
+<h1>Creating Link with title</h1>
 
 <% form_for(@link) do |f| %>
   <%= f.error_messages %>
@@ -15,6 +15,6 @@
     <%= f.text_field :content %>
   </p>
    <p>
-    <%= f.submit 'Create'%>
+    <%= f.submit 'Create',:class => 'but'%>
   </p>
 <% end %>

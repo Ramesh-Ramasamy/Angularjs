@@ -1,7 +1,12 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
-gem "will_paginate", "~> 3.0.4"
-# gem "jammit"
-gem 'dalli'
+gem "rails",'2.3.8'
+gem 'mysql','2.8.1'
+gem 'rake','0.9.6'
+gem 'rdoc'
+gem "will_paginate", '2.3.14', :require => true
+gem "jammit", '0.6.5'
+gem 'jsmin'
+gem 'cssmin'
+gem 'dalli', '~>1.0.5'

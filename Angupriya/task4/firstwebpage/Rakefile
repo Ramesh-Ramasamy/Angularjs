@@ -7,6 +7,10 @@ require 'rake'
 require 'rake/testtask'
 require 'rdoc/task'
 require 'tasks/rails'
- 
-
+require 'jammit'
+namespace :assets do
+  task :package do
+    Jammit.package! :base_url => "localhost/"
+  end
+end
  

@@ -1,3 +1,4 @@
+
 class CommentsController < ApplicationController
   before_filter :authentication,:only => [:new,:create]
   
@@ -10,20 +11,19 @@ class CommentsController < ApplicationController
 
   def create  
    @counter = Counter.find(params[:counter_id])
-   @comment=@counter.comments.build(:feedback=>params[:comment][:feedback],:user_id => session[:user_id])
+   @comment=@counter.comments.build(:feedback=>params[:comment][:feedback],:user_id => Rails.cache.read('user_id'))
     if @comment.save
-      flash[:notice]='comments successfully posted'
-      redirect_to counter_comments_path(@counter)
+      redirect_to :root
     else
-      flash[:notice]=session[:user_id]
+      # flash[:notice]=session[:user_id]
       redirect_to counter_comments_path(@counter)
    end
   end
 
   def show
-  @count=Counter.find(params[:counter_id])
-  @c=Comment.find(:all,:include => :user)
-  @comments=@c.paginate(:page => params[:page],:per_page => 2)
+   @c=Comment.all(:include => :user,:conditions => {:counter_id => params[:counter_id]})
+   @comments=@c.paginate(:page => params[:page],:per_page => 2)
+ 
   end
 
   def dashboard

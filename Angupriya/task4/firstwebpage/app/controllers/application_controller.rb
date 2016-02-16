@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
 
 
   def authentication
-    if session[:user_id]
-      @current_user = User.find session[:user_id]
+    if Rails.cache.read('user_id')
+      @current_user = User.find Rails.cache.read('user_id')
       return true
     else
       redirect_to(:controller => 'users',:action => 'login')
@@ -19,21 +19,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def save_login_state
-    
-    if session[:user_id]
-      @current_user = User.find session[:user_id]
-      flash[:notice]='u r already logged in  '+@current_user.name 
-      redirect_to(:controller => 'users',:action => 'home')
-        return false
-    else
-      return true
-    end
-  end
-
   def logout
-    session[:user_id]=nil 
-    flash[:notice]='successfully logged out'
-    redirect_to(:controller => 'users',:action => 'home')
-    end
+    Rails.cache.write('user_id',nil)
+    redirect_to root_path
+  end
 end

@@ -1,5 +1,7 @@
-$(document).ready(function(){
-	$("a").click(function(event){
+
+	$(function(){
+	$("a[href!='/application/logout']").click(function(event){
+		
 		$("#contents").load($(this).attr('href'));
 		$("#feedback").empty();
 		$("#comment").empty();
@@ -15,6 +17,8 @@ $(document).ready(function(){
 		$("#comment").load($(this).attr('href'));
 		return false;
 	});
+
+	
 	$(".linktype1").hover(function()
 	{
 		$("#withtitle").show();
@@ -29,27 +33,9 @@ $(document).ready(function(){
 		$("#withouttitle").hide();
 	});
 
-$("body").on('submit',"form",function(e)
-	{
-		var formdata=$(this).serializeArray();
-		var pageurl=$(this).attr("action");
-		$.ajax(
-			{
-			url : pageurl,
-			type : 'post',
-			data  : formdata,
-			success :function(data){
-				$('#feedback').empty();
-				$("#contents").empty();
-				$("#comment").html(data);
-			}
-		});
-		return false;
-	});
 
 
 
 });
 
-
-
+	

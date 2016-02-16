@@ -1,0 +1,511 @@
+
+########## wireless info START ##########
+
+Report from: 16 Feb 2016 16:11 IST +0530
+
+Booted last: 16 Feb 2016 10:38 IST +0530
+
+Script from: 27 Sep 2015 00:34 UTC +0000
+
+##### release ###########################
+
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04 LTS
+Release:	14.04
+Codename:	trusty
+
+##### kernel ############################
+
+Linux 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:34:22 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+Parameters: ro, quiet, splash, vt.handoff=7
+
+##### desktop ###########################
+
+Ubuntu
+
+##### lspci #############################
+
+07:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. RTL8101E/RTL8102E PCI Express Fast Ethernet controller [10ec:8136] (rev 07)
+	Subsystem: Hewlett-Packard Company Device [103c:80c1]
+	Kernel driver in use: r8169
+
+0d:00.0 Network controller [0280]: Realtek Semiconductor Co., Ltd. RTL8723BE PCIe Wireless Network Adapter [10ec:b723]
+	Subsystem: Hewlett-Packard Company Device [103c:804c]
+	Kernel driver in use: rtl8723be
+
+##### lsusb #############################
+
+Bus 001 Device 002: ID 8087:8001 Intel Corp. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 003: ID 05c8:0382 Cheng Uei Precision Industry Co., Ltd (Foxlink) 
+Bus 002 Device 002: ID 0bda:b006 Realtek Semiconductor Corp. 
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+##### PCMCIA card info ##################
+
+##### rfkill ############################
+
+0: hci0: Bluetooth
+	Soft blocked: no
+	Hard blocked: no
+1: phy0: Wireless LAN
+	Soft blocked: yes
+	Hard blocked: no
+
+##### lsmod #############################
+
+hp_wmi                 14062  0 
+sparse_keymap          13948  1 hp_wmi
+rtl8723be              85118  0 
+btcoexist              50304  1 rtl8723be
+rtl8723_common         23361  1 rtl8723be
+rtl_pci                26690  1 rtl8723be
+rtlwifi                63475  2 rtl_pci,rtl8723be
+mac80211              630728  3 rtl_pci,rtlwifi,rtl8723be
+cfg80211              484040  2 mac80211,rtlwifi
+wmi                    19177  1 hp_wmi
+
+##### interfaces ########################
+
+auto lo
+iface lo inet loopback
+
+##### ifconfig ##########################
+
+eth2      Link encap:Ethernet  HWaddr <MAC 'eth2' [IF]>  
+          inet addr:10.20.10.71  Bcast:10.20.11.255  Mask:255.255.254.0
+          inet6 addr: fe80::<IP6 'eth2' [IF]>/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:101711 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:53781 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:48651788 (48.6 MB)  TX bytes:11112277 (11.1 MB)
+
+wlan1     Link encap:Ethernet  HWaddr <MAC 'wlan1' [IF]>  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+##### iwconfig ##########################
+
+eth2      no wireless extensions.
+
+lo        no wireless extensions.
+
+wlan1     IEEE 802.11bgn  ESSID:off/any  
+          Mode:Managed  Access Point: Not-Associated   Tx-Power=off   
+          Retry  long limit:7   RTS thr=2347 B   Fragment thr:off
+          Power Management:on
+          
+
+##### route #############################
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         10.20.10.1      0.0.0.0         UG    0      0        0 eth2
+10.20.10.0      0.0.0.0         255.255.254.0   U     1      0        0 eth2
+
+##### resolv.conf #######################
+
+nameserver 127.0.1.1
+search infypedia.org summit.infypedia.org bab.infypedia.org
+
+##### network managers ##################
+
+Installed:
+
+	NetworkManager
+
+Running:
+
+root       778     1  0 10:38 ?        00:00:00 NetworkManager
+
+##### NetworkManager info ###############
+
+NetworkManager Tool
+
+State: connected (global)
+
+- Device: wlan1 ----------------------------------------------------------------
+  Type:              802.11 WiFi
+  Driver:            rtl8723be
+  State:             unavailable
+  Default:           no
+  HW Address:        <MAC 'wlan1' [IF]>
+
+  Capabilities:
+
+  Wireless Properties
+    WEP Encryption:  yes
+    WPA Encryption:  yes
+    WPA2 Encryption: yes
+
+  Wireless Access Points 
+
+- Device: eth2  [Wired connection 1] -------------------------------------------
+  Type:              Wired
+  Driver:            r8169
+  State:             connected
+  Default:           yes
+  HW Address:        <MAC 'eth2' [IF]>
+
+  Capabilities:
+    Carrier Detect:  yes
+    Speed:           100 Mb/s
+
+  Wired Properties
+    Carrier:         on
+
+  IPv4 Settings:
+    Address:         10.20.10.71
+    Prefix:          23 (255.255.254.0)
+    Gateway:         10.20.10.1
+
+    DNS:             10.20.10.1
+
+##### NetworkManager.state ##############
+
+[main]
+NetworkingEnabled=true
+WirelessEnabled=false
+WWANEnabled=true
+WimaxEnabled=true
+
+##### NetworkManager.conf ###############
+
+[main]
+plugins=ifupdown,keyfile,ofono
+dns=dnsmasq
+
+[ifupdown]
+managed=false
+
+##### NetworkManager profiles ###########
+
+[[/etc/NetworkManager/system-connections/SriSaiPG 1]] (600 root)
+[connection] id=SriSaiPG 1 | type=802-11-wireless
+[802-11-wireless] ssid=SriSaiPG 1 | mac-address=<MAC address>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/lazerBeam2]] (600 root)
+[connection] id=lazerBeam2 | type=802-11-wireless
+[802-11-wireless] ssid=lazerBeam2 | mac-address=<MAC 'wlan1' [IF]>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/lazerBeam1]] (600 root)
+[connection] id=lazerBeam1 | type=802-11-wireless
+[802-11-wireless] ssid=lazerBeam1 | mac-address=<MAC 'wlan1' [IF]>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/joshi]] (600 root)
+[connection] id=joshi | type=802-11-wireless
+[802-11-wireless] ssid=joshi | mac-address=<MAC address>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/SriSaiPg-1]] (600 root)
+[connection] id=SriSaiPg-1 | type=802-11-wireless
+[802-11-wireless] ssid=SriSaiPg-1 | mac-address=<MAC 'wlan1' [IF]>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/lazerBeam]] (600 root)
+[connection] id=lazerBeam | type=802-11-wireless
+[802-11-wireless] ssid=lazerBeam | mac-address=<MAC 'wlan1' [IF]>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/lazerBeam 1]] (600 root)
+[connection] id=lazerBeam 1 | type=802-11-wireless
+[802-11-wireless] ssid=lazerBeam | mac-address=<MAC address>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/lazerBeam2 2]] (600 root)
+[connection] id=lazerBeam2 2 | type=802-11-wireless
+[802-11-wireless] ssid=lazerBeam2 | mac-address=<MAC address>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/SriSaiPG 1 1]] (600 root)
+[connection] id=SriSaiPG 1 1 | type=802-11-wireless
+[802-11-wireless] ssid=SriSaiPG 1 | mac-address=<MAC 'wlan1' [IF]>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/lazerBeam2 1]] (600 root)
+[connection] id=lazerBeam2 1 | type=802-11-wireless
+[802-11-wireless] ssid=lazerBeam2 | mac-address=<MAC address>
+[ipv4] method=auto
+[ipv6] method=auto
+
+[[/etc/NetworkManager/system-connections/HP-Print-04-Deskjet 5520 series]] (600 root)
+[connection] id=HP-Print-04-Deskjet 5520 series | type=802-11-wireless
+[802-11-wireless] ssid=HP-Print-04-Deskjet 5520 series | mac-address=<MAC address>
+[ipv6] method=auto
+[ipv4] method=auto
+
+[[/etc/NetworkManager/system-connections/laserbeam1]] (600 root)
+[connection] id=laserbeam1 | type=802-11-wireless
+[802-11-wireless] ssid=laserbeam1 | mac-address=<MAC address>
+[ipv4] method=auto
+[ipv6] method=auto
+
+##### iw reg get ########################
+
+Region: Asia/Kolkata (based on set time zone)
+
+country 00:
+	(2402 - 2472 @ 40), (3, 20)
+	(2457 - 2482 @ 40), (3, 20), PASSIVE-SCAN, NO-IBSS
+	(2474 - 2494 @ 20), (3, 20), NO-OFDM, PASSIVE-SCAN, NO-IBSS
+	(5170 - 5250 @ 40), (3, 20), PASSIVE-SCAN, NO-IBSS
+	(5735 - 5835 @ 40), (3, 20), PASSIVE-SCAN, NO-IBSS
+
+##### iwlist channels ###################
+
+eth2      no frequency information.
+
+lo        no frequency information.
+
+wlan1     13 channels in total; available frequencies :
+          Channel 01 : 2.412 GHz
+          Channel 02 : 2.417 GHz
+          Channel 03 : 2.422 GHz
+          Channel 04 : 2.427 GHz
+          Channel 05 : 2.432 GHz
+          Channel 06 : 2.437 GHz
+          Channel 07 : 2.442 GHz
+          Channel 08 : 2.447 GHz
+          Channel 09 : 2.452 GHz
+          Channel 10 : 2.457 GHz
+          Channel 11 : 2.462 GHz
+          Channel 12 : 2.467 GHz
+          Channel 13 : 2.472 GHz
+
+##### iwlist scan #######################
+
+wlan1     Interface doesn't support scanning : Network is down
+
+eth2      Interface doesn't support scanning.
+
+lo        Interface doesn't support scanning.
+
+##### module infos ######################
+
+[rtl8723be]
+filename:       /lib/modules/3.13.0-71-generic/kernel/drivers/net/wireless/rtlwifi/rtl8723be/rtl8723be.ko
+firmware:       rtlwifi/rtl8723befw.bin
+description:    Realtek 8723BE 802.11n PCI wireless
+license:        GPL
+author:         Realtek WlanFAE	<wlanfae@realtek.com>
+author:         PageHe	<page_he@realsil.com.cn>
+srcversion:     0D59E0301AAA6E5A93400BB
+depends:        rtlwifi,rtl8723-common,rtl_pci,btcoexist,mac80211
+intree:         Y
+vermagic:       3.13.0-71-generic SMP mod_unload modversions 
+signer:         Magrathea: Glacier signing key
+sig_key:        47:A2:C6:25:A3:7A:90:CD:06:81:35:DD:25:89:3A:F8:33:0B:29:3E
+sig_hashalgo:   sha512
+parm:           swlps:bool
+parm:           swenc:using hardware crypto (default 0 [hardware])
+ (bool)
+parm:           ips:using no link power save (default 1 is open)
+ (bool)
+parm:           fwlps:using linked fw control power save (default 1 is open)
+ (bool)
+parm:           msi:Set to 1 to use MSI interrupts mode (default 0)
+ (bool)
+parm:           debug:Set debug level (0-5) (default 0) (int)
+
+[rtl8723_common]
+filename:       /lib/modules/3.13.0-71-generic/kernel/drivers/net/wireless/rtlwifi/rtl8723com/rtl8723-common.ko
+description:    Realtek RTL8723AE/RTL8723BE 802.11n PCI wireless common routines
+license:        GPL
+author:         Larry Finger	<Larry.Finger@lwfinger.net>
+author:         Realtek WlanFAE	<wlanfae@realtek.com>
+srcversion:     D1807280DBDC9B8A7EBDAB7
+depends:        
+intree:         Y
+vermagic:       3.13.0-71-generic SMP mod_unload modversions 
+signer:         Magrathea: Glacier signing key
+sig_key:        47:A2:C6:25:A3:7A:90:CD:06:81:35:DD:25:89:3A:F8:33:0B:29:3E
+sig_hashalgo:   sha512
+
+[rtl_pci]
+filename:       /lib/modules/3.13.0-71-generic/kernel/drivers/net/wireless/rtlwifi/rtl_pci.ko
+description:    PCI basic driver for rtlwifi
+license:        GPL
+author:         Larry Finger	<Larry.FInger@lwfinger.net>
+author:         Realtek WlanFAE	<wlanfae@realtek.com>
+author:         lizhaoming	<chaoming_li@realsil.com.cn>
+srcversion:     D5E4890DC428FA5A1BF92DF
+depends:        mac80211,rtlwifi
+intree:         Y
+vermagic:       3.13.0-71-generic SMP mod_unload modversions 
+signer:         Magrathea: Glacier signing key
+sig_key:        47:A2:C6:25:A3:7A:90:CD:06:81:35:DD:25:89:3A:F8:33:0B:29:3E
+sig_hashalgo:   sha512
+
+[rtlwifi]
+filename:       /lib/modules/3.13.0-71-generic/kernel/drivers/net/wireless/rtlwifi/rtlwifi.ko
+description:    Realtek 802.11n PCI wireless core
+license:        GPL
+author:         Larry Finger	<Larry.FInger@lwfinger.net>
+author:         Realtek WlanFAE	<wlanfae@realtek.com>
+author:         lizhaoming	<chaoming_li@realsil.com.cn>
+srcversion:     730FEE1A7696EA37A982482
+depends:        mac80211,cfg80211
+intree:         Y
+vermagic:       3.13.0-71-generic SMP mod_unload modversions 
+signer:         Magrathea: Glacier signing key
+sig_key:        47:A2:C6:25:A3:7A:90:CD:06:81:35:DD:25:89:3A:F8:33:0B:29:3E
+sig_hashalgo:   sha512
+
+[mac80211]
+filename:       /lib/modules/3.13.0-71-generic/kernel/net/mac80211/mac80211.ko
+license:        GPL
+description:    IEEE 802.11 subsystem
+srcversion:     C8432FAB97804E8F7A8FB0F
+depends:        cfg80211
+intree:         Y
+vermagic:       3.13.0-71-generic SMP mod_unload modversions 
+signer:         Magrathea: Glacier signing key
+sig_key:        47:A2:C6:25:A3:7A:90:CD:06:81:35:DD:25:89:3A:F8:33:0B:29:3E
+sig_hashalgo:   sha512
+parm:           max_nullfunc_tries:Maximum nullfunc tx tries before disconnecting (reason 4). (int)
+parm:           max_probe_tries:Maximum probe tries before disconnecting (reason 4). (int)
+parm:           beacon_loss_count:Number of beacon intervals before we decide beacon was lost. (int)
+parm:           probe_wait_ms:Maximum time(ms) to wait for probe response before disconnecting (reason 4). (int)
+parm:           ieee80211_default_rc_algo:Default rate control algorithm for mac80211 to use (charp)
+
+[cfg80211]
+filename:       /lib/modules/3.13.0-71-generic/kernel/net/wireless/cfg80211.ko
+description:    wireless configuration support
+license:        GPL
+author:         Johannes Berg
+srcversion:     695424C2F5CD23A91B67E25
+depends:        
+intree:         Y
+vermagic:       3.13.0-71-generic SMP mod_unload modversions 
+signer:         Magrathea: Glacier signing key
+sig_key:        47:A2:C6:25:A3:7A:90:CD:06:81:35:DD:25:89:3A:F8:33:0B:29:3E
+sig_hashalgo:   sha512
+parm:           ieee80211_regdom:IEEE 802.11 regulatory domain code (charp)
+parm:           cfg80211_disable_40mhz_24ghz:Disable 40MHz support in the 2.4GHz band (bool)
+
+##### module parameters #################
+
+[rtl8723be]
+debug: 0
+fwlps: Y
+ips: Y
+msi: N
+swenc: N
+swlps: N
+
+[mac80211]
+beacon_loss_count: 7
+ieee80211_default_rc_algo: minstrel_ht
+max_nullfunc_tries: 2
+max_probe_tries: 5
+probe_wait_ms: 500
+
+[cfg80211]
+cfg80211_disable_40mhz_24ghz: N
+ieee80211_regdom: 00
+
+##### /etc/modules ######################
+
+lp
+rtc
+
+##### modprobe options ##################
+
+[/etc/modprobe.d/blacklist-ath_pci.conf]
+blacklist ath_pci
+
+[/etc/modprobe.d/blacklist.conf]
+blacklist evbug
+blacklist usbmouse
+blacklist usbkbd
+blacklist eepro100
+blacklist de4x5
+blacklist eth1394
+blacklist snd_intel8x0m
+blacklist snd_aw2
+blacklist i2c_i801
+blacklist prism54
+blacklist bcm43xx
+blacklist garmin_gps
+blacklist asus_acpi
+blacklist snd_pcsp
+blacklist pcspkr
+blacklist amd76x_edac
+
+[/etc/modprobe.d/blacklist-rare-network.conf]
+alias net-pf-3 off
+alias net-pf-6 off
+alias net-pf-9 off
+alias net-pf-11 off
+alias net-pf-12 off
+alias net-pf-19 off
+alias net-pf-21 off
+alias net-pf-36 off
+
+[/etc/modprobe.d/iwlwifi.conf]
+remove iwlwifi \
+(/sbin/lsmod | grep -o -e ^iwlmvm -e ^iwldvm -e ^iwlwifi | xargs /sbin/rmmod) \
+&& /sbin/modprobe -r mac80211
+
+[/etc/modprobe.d/mlx4.conf]
+softdep mlx4_core post: mlx4_en
+
+##### rc.local ##########################
+
+exit 0
+
+##### pm-utils ##########################
+
+##### udev rules ########################
+
+[/etc/udev/rules.d/70-persistent-net.rules]
+# PCI device 0x1969:0x1090 (alx)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC address>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
+# PCI device 0x10ec:0x8723 (rtl8723ae)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC address>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan0"
+# PCI device 0x10ec:0x8136 (r8169)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC address>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1"
+# PCI device 0x10ec:0x8136 (r8169)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC 'eth2' [IF]>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth2"
+# PCI device 0x10ec:0xb723 (rtl8723be)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC 'wlan1' [IF]>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan1"
+# USB device 0x:0x (r8712u)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC address>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan2"
+# USB device 0x:0x (r8712u)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC address>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan3"
+# USB device 0x:0x (rt2800usb)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="<MAC address>", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan4"
+
+##### dmesg #############################
+
+[ 4590.237159] IPv6: ADDRCONF(NETDEV_CHANGE): eth2: link becomes ready
+[10088.058907] r8169 0000:07:00.0 eth2: link down
+[10092.821643] IPv6: ADDRCONF(NETDEV_UP): eth2: link is not ready
+[10506.994456] r8169 0000:07:00.0 eth2: link up
+[10506.994472] IPv6: ADDRCONF(NETDEV_CHANGE): eth2: link becomes ready
+[11660.906701] r8169 0000:07:00.0 eth2: link down
+[11665.129911] IPv6: ADDRCONF(NETDEV_UP): eth2: link is not ready
+[11892.769447] r8169 0000:07:00.0 eth2: link down
+[11894.416492] r8169 0000:07:00.0 eth2: link up
+[11894.416499] IPv6: ADDRCONF(NETDEV_CHANGE): eth2: link becomes ready
+
+########## wireless info END ############
+

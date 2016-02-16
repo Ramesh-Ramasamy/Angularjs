@@ -1,7 +1,7 @@
 <%= notice %>
 <p>Login Page</p>
 
-<% form_tag  url_for(:controller => 'users',:action => 'login_attempt') do %>
+<% form_tag  url_for(:controller => 'users',:action => 'login_attempt') ,:id => 'login' do %>
 	
 	<p>Username
 	<%= text_field_tag :Username %>

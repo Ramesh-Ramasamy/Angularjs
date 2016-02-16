@@ -9,6 +9,9 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   map.connect ':controller/:action'
+  ActionController::Routing::Routes.draw do |map|
+  Jammit::Routes.draw(map)
+  end
   
 end
 

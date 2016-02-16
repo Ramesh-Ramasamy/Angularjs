@@ -1,15 +1,50 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    dalli (2.7.5)
-    will_paginate (3.0.7)
+    actionmailer (2.3.8)
+      actionpack (= 2.3.8)
+    actionpack (2.3.8)
+      activesupport (= 2.3.8)
+      rack (~> 1.1.0)
+    activerecord (2.3.8)
+      activesupport (= 2.3.8)
+    activeresource (2.3.8)
+      activesupport (= 2.3.8)
+    activesupport (2.3.8)
+    cssmin (1.0.3)
+    dalli (1.0.5)
+    jammit (0.6.5)
+      yui-compressor (>= 0.9.3)
+    jsmin (1.0.1)
+    json (1.8.3)
+    mysql (2.8.1)
+    rack (1.1.6)
+    rails (2.3.8)
+      actionmailer (= 2.3.8)
+      actionpack (= 2.3.8)
+      activerecord (= 2.3.8)
+      activeresource (= 2.3.8)
+      activesupport (= 2.3.8)
+      rake (>= 0.8.3)
+    rake (0.9.6)
+    rdoc (4.2.2)
+      json (~> 1.4)
+    will_paginate (2.3.14)
+    yui-compressor (0.12.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  dalli
-  will_paginate (~> 3.0.4)
+  cssmin
+  dalli (~> 1.0.5)
+  jammit (= 0.6.5)
+  jsmin
+  mysql (= 2.8.1)
+  rails (= 2.3.8)
+  rake (= 0.9.6)
+  rdoc
+  will_paginate (= 2.3.14)
 
 BUNDLED WITH
    1.11.2
