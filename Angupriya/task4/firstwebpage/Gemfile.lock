@@ -13,11 +13,16 @@ GEM
     activesupport (2.3.8)
     cssmin (1.0.3)
     dalli (1.0.5)
+    iconv (1.0.4)
     jammit (0.6.5)
       yui-compressor (>= 0.9.3)
     jsmin (1.0.1)
     json (1.8.3)
+    multi_json (1.0.4)
     mysql (2.8.1)
+    oj (2.14.6)
+    rabl (0.3.0)
+      multi_json (~> 1.0.3)
     rack (1.1.6)
     rails (2.3.8)
       actionmailer (= 2.3.8)
@@ -38,9 +43,12 @@ PLATFORMS
 DEPENDENCIES
   cssmin
   dalli (~> 1.0.5)
+  iconv (~> 1.0.3)
   jammit (= 0.6.5)
   jsmin
   mysql (= 2.8.1)
+  oj
+  rabl
   rails (= 2.3.8)
   rake (= 0.9.6)
   rdoc

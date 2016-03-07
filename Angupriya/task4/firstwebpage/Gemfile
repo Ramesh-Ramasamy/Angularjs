@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem "rails",'2.3.8'
+gem "iconv", "~> 1.0.3"
 gem 'mysql','2.8.1'
 gem 'rake','0.9.6'
 gem 'rdoc'
@@ -10,3 +11,6 @@ gem "jammit", '0.6.5'
 gem 'jsmin'
 gem 'cssmin'
 gem 'dalli', '~>1.0.5'
+gem 'rabl'
+#  as the JSON parser
+gem 'oj'

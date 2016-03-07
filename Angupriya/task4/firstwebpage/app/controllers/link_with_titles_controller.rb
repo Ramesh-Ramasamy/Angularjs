@@ -1,9 +1,9 @@
 class LinkWithTitlesController < ApplicationController
+  
   def new
-
-  @link = LinkWithTitle.new
-  render :layout => false
-   end
+    @link = LinkWithTitle.new
+    render :layout => false
+  end
 
 
   def create

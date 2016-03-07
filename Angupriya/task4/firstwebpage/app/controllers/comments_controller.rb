@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
   	@counter= Counter.find(params[:counter_id])
     @comment=@counter.comments.build
   end
+  
   def index
   end
 

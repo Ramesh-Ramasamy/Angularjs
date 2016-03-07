@@ -1,4 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+
+  # Api::Routes.draw(map)
+  #   map.resources :comments
+  # end
+  map.resources :posts
+
+  map.resources :details
   map.resources :link_without_titles
   map.resources :link_with_titles
   map.resources :users , :collection => {:login => :get, :login_attempt => :get,:home => :get}
@@ -9,9 +16,9 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   map.connect ':controller/:action'
-  ActionController::Routing::Routes.draw do |map|
-  Jammit::Routes.draw(map)
-  end
-  
-end
+   ActionController::Routing::Routes.draw do |map|
+   Jammit::Routes.draw(map)
+   end
+ end
+# end
 
