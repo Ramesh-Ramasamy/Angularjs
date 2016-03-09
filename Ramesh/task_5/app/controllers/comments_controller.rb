@@ -5,6 +5,10 @@ class CommentsController < ApplicationController
     @comments = Comment.all(:include => :user,:conditions => {:comments => {:country_id => params[:country_id]}} )
     #@comments = User.all(:joins => :comments,:select => 'comments.commentbody,users.username',:conditions => {:comments => {:country_id => @country.id}})
     @comments = @comments.paginate(:page => params[:page], :per_page => 3)
+    respond_to do |format|
+      
+      format.json
+    end
   end
 
   def show  	

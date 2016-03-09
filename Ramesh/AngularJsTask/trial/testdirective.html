@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html ng-app = "myApp">
+<html >
 <head >
 	<script type="text/javascript" src="../lib/angular.js"></script>
-	<script type="text/javascript" src="testingangular.js"></script>	
+	<script type="text/javascript" src="testingangular.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>	
 	<title>Angular Js</title>
 </head>
 <body>
-<hello-world></hello-world>
-hai
+<hello-world name="Ramesh"></hello-world>
+<div ng-app = "myApp">
+<div ng-controller="hi">
+	<input type="text" ng-model="message" />
+	
+	<div phone dial="alerting()">Ramesh</div>
+	<div ng-click="alerting()">Kanth</div>
+	{{message}}
+</div>
+</div>
+
 </body>
 </html>

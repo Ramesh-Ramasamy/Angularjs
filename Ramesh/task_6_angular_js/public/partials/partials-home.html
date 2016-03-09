@@ -1,0 +1,10 @@
+<table>
+	<tr ng-repeat="det in details">
+		<td>{{det.detail.id}}</td>
+		<td>{{det.detail.name}}</td>
+		<td><a ui-sref="view({id: det.detail.id})">View</a></td>
+		<td><a ui-sref="update({id: det.detail.id})">Edit</a></td>
+		<td><a ui-sref="delete({id: det.detail.id})">Delete</a></td>			
+	</tr>
+</table>
+<a ui-sref="add">Add a New Post</a>
