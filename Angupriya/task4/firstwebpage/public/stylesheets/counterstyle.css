@@ -36,7 +36,7 @@ textarea{
 	height: 150px;
 }
 #leftside{
-	float: right;
+	float: left;
 	width: 18%;
 	height: 650px;
 	background-color: pink;

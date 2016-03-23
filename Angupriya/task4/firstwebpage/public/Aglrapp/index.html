@@ -1,16 +1,22 @@
 <html>
+<title>Angular app</title>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js">
+    <script src="javascripts/angular.min.js">
     </script>
-    <script type="text/javascript" src="Aglrapp/app.js"></script>
-    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js">
+    <script type="text/javascript"  src="javascripts/angular-ui-router.min.js">
     </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/restangular/1.4.0/restangular.js"></script>
+    <script type="text/javascript" src="javascripts/restangular.min.js"></script>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+    <script type="text/javascript" src="javascripts/lodash.js"></script>
     </head>
-  <div ng-app="firstApp" ng-controller='postCtrl'>
-    <a ui-sref='post'>Click to view all post details</a>
+    <script type="text/javascript" src="Aglrapp/app.js"></script>
+    
+  <div ng-app="firstApp">
+    <a ui-sref='post'>Click to view all post details</a>      
+    <h1>enter the user id</h1>
+    <input type='text' ng-model='id'>
+    <a ui-sref="show({userId: id })">click to see name of entered user</a>
+    <a ui-sref="add">Add new user</a>
     <div ui-view></div>
   </div>
 </html>

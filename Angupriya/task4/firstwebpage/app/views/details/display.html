@@ -1,0 +1,14 @@
+<h1>Record List</h1>
+  
+  <table border='1'>
+  <td>Name</td>
+  <td>Id</td>
+
+  <tr ng-repeat="post in posts"> 
+  <td>{{post.id}}</td>
+  <td>{{post.name}}</td>
+    <td><a ui-sref="edit({editId: {{post.detail.id}} })" >Edit</a></td>
+    <td><a ui-sref="delete({deleteId: {{post.detail.id}} })" >Delete</a>
+  </td>
+  </tr>
+</table>
