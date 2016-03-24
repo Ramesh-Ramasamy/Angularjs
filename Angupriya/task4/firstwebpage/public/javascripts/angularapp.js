@@ -80,7 +80,7 @@ myApp.controller('addCtrl',['$scope', 'Restangular','$stateParams','$state',func
     scope.save = function(){      
       alert(scope.newpost.detail.name)
       Rest.all("details").post(scope.newpost).then(function(o){
-        scope.details.push(o);
+        // scope.details.post(o);
         state.go('post');
       })
     }

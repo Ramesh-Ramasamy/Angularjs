@@ -58,6 +58,7 @@ textarea{
 	font-size: 20px;
 	border-radius: 25px;
 	text-align: center;
+	width:200px;
 	height: 50px;
 }
 .but1{
@@ -161,8 +162,9 @@ textarea{
 	background-color: cyan;
 }
 #contents{
-	padding-left: 100px;
-	/*margin-left: 200px;*/
+	position: relative;
+	padding-left: 500px;
+	/*margin-top: 50px;*/
 	font-size: 20px;
 	font-style: italic;
 	width: 500px;

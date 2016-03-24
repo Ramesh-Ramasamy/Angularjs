@@ -1,0 +1,2 @@
+module ApipostHelper
+end

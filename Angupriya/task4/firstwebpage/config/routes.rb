@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   #  get "/" => "posts#index"
   # end
   # map.resources :posts
+  map.resources  :apiposts
   map.resources  :homes
   map.resources :details
   map.resources :link_without_titles
