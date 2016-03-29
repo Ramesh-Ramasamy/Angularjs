@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   # end
   # map.resources :posts
   map.resources  :apiposts
+  map.resources  :apicomments
   map.resources  :homes
   map.resources :details
   map.resources :link_without_titles

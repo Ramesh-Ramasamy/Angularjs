@@ -48,6 +48,15 @@ textarea{
 
 }
 
+#right{
+	float: right;
+	margin-right: 0px;
+	background-color: pink;
+	padding-top: 10px;
+	width: 15%;
+	height: 250px;
+	border-radius: 25px;
+}
 .but{
 	text-decoration: none;
 	background-color: white;
@@ -163,12 +172,14 @@ textarea{
 }
 #contents{
 	position: relative;
-	padding-left: 500px;
+	padding-left: 200px;
 	/*margin-top: 50px;*/
+	width: 400px;
 	font-size: 20px;
 	font-style: italic;
-	width: 500px;
+	
 	color: green;
+	float:left;
 
 }
 

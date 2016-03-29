@@ -1,6 +1,6 @@
 class ApipostsController < ApplicationController
   def index
-    @counters = Counter.find(:all ,:select => 'id,name,content,type')
+    @counters = Counter.find(:all,:select => 'id,name,content,type,count')
     respond_to do |format|
       format.json { render :json=> @counters }
     end
@@ -21,7 +21,6 @@ class ApipostsController < ApplicationController
 
   def create
     @createpost = Counter.new
-    raise params
     @createpost.name = params[:name]
     @createpost.content = params[:content]
     saved = @createpost.save!
@@ -31,4 +30,15 @@ class ApipostsController < ApplicationController
       end
     end
   end
+
+
+  def update
+    @detail = Counter.find(params[:id])
+      if @detail.update_attributes(:count=>params[:count])           
+        respond_to do |format|
+          format.json  { render :json => @detail }      
+         end
+      end
+  end 
+
 end
