@@ -9,7 +9,17 @@ myApp.config(function($stateProvider,$urlRouterProvider,RestangularProvider) {
       templateUrl: "api/post.html"
     
     })
- 
+    .state('post.content',{
+      url: "/:postId",
+      controller:"contentCtrl",
+      templateUrl:"api/content.html"
+    })
+    .state('post.content.comment',{
+      url: "/:Id",
+      controller:"commentCtrl",
+      templateUrl:"api/comment.html"
+    })
+    
   })
   myApp.run(['$state',function($state){
   $state.transitionTo('post')
@@ -21,20 +31,26 @@ myApp.controller('postCtrl',['$scope','Restangular','$state',function (scope, ra
     ra.all("apiposts").getList().then(function (o){
       scope.posts = o;
        console.log(o);
-
+        var totalcount=0
+        for(var i = 0; i < scope.posts.length; i++){
+        var count=scope.posts[i].count
+        totalcount += count;
+        }
+        scope.tc=totalcount
+        console.log(scope.tc)
      })
-       scope.counter=function(id){
-        ra.one('apiposts',id).get().then(function(u){
-        scope.id=id
-        scope.c=u
-        scope.text="count value:"
-        scope.c.count=u.count+1;
-        scope.txt="totalcount"
-        scope.tc=++scope.tc|| 0
-        scope.c.put();
+      //  scope.counter=function(id){
+      //   ra.one('apiposts',id).get().then(function(u){
+      //   scope.id=id
+      //   scope.c=u
+      //   scope.text="count value:"
+      //   scope.c.count=u.count+1;
+      //   scope.txt="totalcount"
+      //   scope.tc=++scope.tc|| 0
+      //   scope.c.put();
         
-       })
-      }
+      //  })
+      // }
     
       scope.add=function(){
         ra.all("apiposts").post(scope.newpost).then(function(o){
@@ -58,15 +74,32 @@ myApp.controller('postCtrl',['$scope','Restangular','$state',function (scope, ra
       }
 }])
 
+myApp.controller('contentCtrl',['$scope','Restangular','$state','$stateParams',function (scope, ra,state,params)  
+{
+      ra.one('apiposts',params.postId).get().then(function(u){
+        scope.post=u
+        scope.post.count=u.count+1;
+        scope.post.put();
+      })
 
+      ra.all("apiposts").getList().then(function (o){
+      scope.records = o;
+        var totalcount=0
+        for(var i = 0; i < scope.records.length; i++){
+        var count=scope.records[i].count
+        totalcount += count;
+        }
+        scope.totalcount=totalcount
+      })
+}])
 
+myApp.controller('commentCtrl',['$scope','Restangular','$state','$stateParams',function (scope, ra,state,params)  
+{ alert("comment ctrl")
+  ra.one("apicomments",params.Id).get().then(function (o){
+          scope.comments=o
 
-
-
-
-
-
-
+})
+}])
 
 
 

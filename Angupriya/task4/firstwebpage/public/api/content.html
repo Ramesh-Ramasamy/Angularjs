@@ -1,3 +1,6 @@
 
-{{c.content}}
-{{c.count}}
+content :{{post.content}}<br>
+Count value :{{post.count}}<br>
+Total count :{{totalcount}}
+<a ui-sref="post.content.comment({Id: post.id })">View comments</a>
+<div ui-view></div>
