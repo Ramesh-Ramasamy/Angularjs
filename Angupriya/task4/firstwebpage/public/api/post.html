@@ -2,10 +2,76 @@
 
 <div id="leftside">
 <p ng-repeat="post in posts" class="but"> 
-    <a ui-sref="post.content({postId: {{post.id}} })">{{post.name}}</a>
+    <a ui-sref="post.content({Id: {{post.id}} })">{{post.name}}</a>
 </p>
 </div>
 <div id="contents" ui-view></div>
+
+<div id="right">
+  <p>Add new Button</p>
+  Name of button:
+  <input type="text" ng-model="newpost.name" /><br>
+  Content:
+  <input type="text" ng-model="newpost.content" /><br>
+  <button ng-click="add()">create</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <a ng-click=counter(post.id)>{{post.name}}</a> -->
+
+
+
+
+
+
+
 <!-- <div id="contents">
 {{c.content}}<br>
 {{text}}
@@ -23,22 +89,3 @@
   <input type="text" ng-model="newcom.comments" /><br>
   <button ng-click="newcomments(id)">create</button> -->
 <!-- </div> -->
-
-<!-- <div id="right">
-  <p>Add new Button</p>
-  Name of button:
-  <input type="text" ng-model="newpost.name" /><br>
-  Content:
-  <input type="text" ng-model="newpost.content" /><br>
-  <button ng-click="add()">create</button>
-</div>
-
-
-    <a ng-click=counter(post.id)>{{post.name}}</a> -->
-
-
-
-
-
-
-
