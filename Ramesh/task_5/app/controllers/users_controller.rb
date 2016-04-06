@@ -1,5 +1,5 @@
   class UsersController < ApplicationController
-  layout "countries"
+  
   def index
     @users = User.all
   end
@@ -8,14 +8,21 @@
     @user = User.new
   end
 
-  def create
-    @user = User.new(params[:user])
+  def create    
+    @user = User.new
+    @user.username = params[:username]
+    @user.password = params[:password]
     if @user.save
-      flash.now[:notice] = "You signed up successfully"
-      redirect_to(root_path)
+      session[:user_id] = @user.id
+      session[:username] = @user.username     
+      respond_to do |format|      
+        format.json  { render :json => @user }
+      end
+        flash.now[:notice] = 'User Registered Successfully'    
     else
-      flash.now[:notice] = "Form is invalid"
-      render "new"
+        respond_to do |format|  
+         format.json  { render :json => @user.errors }
+        end
     end
 
   end

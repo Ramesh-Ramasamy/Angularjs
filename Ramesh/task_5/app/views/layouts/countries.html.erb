@@ -4,47 +4,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Posts: <%= controller.action_name %></title>   
-    <%= include_stylesheets :common, :media => 'all' %>
-    <%= include_javascripts :common %>  
+  <title>Posts: <%= controller.action_name %></title>  
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js" ></script>
+  <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js">
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/restangular/1.4.0/restangular.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+  <%= javascript_include_tag "dirPagination" %> 
+  <%= javascript_include_tag "script" %>     
+  <%= include_stylesheets :common, :media => 'all' %>
+  <%= include_javascripts :common %> 
 </head>
 <body>
-<header>
-	Task 7 Ruby On Rails
-	<div class="row">
-		<div class="col-8">
-    <nav>
-      <ul>
-        <li>
-          <%= link_to 'Add New Country', new_country_path %>
-        </li>
-        <li>
-          <%= link_to 'With Continent', withcontinents_path %> 
-          <div id="withcontinent"></div>
-        </li>
-        <li>
-          <%= link_to 'With Out Continent', withoutcontinents_path %>
-          <div id="withoutcontinent"></div>
-        </li>
-      </ul>
-    </nav>    
-		</div>
-		<div class="col-4 cl-effect-4">
-      <% if current_user %>
-        Hello, <%= current_user.username %>
-      <%= link_to "Log out", logout_path %>
-      <% else %>
-        <%= link_to 'Sign-Up', new_user_path %>
-      <%= link_to "Log in", login_path %>
-      <% end %>
-      <%= link_to 'Home', countries_path %>
-      <%= link_to 'Dash Board', dashboard_path %>
-		</div>
-	</div>
-</header>
+<p style="color:green;"><%=notice %>
 <section>
-<%= yield %>
+ <%=yield%> 
 </section>
-<!--<footer>cpoyright &copy; www.BuildaBazaar.com</footer> -->
+
 </body>
 </html>

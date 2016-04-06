@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-3"></div>
+	<div class="col-6">
+		<input type="text" placeholder="Username" value = "{{user.username}}" ng-model="newuser.username"/>
+		<input type="password" placeholder="Password" value = "{{user.password}}" ng-model="newuser.password"/>
+		<input type="password" placeholder="Retype-your Password" value = "{{user.password2}}" ng-model="newuser.password2"/>
+
+		<br><br>
+		<button ng-click="addUser()">Add User</button>
+		<br/><br/>
+		<div class="errors">
+			<div  ng-repeat = "error in errors">
+				{{error}}
+			</div>
+		</div>
+		
+	</div>
+	<div class="col-3"></div>
+</div>

@@ -1,8 +1,10 @@
 class WithoutcontinentsController < ApplicationController
-	layout "countries"
+	
   def index
   	@withoutcontinents = Withoutcontinent.all
-  	render :layout => false
+	respond_to do |format|      
+	  format.json  { render :json => @withoutcontinents }
+	end 
   end 
 
   def show

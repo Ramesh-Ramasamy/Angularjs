@@ -1,14 +1,11 @@
 class CommentsController < ApplicationController
-  layout "countries"
-  before_filter :check_user, :only =>[:new, :create]
+  layout "countries"  
   def index      
     @comments = Comment.all(:include => :user,:conditions => {:comments => {:country_id => params[:country_id]}} )
-    #@comments = User.all(:joins => :comments,:select => 'comments.commentbody,users.username',:conditions => {:comments => {:country_id => @country.id}})
-    @comments = @comments.paginate(:page => params[:page], :per_page => 3)
-    respond_to do |format|
-      
-      format.json
-    end
+    @comments = User.all(:joins => :comments,:select => 'comments.commentbody,users.username',:conditions => {:comments => {:country_id => params[:country_id]}})    
+   respond_to do |format|      
+      format.json  { render :json => @comments }
+    end 
   end
 
   def show  	
@@ -22,19 +19,28 @@ class CommentsController < ApplicationController
 
   def create
   	@country = Country.find(params[:country_id])
-    @comment = @country.comments.build(:user_id => Rails.cache.read("user_id"), :commentbody => params[:comment][:commentbody])
+    @comment = @country.comments.build(:user_id => params[:user_id], :commentbody => params[:commentbody])
+    # @user = User.find(params[:user_id]).username
   	if @comment.save
-      flash[:notice] = 'Comment was successfully saved.'
-      redirect_to country_comment_url(@country, @comment)
-    else
-      flash[:notice] = 'Comment was not successfully saved.'      
-      render 'new'
+      @comment = User.all(:joins => :comments,:select => 'comments.commentbody,users.username',:conditions => {:comments => {:id => @comment.id}})
+     
+      respond_to do |format|      
+        format.json  { render :json => @comment }
+      end     
     end
   end
 
-  def dashboard
+  def countrydashboard
     @country = Comment.all(:joins => :country, :group =>"country_id",:select => "countryname,country_id,count(*) as country_count", :order => "country_count DESC", :limit => 5)
-    @user = Comment.all(:joins => :user, :group =>"user_id",:select => "username,user_id,count(*) as user_count", :order => "user_count DESC", :limit => 5)
+    respond_to do |format|      
+      format.json  { render :json => @country }
+    end
   end
 
+  def userdashboard
+    @user = Comment.all(:joins => :user, :group =>"user_id",:select => "username,user_id,count(*) as user_count", :order => "user_count DESC", :limit => 5)    
+    respond_to do |format|      
+      format.json  { render :json => @user }
+    end
+  end
 end

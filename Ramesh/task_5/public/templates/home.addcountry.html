@@ -1,0 +1,18 @@
+ <div class="row">
+  <div class="col-1">  	
+  </div>
+  <div class="col-7">
+	  <form>
+	    <input type="text" placeholder="Country Name" ng-model="country.name"><br/><br/>
+	    <textarea placeholder="Country Description" ng-model="country.description"></textarea><br/><br/>
+	    <input type="radio" id="country_type_withcontinent" name="type" value="Withcontinent" ng-model="country.type">With Continent
+	    <input type="radio" id="country_type_withoutcontinent" value="Withoutcontinent" name="type" ng-model="country.type">With Out Continent<br/><br/>
+	  	 <div id="showcontinent" class="block" >
+		  	 <input type="text"  ng-model="country.continent" placeholder="Continent name"><br/><br/>		  	
+	  	 </div>
+	  	 <button ng-click="save()" >Add Country</button>	  	 
+	    </form>
+   </div>
+  <div class="col-1"></div>
+</div>
+

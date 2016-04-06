@@ -41,11 +41,11 @@ Rails::Initializer.run do |config|
   config.gem 'will_paginate', :version => '~> 2.3.16'
   
  #  config.action_controller.session_store = :active_record_store
-  config.action_controller.session = {
-   :key => '_task_5_session',
-   :secret      => '8391b7fec8cd8ea79230965b18eef26e673c6a84f0c879b41d25d0ab87bcbc1769a0a8da30627c7838172e636423ec55f5d68eb39c47299a8fd22caf0081b8ce',
+ #  config.action_controller.session = {
+ #   :key => '_task_5_session',
+ #   :secret      => '8391b7fec8cd8ea79230965b18eef26e673c6a84f0c879b41d25d0ab87bcbc1769a0a8da30627c7838172e636423ec55f5d68eb39c47299a8fd22caf0081b8ce',
    
- }
+ # }
  config.gem 'dalli'
  config.gem "jammit"
 end

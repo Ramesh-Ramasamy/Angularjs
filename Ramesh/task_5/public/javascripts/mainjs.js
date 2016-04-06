@@ -1,9 +1,10 @@
-$(function(){		
-	$("#showcontinent").hide();
-	$("#country_type_withcontinent").click(function(){
+$(function(){
+	
+	$("body").on("click","#country_type_withcontinent",function(){
+		
 		$("#showcontinent").show();
 	});
-	$("#country_type_withoutcontinent").click(function(){
+	$("body").on("click","#country_type_withoutcontinent",function(){
 		$("#showcontinent").hide();
 	});
 	$("a[href='/withcontinents']").click(function(){				

@@ -41,8 +41,7 @@ class DetailsController < ApplicationController
   # POST /details
   # POST /details.xml
   def create
-    @detail = Detail.new(params[:detail])
-
+    @detail = Detail.new(params[:detail])    
     respond_to do |format|
       if @detail.save
         format.json  { render :json => @detail }
@@ -56,7 +55,8 @@ class DetailsController < ApplicationController
     @detail = Detail.find(params[:id])
 
     respond_to do |format|
-      if @detail.update_attributes(params[:detail])           
+      if @detail.update_attributes(params[:detail])
+                  
           format.json  { render :json => @detail }      
       end
     end

@@ -6,9 +6,8 @@ javascript_compressor:  closure     # (yui, closure)
 
 javascripts:
   common:    
-    - public/javascripts/jquery-1.11.3.js    
+    - public/javascripts/jquery-1.11.3.js     
     - public/javascripts/mainjs.js
-    
 stylesheets:
   common:    
     - public/stylesheets/*.css

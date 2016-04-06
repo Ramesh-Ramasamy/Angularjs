@@ -1,33 +1,60 @@
 class CountriesController < ApplicationController
   
-  before_filter :check_user, :only =>[:new, :create]
+  
 
-  def index  	
+  def index 
+    @countries = Country.all    
+    respond_to do |format|      
+      format.json  { render :json => @countries }
+    end  	
   end
 
   def show
   	@country = Country.find(params[:id])    
-    render :layout => !request.xhr?
+    respond_to do |format|      
+      format.json  { render :json => @country }
+    end  
+    # render :layout => false
   end
 
   def new
   	@country = Country.new
   end
 
-  def create
-    if (params[:country][:type] == "Withcontinent")
-      @country = Withcontinent.new(params[:country]) 
+  def create    
+    if (params[:type] == "Withcontinent")
+      @country = Withcontinent.new
+      @country.continent = params[:continent];
     else
-      params[:country][:continent] = nil
-      @country = Withoutcontinent.new(params[:country]) 
-    end   	
-  	if @country.save
-  	 redirect_to(root_path)
-    else
-      flash.now[:notice] = "Country not successfully added"
-      render 'new' 
+      params[:continent] = nil
+      @country = Withoutcontinent.new 
+    end 
+    @country.type = params[:type];
+    @country.countryname = params[:name];
+    @country.countrydesc = params[:description];
+    @country.clickcount = 0;  	
+  	if @country.save!
+  	 respond_to do |format|      
+      format.json  { render :json => @country }
+     end   
     end
   end
 
+   def edit
+    @country = Country.find(params[:id])
+    respond_to do |format|      
+      format.json  { render :json => @country }
+    end
+  end
+
+
+  def update
+    @country = Country.find(params[:id])       
+    if @country.update_attributes(:clickcount => params[:clickcount])
+      respond_to do |format|          
+        format.json  { render :json => @country }      
+      end
+    end
+  end
   
 end

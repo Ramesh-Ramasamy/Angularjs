@@ -4,10 +4,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sessions 
   map.resources :withcontinents, :has_many => :comments
   map.resources :withoutcontinents, :has_many => :comments 
-  map.dashboard '/dashboard', :controller => 'comments', :action => 'dashboard'
+  map.countrydashboard '/countrydashboard', :controller => 'comments', :action => 'countrydashboard'
+  map.userdashboard '/userdashboard', :controller => 'comments', :action => 'userdashboard'
   map.logout '/logout', :controller => 'sessions', :action => 'logout'
   map.login '/login', :controller => 'sessions', :action => 'login'
   map.authenticate_user '/authenticate_user', :controller => 'sessions', :action => 'authenticate_user'
+  map.userdetails '/userdetails', :controller => 'sessions', :action => 'userdetails'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -50,6 +52,6 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-  map.root :controller => "countries"
+  map.root :controller => "home"
   Jammit::Routes.draw(map)
 end

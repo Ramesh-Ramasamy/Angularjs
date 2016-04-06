@@ -1,8 +1,10 @@
 class WithcontinentsController < ApplicationController
-  layout "countries"
+  
   def index
   	@withcontinents = Withcontinent.all
-  	render :layout => false
+  	respond_to do |format|      
+      format.json  { render :json => @withcontinents }
+    end
   end
   def show
   	@country = Withcontinent.find(params[:id])  	

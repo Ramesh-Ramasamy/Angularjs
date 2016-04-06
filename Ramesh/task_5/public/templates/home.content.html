@@ -1,0 +1,12 @@
+<div id="showdatails">
+	Country name-{{country.countryname}}<br/>
+	Click count-{{country.clickcount}}
+</div>
+<u>comments</u>
+<div dir-paginate="comment in comments | itemsPerPage: 4">
+		{{comment.username}} - {{comment.commentbody}}	
+</div>
+<dir-pagination-controls boundary-links="true" template-url="templates/dirPagination.tpl.html">
+    </dir-pagination-controls>
+<a ui-sref="home.content.comment({id:country.id})"><button>Add A New Comment</button></a>	
+<div ui-view="home.content.comment"></div>	

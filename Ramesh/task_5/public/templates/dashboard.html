@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="col-2">
+		<center>
+			<h3>With Continent</h3>
+			<table>
+				<tr ng-repeat="continent in withcontinents">
+					<td>{{continent.countryname}}</td>
+				</tr>
+			</table>
+		</center>
+	</div>
+	<div class="col-2">
+		<center>
+			<h3>Without Continent</h3>
+			<table>
+				<tr ng-repeat="continent in withoutcontinents">
+					<td>{{continent.countryname}}</td>
+				</tr>
+			</table>
+		</center>
+	</div>
+	<div class="col-4">
+		<center>Top 5 Countries
+		<table>
+			<tr>
+				<th>
+					Country
+				</th>
+				<th>
+					Total Comments
+				</th>
+			</tr>
+			<tr ng-repeat="country in countries">
+				<td>
+					{{country.countryname}}
+				</td>
+				<td>
+					{{country.country_count}}	
+				</td>
+			</tr>
+		</table>
+		</center>			
+	</div>
+	<div class="col-4">
+	<center>Top 5 Users
+		<table>
+			<tr>
+				<th>
+					User
+				</th>
+				<th>
+					Total Comments
+				</th>
+			</tr>
+			<tr ng-repeat="user in users">
+				<td>{{user.username}}</td>
+				<td>{{user.user_count}}</td>
+			</tr>
+		</table>
+	</center>
+	</div>
+</div>
