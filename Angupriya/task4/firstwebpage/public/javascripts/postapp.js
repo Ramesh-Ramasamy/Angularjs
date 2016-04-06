@@ -1,25 +1,61 @@
 
+$(document).ready(function () {
+    $("#title").hide();
+    $("body").on("click","#with_title",function () {        
+        $("#title").show();
+    });
+    $("body").on("click","#without_title",function () {        
+        $("#title").hide();
+    });
+});
+
 var myApp=angular.module('firstApp',['ui.router','restangular','angularUtils.directives.dirPagination'])
 myApp.config(function($stateProvider,$urlRouterProvider,RestangularProvider) {
   RestangularProvider.setBaseUrl('http://localhost:3000');
   $stateProvider
 
-  // .state('user',{
-
-  //   controller: "userCtrl",
-  //   templateUrl: "api/login.html"
-
-  // })
+  .state('user',{
+    views:{
+      'header':{
+        templateUrl: "api/header.html",
+      },
+      '':{
+        controller: "loginCtrl",
+        templateUrl: "api/login.html"
+    }}
+  })
+  
+  .state('signup',{
+    controller: "signupCtrl",
+    templateUrl: "api/signup.html"
+  })
+  
   .state('post', {
     views:{
       'header':{
-        templateUrl: "api/header.html"
-      },
-      '':{
-    controller: "postCtrl",
-    templateUrl: "api/post.html"
-    }
+        templateUrl: "api/header.html",
+        },
+      'post':{
+         controller: "postCtrl",
+         templateUrl: "api/post.html"
+      }
   }
+  })
+  .state('dashboard',{
+    views:{
+      'header':{
+        templateUrl: "api/header.html",
+        },
+        'post':{
+          controller: "postCtrl",
+          templateUrl: "api/post.html"
+        },
+        '':{
+          controller:'dashboardCtrl',
+          templateUrl: 'api/dashboard.html'
+          
+        }
+      }
   })
   .state('post.content',{
     url: "/:Id",
@@ -29,7 +65,7 @@ myApp.config(function($stateProvider,$urlRouterProvider,RestangularProvider) {
   .state('post.content.viewcomment',{
     views: {
       'viewcomments':{
-        controller:"commentCtrl",
+        controller:"viewcommentCtrl",
         templateUrl:"api/viewcomment.html"
       }
     }
@@ -47,16 +83,75 @@ myApp.run(['$state',function($state){
   $state.transitionTo('post')
 }])
 
-// myApp.controller('userCtrl',function($scope,$stateParams,Restangular,Session,$state){
-//     $scope.checkuser = function(){
-//       Restangular.all("authenticate_user").post($scope.user).then(function(o){
-//         console.log(o);
-//       })
-//     }
-//    }
+
+myApp.factory('User',function(Session){
+  var user={}
+    Session.then(function(o){
+      user = o;
+    });
+    return{     
+      getuser : function(){
+        return user;
+      },
+      setuser : function(id,name){
+        user.user_id = id;
+        user.username = name;
+      }
+
+    }
+  });
 
 
-myApp.controller('postCtrl',['$scope','Restangular','$state','$stateParams',function (scope, ra,st,params)  
+  myApp.factory('Session', function($http) {
+     return $http.get('/userdetails').then(function(result) {  
+          return result.data; 
+      });
+  }); 
+
+myApp.controller('signupCtrl',function($scope,$stateParams,Restangular,$state,User){
+     $scope.createuser=function(){
+      console.log($scope.user)
+      Restangular.all("apiusers").post($scope.user).then(function(o){
+        alert("successfully signed up")
+        User.setuser(o.id,o.name);
+        $state.go("post")
+      })
+    }
+
+})
+myApp.controller('loginCtrl',function($scope,$stateParams,Restangular,$state,User){
+    $scope.checkuser = function(){
+      Restangular.all("authenticate_user").post($scope.user).then(function(o){
+          alert("successfully logged in");
+          console.log(o);
+          if(o.name != null){
+            User.setuser(o.id,o.name);
+            $state.go("post");
+          }
+      })
+    }
+   })
+
+myApp.controller('dashboardCtrl',['$scope','Restangular','$state','$stateParams','$http','User',function (scope, ra,st,params,$http,User)  
+{
+  
+    ra.all("/with_title").getList().then(function(o){
+    scope.Titlelists=o
+  })
+    ra.all("/without_title").getList().then(function(o){
+    scope.lists=o
+  })
+
+    ra.all("/topuser").getList().then(function(o){
+    scope.topusers=o
+  })
+
+    ra.all("/topposts").getList().then(function(o){
+    scope.topposts=o
+    console.log("posts"+scope.topposts)
+  })
+}])
+myApp.controller('postCtrl',['$scope','Restangular','$state','$stateParams','$http','User',function (scope, ra,st,params,$http,User)  
 {
   ra.all("apiposts").getList().then(function (o){
     scope.posts = o;
@@ -70,11 +165,12 @@ myApp.controller('postCtrl',['$scope','Restangular','$state','$stateParams',func
     console.log(scope.tc)
   })
   scope.add=function(){
+    console.log("type")
+    console.log(scope.newpost);
     ra.all("apiposts").post(scope.newpost).then(function(o){
       st.go(st.current, {}, {reload: true});
     })
   }
-
 }])
 
 myApp.controller('contentCtrl',['$scope','Restangular','$state','$stateParams',function (scope, ra,state,params)  
@@ -96,19 +192,57 @@ myApp.controller('contentCtrl',['$scope','Restangular','$state','$stateParams',f
   })
 }])
 
-myApp.controller('commentCtrl',['$scope','Restangular','$state','$stateParams',function (scope, ra,state,params)  
+
+myApp.controller('viewcommentCtrl',['$scope','Restangular','$state','$stateParams',function (scope, ra,state,params)  
 { 
 
   ra.one("apicomments",params.Id).get().then(function (o){
     scope.comments=o
   })
-  scope.newcomments=function(){
-    ra.all("apiposts/"+params.Id+"/apicomments").post(scope.newcom).then(function(o) {
-      // scope.comments.push(o[0])
-      state.go("post.content.viewcomment")
-    })
-  }
 }])
+myApp.controller('commentCtrl',['$scope','Restangular','$state','$stateParams','User','Session',function (scope, ra,state,params,User,Session)  
+{ 
+     alert("newcomments")
+      var response = {}
+      response.user_id = User.getuser().user_id;
+      response.username = User.getuser().username;  
+      if(response.username != null){ 
+        alert(" Hi "+response.username);                
+          scope.session = response;
+        }
+      else{
+          alert("login ...To comment");                   
+          state.go("user");
+
+        }
+      
+      scope.newcomments=function(){
+          scope.newcom.id=scope.session.user_id
+          ra.all("apiposts/"+params.Id+"/apicomments").post(scope.newcom).then(function(o) {
+          state.go("post.content.viewcomment")
+      })
+    }
+
+}]) 
+
+
+
+
+
+
+
+// scope.user=function($scope,$stateParams,Restangular,Session,$state){
+//     Session.then(function(response){
+//         if(response.username != null){ 
+//           alert(" Hi "+response.username);                
+//             $scope.session = response;
+//         }
+//           else{
+//             alert(response.username);                   
+//             $state.go("user");
+//           }
+//       });
+// }])
 
 
 

@@ -12,17 +12,31 @@ class ApipostsController < ApplicationController
       format.json { render :json=> @showpost }
     end
   end
-  # def new
-  #   @newpost = Counter.new
-  #   respond_to do |format|      
-  #     format.json  { render :json => @newpost }
-  #   end
-  # end
+  
+  def with_title
+  @list=LinkWithTitle.all
+    respond_to do |format|
+      format.json { render :json=> @list }
+    end
+  end
+
+  def without_title
+  @list=LinkWithoutTitle.all
+    respond_to do |format|
+      format.json { render :json=> @list }
+    end
+  end
 
   def create
     @createpost = Counter.new
+    if params[:type].eql?("LinkWithTitle")
+      @createpost.title=params[:title]
+    else
+      @createpost.title="No Title"
+    end
     @createpost.name = params[:name]
     @createpost.content = params[:content]
+    @createpost.type=params[:type]
     saved = @createpost.save!
     if saved
     respond_to do |format|
