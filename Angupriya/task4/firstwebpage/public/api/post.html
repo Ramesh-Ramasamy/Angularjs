@@ -2,7 +2,7 @@
 
 <div id="leftside">
   <p ng-repeat="post in posts" class="but"> 
-    <a ui-sref="post.content({Id: {{post.id}} })">{{post.name}}</a>
+    <a ng-click="content(post.id)">{{post.name}}</a>
   </p>
 </div>
 <div id="contents" ui-view></div>
@@ -21,6 +21,7 @@
 
 
 
+    <!-- <a ui-sref="post.content({Id: {{post.id}} })">{{post.name}}</a> -->
 
 
 

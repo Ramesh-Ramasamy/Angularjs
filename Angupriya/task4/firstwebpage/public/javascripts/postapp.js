@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
 });
 
-var myApp=angular.module('firstApp',['ui.router','restangular','angularUtils.directives.dirPagination'])
+var myApp=angular.module('firstApp',['postApp','dashApp','ui.router','restangular','angularUtils.directives.dirPagination'])
 myApp.config(function($stateProvider,$urlRouterProvider,RestangularProvider) {
   RestangularProvider.setBaseUrl('http://localhost:3000');
   $stateProvider
@@ -30,18 +30,7 @@ myApp.config(function($stateProvider,$urlRouterProvider,RestangularProvider) {
     templateUrl: "api/signup.html"
   })
   
-  .state('post', {
-    views:{
-      'header':{
-        templateUrl: "api/header.html",
-        },
-      'post':{
-         controller: "postCtrl",
-         templateUrl: "api/post.html"
-      }
-  }
-  })
-  .state('dashboard',{
+.state('dashboard',{
     views:{
       'header':{
         templateUrl: "api/header.html",
@@ -49,14 +38,26 @@ myApp.config(function($stateProvider,$urlRouterProvider,RestangularProvider) {
         'post':{
           controller: "postCtrl",
           templateUrl: "api/post.html"
-        },
-        '':{
-          controller:'dashboardCtrl',
-          templateUrl: 'api/dashboard.html'
-          
         }
+        // '':{
+        //   controller:'dashboardCtrl',
+        //   templateUrl: 'api/dashboard.html'
+          
+        // }
       }
   })
+  // .state('post', {
+  //   views:{
+  //     'header':{
+  //       templateUrl: "api/header.html",
+  //       },
+  //     'post':{
+  //        controller: "postCtrl",
+  //        templateUrl: "api/post.html"
+  //     }
+  // }
+  // })
+  
   .state('post.content',{
     url: "/:Id",
     controller:"contentCtrl",
@@ -79,9 +80,9 @@ myApp.config(function($stateProvider,$urlRouterProvider,RestangularProvider) {
     }
   })
 })  
-myApp.run(['$state',function($state){
-  $state.transitionTo('post')
-}])
+// myApp.run(['$state',function($state){
+//   $state.transitionTo('post')
+// }])
 
 
 myApp.factory('User',function(Session){
@@ -132,46 +133,28 @@ myApp.controller('loginCtrl',function($scope,$stateParams,Restangular,$state,Use
     }
    })
 
-myApp.controller('dashboardCtrl',['$scope','Restangular','$state','$stateParams','$http','User',function (scope, ra,st,params,$http,User)  
-{
-  
-    ra.all("/with_title").getList().then(function(o){
-    scope.Titlelists=o
-  })
-    ra.all("/without_title").getList().then(function(o){
-    scope.lists=o
-  })
 
-    ra.all("/topuser").getList().then(function(o){
-    scope.topusers=o
-  })
-
-    ra.all("/topposts").getList().then(function(o){
-    scope.topposts=o
-    console.log("posts"+scope.topposts)
-  })
-}])
-myApp.controller('postCtrl',['$scope','Restangular','$state','$stateParams','$http','User',function (scope, ra,st,params,$http,User)  
-{
-  ra.all("apiposts").getList().then(function (o){
-    scope.posts = o;
-    console.log(o);
-    var totalcount=0
-    for(var i = 0; i < scope.posts.length; i++){
-      var count=scope.posts[i].count
-      totalcount += count;
-    }
-    scope.tc=totalcount
-    console.log(scope.tc)
-  })
-  scope.add=function(){
-    console.log("type")
-    console.log(scope.newpost);
-    ra.all("apiposts").post(scope.newpost).then(function(o){
-      st.go(st.current, {}, {reload: true});
-    })
-  }
-}])
+// myApp.controller('postCtrl',['$scope','Restangular','$state','$stateParams','$http','User',function (scope, ra,st,params,$http,User)  
+// {
+//   ra.all("apiposts").getList().then(function (o){
+//     scope.posts = o;
+//     console.log(o);
+//     var totalcount=0
+//     for(var i = 0; i < scope.posts.length; i++){
+//       var count=scope.posts[i].count
+//       totalcount += count;
+//     }
+//     scope.tc=totalcount
+//     console.log(scope.tc)
+//   })
+//   scope.add=function(){
+//     console.log("type")
+//     console.log(scope.newpost);
+//     ra.all("apiposts").post(scope.newpost).then(function(o){
+//       st.go(st.current, {}, {reload: true});
+//     })
+//   }
+// }])
 
 myApp.controller('contentCtrl',['$scope','Restangular','$state','$stateParams',function (scope, ra,state,params)  
 {  
