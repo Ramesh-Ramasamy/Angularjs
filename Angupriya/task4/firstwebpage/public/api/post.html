@@ -2,21 +2,13 @@
 
 <div id="leftside">
   <p ng-repeat="post in posts" class="but"> 
-    <a ng-click="content(post.id)">{{post.name}}</a>
+    <a ng-click="displaycontent(post.id)">{{post.name}}</a>
   </p>
 </div>
-<div id="contents" ui-view></div>
+<content></content>
 
 <div id="right">
-  <p>Add new Button</p>
-  Name of button:
-  <input type="text" ng-model="newpost.name" /><br>
-  Content:
-  <input type="text" ng-model="newpost.content" /><br>
-  <input  type="radio" name="link" id="with_title" value="LinkWithTitle" ng-model="newpost.type">Link with title<br>
-  <input type="radio" name="link"  id="without_title" value="LinkWithoutTitle" ng-model="newpost.type" >Link without title<br>{{newpost.type}}
-  <input type="text" ng-model="newpost.title" id="title" placeholder="enter the title">
-  <button ng-click="add()">create</button>
+<add-link></add-link>
 </div>
 
 

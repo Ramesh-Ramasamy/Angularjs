@@ -23,7 +23,7 @@ class ApicommentsController < ApplicationController
     end
   end
   def show
-    @c=Comment.find(:all,:joins => :user,:select => "users.name,comments.feedback",:conditions => {:counter_id =>13})
+    @c=Comment.find(:all,:joins => :user,:select => "users.name,comments.feedback",:conditions => {:counter_id => params[:id]})
    respond_to do |format|
       format.json { render :json=> @c }
     end

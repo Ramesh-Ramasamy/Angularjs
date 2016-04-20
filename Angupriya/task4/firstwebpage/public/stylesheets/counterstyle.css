@@ -177,11 +177,9 @@ textarea{
 #contents{
 	position: relative;
 	padding-left: 200px;
-	/*margin-top: 50px;*/
 	width: 400px;
 	font-size: 20px;
 	font-style: italic;
-	
 	color: green;
 	float:left;
 

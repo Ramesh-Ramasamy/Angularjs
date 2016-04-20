@@ -1,9 +1,9 @@
-
-<div dir-paginate="comment in comments | itemsPerPage: 4">
-    {{comment.name}}
-    {{comment.feedback}}
-</div>
-
+  <div dir-paginate="comment in comments | itemsPerPage: 4">
+    <div ng-if="comment.name">
+      Name - {{comment.name}}
+      Feedback - {{comment.feedback}}
+    </div>
+  </div>
 
 <dir-pagination-controls boundary-links="true" template-url="api/dirPagination.tpl.html">
     </dir-pagination-controls>
