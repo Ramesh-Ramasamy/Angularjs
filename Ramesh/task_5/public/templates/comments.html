@@ -1,0 +1,13 @@
+<u ng-if="country.countryname">comments</u>
+<div dir-paginate="comment in comments | itemsPerPage: 4">
+		{{comment.username}} - {{comment.commentbody}}	
+</div>
+<dir-pagination-controls boundary-links="true" template-url="templates/dirPagination.tpl.html">
+    </dir-pagination-controls>
+<div ng-show="country.countryname">
+	<br /><br />
+	<h4>Enter Your comments</h4>
+	<textarea Placeholder="Please type here" ng-model="comment.commentbody">		
+	</textarea>
+	<button ng-click="postcomments(country.id)">SUBMIT</button>
+</div>	

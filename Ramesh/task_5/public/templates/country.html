@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-3">
+		<div ng-repeat = "country in countries">
+			<a ng-click="viewdetails(country.id)">{{country.countryname}}</a>		
+		</div>	
+	</div>	
+	<div class="col-5" >
+		<country-Content></country-Content>
+	</div>	
+	<div class="col-4">
+		<add-newcountry><button>Add A New Country</button></add-newcountry>	
+	</div>		
+</div>
