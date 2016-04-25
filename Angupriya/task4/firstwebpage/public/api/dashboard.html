@@ -1,0 +1,36 @@
+
+<post></post>
+ <p>
+ <table border="1">
+    <td><p><b>Link with Title</b></p></td>
+    <tr ng-repeat="list in Titlelists">
+      <td>{{list.name}}</td>
+    </tr> 
+</table>
+<br>
+<table border="1">
+    <td><p><b>Link without Title</b></p></td>
+    <tr ng-repeat="list in lists">
+      <td>{{list.name}}</td>
+    </tr> 
+</table>
+<table border="1">
+    <tr><td colspan="2"><p><b>Top user</b></p></td></tr>
+    <td>Top user names:</td>
+    <td>Number of comments </td>
+    <tr ng-repeat="top in topusers">
+      <td>{{top.name}}</td>
+      <td>{{top.user_count}}</td>
+    </tr> 
+</table>
+</p>
+<table border="1">
+    <tr><td colspan="2"><p><b>Top posts</b></p></td><tr>
+    <td>Top Posts</td>
+    <td>Number of clicks </td>
+    <tr ng-repeat="top in topposts">
+      <td>{{top.name}}</td>
+      <td>{{top.count}}</td>
+  </td> 
+</table>
+

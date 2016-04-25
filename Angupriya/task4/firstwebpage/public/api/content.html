@@ -1,9 +1,15 @@
 
-content :{{post.content}}<br>
-Count value :{{post.count}}<br>
-Total count :{{totalcount}}<br>
-<a ui-sref="post.content.viewcomment">view comments</a>
-<a ui-sref="post.content.newcomment">new comments</a>
+<div id="contents" ng-if="post.content">
+  <h1>{{post.title}}</h1>
+  content :{{post.content}}<br>
+  Count value :{{post.count}}<br>
+  Total count:{{tc}}<br>
+  <button ng-click="viewComments(post.id)">View comments{{post.id}}</button>
+  <br>
+  <view-comments></view-comments>
+  <new-comments></new-comments>
+</div>
 
-<div ui-view="viewcomments"></div>
-<div ui-view="newcomments"></div>
+
+<!-- <a ui-sref="post.content.newcomment">new comments</a> -->
+

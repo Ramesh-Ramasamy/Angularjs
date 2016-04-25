@@ -15,6 +15,10 @@
 	margin-right: auto;
 	
 }
+table{
+	float: left;
+	width: 300px;
+}
 .heading{
 	position: relative;
 	padding-left: 100px;
@@ -108,15 +112,15 @@ textarea{
 	margin-top: 100px;
 }
 .linktype1{
-
+	float: left;
+	position: absolute;
+	margin-right: 300px;
 	text-align: left;
 	width: 150px;
 	height: 30px;
-
 	border-radius: 25px;
-	background-color: black;
-	text-decoration: none;
 	background-color: grey;
+	text-decoration: none;
 	color: yellow;
 	text-transform: uppercase;
 	margin-top: 5px;
@@ -173,11 +177,9 @@ textarea{
 #contents{
 	position: relative;
 	padding-left: 200px;
-	/*margin-top: 50px;*/
 	width: 400px;
 	font-size: 20px;
 	font-style: italic;
-	
 	color: green;
 	float:left;
 
@@ -199,9 +201,9 @@ textarea{
 }
 
 #withtitle{
-	position: absolute;
-	display: none;	
+	position: absolute;	
 	border-radius: 25px;
+	margin-left: 380;
 	width: 120px;
 	background-color: yellow;
 	text-transform: capitalize;
@@ -209,12 +211,10 @@ textarea{
 }
 #withouttitle{
 	position: absolute;
-	display: none;	
+	margin-left: 500;
 	border-radius: 25px;
-	width: 20%;
 	background-color: aqua;
-	margin-left:130px;
-	width: 150px;
+	width: 200px;
 	color: white;
 	text-transform: capitalize;
 }

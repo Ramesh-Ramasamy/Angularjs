@@ -1,0 +1,9 @@
+<p> Add a New Post </p> <br>
+  Name of post:
+  <input type="text" ng-model="newpost.name" /><br>
+  Content:
+  <input type="text" ng-model="newpost.content" /><br>
+  <input  type="radio" name="link" id="with_title" value="LinkWithTitle" ng-model="newpost.type">Post with title<br>
+  <input type="radio" name="link"  id="without_title" value="LinkWithoutTitle" ng-model="newpost.type" >Post without title<br>
+  <input type="text" ng-model="newpost.title" id="title" placeholder="enter the title">
+  <button ng-click="add()">create</button>

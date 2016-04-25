@@ -11,7 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   # map.resources :posts
   map.resources  :apiposts, :has_many => :apicomments
   map.resources  :apicomments, :has_one => :user
-  map.resources  :sessions
+  map.resources  :apisessions
+  map.resources  :apiusers
   map.resources  :homes
   map.resources  :details
   map.resources  :link_without_titles
@@ -20,11 +21,17 @@ ActionController::Routing::Routes.draw do |map|
   map.resources  :comments , :collection => {:create_comments => :post,:dashboard => :get}
   map.resources  :counters, :has_many => :comments ,:collection => {:dashboard => :get}
   map.resources  :comments, :has_one  => :user, :has_one => :counter
-  map.root       :controller => 'homes'
+  map.root       :controller =>'homes'
   map.logout      '/logout', :controller => 'apisessions', :action => 'logout'
   map.login       '/login', :controller => 'apisessions', :action => 'login'
   map.authenticate_user '/authenticate_user', :controller => 'apisessions', :action => 'authenticate_user'
   map.userdetails '/userdetails', :controller => 'apisessions', :action => 'userdetails'
+  map.with_title  '/with_title',:controller => 'apiposts',:action => 'with_title'
+  map.with_title  '/without_title',:controller => 'apiposts',:action => 'without_title'  
+  map.topuser     '/topuser',:controller => 'apicomments',:action => 'topuser'
+  map.topposts    '/topposts',:controller => 'apicomments',:action => 'topposts'
+
+
   map.connect    ':controller/:action/:id'
   map.connect    ':controller/:action/:id.:format'
   map.connect    ':controller/:action'
