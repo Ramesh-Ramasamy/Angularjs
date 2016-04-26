@@ -1,17 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Posts: <%= controller.action_name %></title>  
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js" ></script>
-  <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js">
-  </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/restangular/1.4.0/restangular.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+  <title>Posts: <%= controller.action_name %></title>    
+  <%= javascript_include_tag "angular.min" %>
+  <%= javascript_include_tag "angular-ui-router.min" %>
+  <%= javascript_include_tag "restangular.min" %>
+  <%= javascript_include_tag "lodash.min" %>
   <%= javascript_include_tag "dirPagination" %> 
-  <%= javascript_include_tag "script" %>     
+  <%= javascript_include_tag "script" %> 
+  <%= javascript_include_tag "dashboard" %>    
   <%= include_stylesheets :common, :media => 'all' %>
   <%= include_javascripts :common %> 
 </head>
