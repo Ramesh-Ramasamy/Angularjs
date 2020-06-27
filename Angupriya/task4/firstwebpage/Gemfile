@@ -5,7 +5,7 @@ gem "rails",'2.3.8'
 gem "hirb"
 gem "iconv", "~> 1.0.3"
 gem 'mysql','2.8.1'
-gem 'rake','0.9.6'
+gem 'rake','12.3.3'
 gem 'rdoc'
 gem "will_paginate", '2.3.14', :require => true
 gem "jammit", '0.6.5'
