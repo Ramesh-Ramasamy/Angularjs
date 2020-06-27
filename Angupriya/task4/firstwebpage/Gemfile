@@ -1,7 +1,7 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "rails",'2.3.8'
+gem "rails",'2.3.11'
 gem "hirb"
 gem "iconv", "~> 1.0.3"
 gem 'mysql','2.8.1'
