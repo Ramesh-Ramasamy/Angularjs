@@ -16,7 +16,6 @@ GEM
     jammit (0.6.3)
       yui-compressor (>= 0.9.3)
     jsmin (1.0.1)
-    json (1.8.3)
     mysql (2.8.1)
     rack (1.1.6)
     rails (2.3.8)
@@ -27,8 +26,7 @@ GEM
       activesupport (= 2.3.8)
       rake (>= 0.8.3)
     rake (10.5.0)
-    rdoc (4.2.1)
-      json (~> 1.4)
+    rdoc (6.3.1)
     will_paginate (2.3.16)
     yui-compressor (0.12.0)
 
