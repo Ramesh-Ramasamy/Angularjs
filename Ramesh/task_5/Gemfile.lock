@@ -12,7 +12,7 @@ GEM
       activesupport (= 2.3.8)
     activesupport (2.3.8)
     cssmin (1.0.3)
-    dalli (1.0.5)
+    dalli (3.2.3)
     jammit (0.6.3)
       yui-compressor (>= 0.9.3)
     jsmin (1.0.1)
@@ -37,7 +37,7 @@ PLATFORMS
 
 DEPENDENCIES
   cssmin
-  dalli (~> 1.0.5)
+  dalli (~> 3.2.3)
   jammit (= 0.6.3)
   jsmin
   mysql (= 2.8.1)
