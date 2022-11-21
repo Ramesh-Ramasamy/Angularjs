@@ -11,7 +11,7 @@ gem "will_paginate", '2.3.14', :require => true
 gem "jammit", '0.6.5'
 gem 'jsmin'
 gem 'cssmin'
-gem 'dalli', '~>1.0.5'
+gem 'dalli', '~>3.2.3'
 gem 'rabl'
 #  as the JSON parser
 gem 'oj'
